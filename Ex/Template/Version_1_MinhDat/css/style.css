@@ -494,7 +494,7 @@ body{
     text-align: center; 
     font-weight: bold; 
     font-size: 40px; 
-    background-color: #6a006a;
+    background-color:#758d61;
     padding: 30px 0px;  
 }
 
@@ -528,7 +528,7 @@ body{
 .gallery_section{
 	width: 100%;
 	float: left;
-	background-color:#80ffff;
+	background-color: #758d61;
 	height: auto;
 
 }
@@ -747,7 +747,7 @@ a:hover {
     color: #ffffff;
     text-align: center;
     padding: 10px 0px;
-    background-color: #6a006a;
+    background-color: #758d61;
     font-family: Poppins;
 }
 
