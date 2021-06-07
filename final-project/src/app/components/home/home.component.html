@@ -1,1 +1,143 @@
-<p>home works!</p>
+<div class="container">
+    <img class="img" src="assets/img/home-main.jpg">
+    <div class="introduce">
+        <h1>Introduce</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptatem molestiae doloribus a ut recusandae
+            molestias modi nam nihil, veniam laborum nostrum, libero distinctio in dignissimos impedit. Tempore,
+            quisquam in!</p>
+    </div>
+    <div class="slide-show">
+        <owl-carousel-o [options]="customOptions">
+            <ng-container *ngFor="let slide of dynamicSlides">
+                <ng-template carouselSlide [id]="slide.id">
+                    <img class="imgslide" [src]="slide.src" [alt]="slide.alt" [title]="slide.title">
+                </ng-template>
+            </ng-container>
+        </owl-carousel-o>
+    </div>
+    <div class="project">
+        <h1>ABOUT PROJECT</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint necessitatibus delectus quaerat tempore minus
+            doloribus ducimus veritatis, pariatur quibusdam? Dolorum perferendis obcaecati, accusamus expedita possimus
+            nam dignissimos quaerat non aperiam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, error!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur voluptate iusto nulla eligendi recusandae
+            consectetur?
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, eveniet quo asperiores ad ab minima
+            aspernatur ullam quaerat impedit hic.</p>
+
+    </div>
+    <div class="follow">
+        <div class="content">
+            <h1>Contact us</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi provident quos temporibus reprehenderit
+                quod placeat harum dolore commodi nisi eaque?</p>
+
+        </div>
+        <div class="follow-container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="eva eva-pin"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>72 đường Phạm Ngũ Lão, Quận 1</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="eva eva-phone"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>+123123098</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="eva eva-email"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>dlk@company.ecommerce.com</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="contactForm">
+                <form action="">
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" required>
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" name="" required>
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea name="" required></textarea>
+                        <span>Type your Message...</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" value="Send">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="aboutus">
+        <h1>About us</h1>
+        <main class="grid">
+            <article>
+                <img src="assets/img/kiet.jpg" alt="">
+                <div class="text">
+                    <h3>Tạ Anh Kiệt</h3>
+                    <p>CEO<br>Giám đốc điều hành</p>
+                </div>
+            </article>
+            <article>
+                <img src="assets/img/dat.jpg" alt="">
+                <div class="text">
+                    <h3>Phùng Minh Đạt</h3>
+                    <p>CEO<br>Giám đốc marketing</p>
+                </div>
+            </article>
+            <article>
+                <img src="assets/img/long.jpg" alt="">
+                <div class="text">
+                    <h3>Nguyễn Thành Long</h3>
+                    <p>CEO<br>Giám đốc tài chính</p>
+                </div>
+            </article>
+        </main>
+    </div>
+    <div class="blog">
+        <h1>Blog</h1>
+        <main class="grid">
+            <article>
+                <img src="assets/img/slide1.jpg" alt="">
+                <div class="text">
+                    <h3>Blog 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci consequatur natus, placeat cum
+                        esse accusantium!</p>
+                    <button>Read more</button>
+                </div>
+            </article>
+            <article>
+                <img src="assets/img/slide2.jpg" alt="">
+                <div class="text">
+                    <h3>Blog 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et minus exercitationem consequuntur
+                        temporibus quasi! Possimus.</p>
+                    <button>Read more</button>
+                </div>
+            </article>
+            <article>
+                <img src="assets/img/slide3.jpg" alt="">
+                <div class="text">
+                    <h3>Blog 3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure distinctio molestiae autem ducimus
+                        nemo reiciendis!</p>
+                    <button>Read more</button>
+                </div>
+            </article>
+        </main>
+    </div>
+</div>
