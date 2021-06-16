@@ -1,3 +1,4 @@
+<p>login works!</p>
 <div class="login-container">
     <div class="center">
         <h1>Login</h1>
@@ -9,7 +10,7 @@
                     [(ngModel)]="username"
                     name="username"
                     #userName=ngModel
-                    >   
+                    >
                 <span></span>
                 <label for="">Username</label>
             </div>
@@ -29,7 +30,6 @@
                     name="passoword"
                     >
     
-                <span></span>
                 <label for="">Password</label>
             </div>
             <p
@@ -40,10 +40,15 @@
             <input 
                 type="submit" 
                 value="Login" 
+                (click)="authService.login(userName.value, userPassword.value)"
                 [disabled]="loginForm.invalid"
                 >
-            <div class="signup_link">
-                Not a member? <a routerLink="/register">Sign up</a>
+            <div 
+                class="signup_link"
+            >
+                Not a member? <a
+                 routerLink="/register"
+                 >Sign up</a>
             </div>
         </form>
     </div>
