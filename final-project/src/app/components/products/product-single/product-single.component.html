@@ -5,11 +5,11 @@
       <img 
         data-image="red" 
         class="active" 
-        [src]="imgSrc[index]"
+       
         alt=""
         >
-      <button (click)="decreIndex()" class="left"><i class="eva eva-arrow-left"></i></button>
-      <button (click)="increIndex()" class="right"><i class="eva eva-arrow-right"></i></button>
+      <button class="left"><i class="eva eva-arrow-left"></i></button>
+      <button class="right"><i class="eva eva-arrow-right"></i></button>
     </div>
     <!-- Right Column -->
     <div class="right-column">
@@ -44,16 +44,16 @@
 
         <div class="cable-config">
           <span>Số phần bạn mua: </span>
-          <input type="number" value="{{ numOfMounts }}" class="text-center">
-          <button (click)="increNum()"><i class="eva eva-arrow-ios-upward"></i></button>
-          <button (click)="decreNum()"><i class="eva eva-arrow-ios-downward"></i></button>
+          <input type="number" class="text-center">
+          <button ><i class="eva eva-arrow-ios-upward"></i></button>
+          <button ><i class="eva eva-arrow-ios-downward"></i></button>
         </div>
       </div>
    
       <!-- Product Pricing -->
       <div class="product-price">
         <span style="font-size: 16px;">Tổng giá trị</span>
-        <span style="font-size: 18px; font-weight: bolder;">{{ formatNumber(numOfMounts * 4000000) }}</span>
+        <span style="font-size: 18px; font-weight: bolder;"></span>
         <a href="#" class="cart-btn">Add to cart</a>
       </div>
     </div>

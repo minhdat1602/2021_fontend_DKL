@@ -1,7 +1,7 @@
 <div class="register-container">
     <div class="container">
         <div class="title">Registration</div>
-        <form #registerForm="ngForm">
+        <form (ngSubmit)="submitForm()" #registerForm="ngForm">
             <div class="user-details">
                 <div class="input-box">
                     <span class="details">Full Name</span>
@@ -14,7 +14,7 @@
                         [ngClass]="{'error': userName.invalid && userName.touched}"
                         required
                         >
-                        <p
+                    <p
                         *ngIf="userName.invalid && userName.dirty"
                         style="color: red;"
                     >
@@ -61,11 +61,11 @@
                         name="phoneNumber"
                         #userPhoneNumber=ngModel
                         required>
-                        <p
-                        *ngIf="userPhoneNumber.invalid && userPhoneNumber.dirty"
-                        style="color: red;"
-                    >
-                Your phone number is required and type number</p>
+                    <p
+                    *ngIf="userPhoneNumber.invalid && userPhoneNumber.dirty"
+                    style="color: red;"
+                >
+                Your email is required and type number</p>
                 </div>
                 <div class="input-box">
                     <span class="details">Password</span>
@@ -83,8 +83,8 @@
                     >
                     Your password is required</p>
                     <p
-                        *ngIf="userPassword.invalid && userPassword.dirty"
-                        style="color: red;"
+                    *ngIf="userPassword.invalid && userPassword.dirty"
+                    style="color: red;"
                 >
                 Your password has more then 6 character</p>
                 </div>
@@ -100,17 +100,37 @@
                         [disabled]="userPassword.invalid === true"
                         >
                         <p
-                        *ngIf="confirmPassword.touched"
+                        *ngIf="confirmPassword.invalid && confirmPassword.dirty"
                         style="color: red;"
                     >
                     Confirm password</p>
                     <p
-                        *ngIf="confirmPassword.touched"
+                        *ngIf="userPassword !== confirmPassword && confirmPassword.dirty"
                         style="color: red;"
                     >
                     Confirm wrong password</p>
                 </div>
             </div>
+            <!-- <div class="gender-details">
+                <input type="radio" name="gender" id="dot-1">
+                <input type="radio" name="gender" id="dot-2">
+                <input type="radio" name="gender" id="dot-3">
+                <span class="gender-title">Gender</span>
+                <div class="category">
+                    <label for="dot-1">
+                        <span class="dot one"></span>
+                        <span class="gender">Male</span>
+                    </label>
+                    <label for="dot-2">
+                        <span class="dot two"></span>
+                        <span class="gender">Female</span>
+                    </label>
+                    <label for="dot-3">
+                        <span class="dot three"></span>
+                        <span class="gender">Prefer not to say</span>
+                    </label>
+                </div>
+            </div> -->
           
             <input 
                 class="button"

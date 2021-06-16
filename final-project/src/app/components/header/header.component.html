@@ -9,7 +9,7 @@
         <li><a routerLink="/products">Products</a></li>
         <li><a href="#">Contact</a></li>
         <li><a href="#">
-                <i class="eva eva-shopping-bag"></i>
+                <i class="eva eva-shopping-cart"></i>
             </a></li>
         <li>
 
@@ -20,12 +20,30 @@
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                     <a 
-                        class="dropdown-item" 
-                        routerLink="/login"
-                        >Log in</a>
-                        <a class="dropdown-item" routerLink="/register">Register</a>
-                    <!-- <a *ngIf="authService.isLoggedIn()" class="dropdown-item" href="#">Infomation</a> -->
-                    <!-- <a *ngIf="authService.isLoggedIn()" class="dropdown-item" (click)="authService.logout()">Log out</a> -->
+                    class="dropdown-item"
+                    routerLink="/login"
+                    *ngIf="!authService.isLoggedIn()" 
+                    >
+                    Log in</a>
+                <a 
+                    class="dropdown-item"
+                    routerLink="/register"
+                    *ngIf="!authService.isLoggedIn()" 
+                    >
+                    Register</a>
+                <a 
+                    *ngIf="authService.isLoggedIn()" 
+                    class="dropdown-item" 
+                    href="#"
+                    >
+                    Infomation</a>
+                <a 
+                    *ngIf="authService.isLoggedIn()" 
+                    class="dropdown-item"
+                    (click)="authService.logout()"
+                    >
+                    Log
+                    out</a>
                 </div>
             </div>
 
