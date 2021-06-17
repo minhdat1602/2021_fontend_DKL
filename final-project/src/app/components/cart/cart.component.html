@@ -1,1 +1,104 @@
-<p>cart works!</p>
+<div class="container">
+	<table id="cart" class="table table-hover table-condensed">
+		<thead>
+			<tr>
+				<th style="width:50%">Sản phẩm</th>
+				<th style="width:10%">Giá một phần</th>
+				<th style="width:10%">Số phần</th>
+				<th style="width:22%" class="text-center">Tạm tính</th>
+				<th style="width:10%">Hành động</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td data-th="Product">
+					<div class="row">
+						<div class="col-sm-2 hidden-xs"><img style="height: 90px; width: 100px;"
+								src="assets/img/slide1.jpg" alt="..." class="img-responsive" /></div>
+						<div class="col-sm-10">
+							<h4 class="nomargin">Product1</h4>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos debitis non distinctio sit delectus sint.</p>
+						</div>
+					</div>
+				</td>
+				<td data-th="Price">100000 VND</td>
+				<td data-th="Quantity">
+					<button  class="btn btn-danger m-lg-1"><i
+							class="eva eva-minus"></i></button>
+					<button  class="btn btn-primary"><i
+							class="eva eva-plus"></i></button>
+					<input type="number" class="form-control text-center" value="1">
+
+
+				</td>
+				<td data-th="Subtotal" class="text-center">10000000</td>
+				<td data-th="Actions">
+					<button  class="btn btn-danger"><i class="eva eva-close"></i></button>
+				</td>
+			</tr><tr>
+				<td data-th="Product">
+					<div class="row">
+						<div class="col-sm-2 hidden-xs"><img style="height: 90px; width: 100px;"
+								src="assets/img/slide1.jpg" alt="..." class="img-responsive" /></div>
+						<div class="col-sm-10">
+							<h4 class="nomargin">Product1</h4>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos debitis non distinctio sit delectus sint.</p>
+						</div>
+					</div>
+				</td>
+				<td data-th="Price">100000 VND</td>
+				<td data-th="Quantity">
+					<button  class="btn btn-danger m-lg-1"><i
+							class="eva eva-minus"></i></button>
+					<button  class="btn btn-primary"><i
+							class="eva eva-plus"></i></button>
+					<input type="number" class="form-control text-center" value="1">
+
+
+				</td>
+				<td data-th="Subtotal" class="text-center">10000000</td>
+				<td data-th="Actions">
+					<button  class="btn btn-danger"><i class="eva eva-close"></i></button>
+				</td>
+			</tr>
+			<tr>
+				<td data-th="Product">
+					<div class="row">
+						<div class="col-sm-2 hidden-xs"><img style="height: 90px; width: 100px;"
+								src="assets/img/slide1.jpg" alt="..." class="img-responsive" /></div>
+						<div class="col-sm-10">
+							<h4 class="nomargin">Product1</h4>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos debitis non distinctio sit delectus sint.</p>
+						</div>
+					</div>
+				</td>
+				<td data-th="Price">100000 VND</td>
+				<td data-th="Quantity">
+					<button  class="btn btn-danger m-lg-1"><i
+							class="eva eva-minus"></i></button>
+					<button  class="btn btn-primary"><i
+							class="eva eva-plus"></i></button>
+					<input type="number" class="form-control text-center" value="1">
+
+
+				</td>
+				<td data-th="Subtotal" class="text-center">10000000</td>
+				<td data-th="Actions">
+					<button  class="btn btn-danger"><i class="eva eva-close"></i></button>
+				</td>
+			</tr>
+
+		</tbody>
+		<tfoot>
+			<tr class="visible-xs">
+				<td class="text-center"><strong>Tổng: 1000000000</strong></td>
+
+			</tr>
+			<tr>
+				<td><a routerLink="/products" class="btn btn-warning"><i class="fa fa-angle-left"></i>Tiếp tục mua
+						sắm</a></td>
+				<td><a href="#" class="btn btn-success btn-block">Thanh toán <i class="fa fa-angle-right"></i></a></td>
+			</tr>
+		</tfoot>
+	</table>
+</div>
