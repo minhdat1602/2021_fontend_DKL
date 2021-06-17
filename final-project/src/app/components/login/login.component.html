@@ -1,33 +1,54 @@
+<p>login works!</p>
 <div class="login-container">
     <div class="center">
         <h1>Login</h1>
-        <form>
+        <form #loginForm="ngForm">
             <div class="txt_field">
                 <input 
-                    type="text" 
+                    type="email" 
                     required
-                    #userName
-                    >   
+                    [(ngModel)]="username"
+                    name="username"
+                    #userName=ngModel
+                    >
                 <span></span>
                 <label for="">Username</label>
             </div>
+            <p
+                class="error"
+                style="color: red;"
+                *ngIf="userName.invalid && userName.touched"
+                >
+                Username is required
+        </p>
             <div class="txt_field">
                 <input 
                     type="password" 
                     required
-                    #userPassword
+                    [(ngModel)]="password"
+                    #userPassword=ngModel
+                    name="passoword"
                     >
     
-                <span></span>
                 <label for="">Password</label>
             </div>
+            <p
+                style="color: red;"
+                *ngIf="userPassword.invalid && userPassword.touched"
+            >Password is required</p>
             <div class="pass">Forgot Password</div>
             <input 
                 type="submit" 
                 value="Login" 
+                (click)="authService.login(userName.value, userPassword.value)"
+                [disabled]="loginForm.invalid"
                 >
-            <div class="signup_link">
-                Not a member? <a routerLink="/register">Sign up</a>
+            <div 
+                class="signup_link"
+            >
+                Not a member? <a
+                 routerLink="/register"
+                 >Sign up</a>
             </div>
         </form>
     </div>
