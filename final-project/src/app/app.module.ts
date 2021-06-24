@@ -22,6 +22,8 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { CartComponent } from './components/cart/cart.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+import { SuccessComponent } from './components/success/success.component';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     RegisterComponent,
     LoginComponent,
     CartComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    PagenotfoundComponent,
+    SuccessComponent
   ],
   imports: [
     BrowserModule,
