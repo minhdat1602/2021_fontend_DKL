@@ -1,15 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+page = 1;
+  count = 0;
+  tableSize = 9;
+  tableSizesArr = [4, 8, 12];
 
-@Component({
-  selector: 'app-products-list',
-  templateUrl: './products-list.component.html',
-  styleUrls: ['./products-list.component.scss']
-})
-export class ProductsListComponent implements OnInit {
+  constructor(
+    private productsService: ProductsService,
+    public formatNumberService: FormatNumberService
+    ) { }
 
-  constructor() { }
-
+  products: any[] = [];
   ngOnInit(): void {
+    this.showData()
   }
 
-}
+  showData() {
+    this.productsService.getAllProduct().subscribe(
+      item => {
+        this.products = item
+      } 
+    )
+  }
+
+  tabSize(event: any){
+    this.page = event;
+    this.showData();
+  }  
