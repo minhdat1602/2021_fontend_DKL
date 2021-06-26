@@ -1,60 +1,76 @@
 <main class="container">
- 
-    <!-- Left Column / Headphones Image -->
-    <div class="left-column" >
-      <img 
-        data-image="red" 
-        class="active" 
-       
-        alt=""
-        >
-      <button class="left"><i class="eva eva-arrow-left"></i></button>
-      <button class="right"><i class="eva eva-arrow-right"></i></button>
+
+  <!-- Left Column / Headphones Image -->
+  <div class="left-column">
+    <img data-image="red" class="active" [src]="imgSrc[index]" alt="">
+    <button (click)="decreIndex()" class="left"><i class="eva eva-arrow-left"></i></button>
+    <button (click)="increIndex()" class="right"><i class="eva eva-arrow-right"></i></button>
+  </div>
+  <!-- Right Column -->
+
+  <div class="right-column">
+    <!-- Product Description -->
+    <div class="product-description">
+      <h1>{{ product.name }}</h1>
+      <p>{{ product.shortDescription }}</p>
     </div>
-    <!-- Right Column -->
-    <div class="right-column">
-      <!-- Product Description -->
-      <div class="product-description">
-        <h1>Beats EP</h1>
-        <p>The preferred choice of a vast range of acclaimed DJs. Punchy, bass-focused sound and high isolation. Sturdy headband and on-ear cushions suitable for live performance</p>
-      </div>
-   
-      <!-- Product Configuration -->
-      <div class="product-configuration">
-        <!-- Product Color -->
-        <div class="cable-config">
-          <span>Khả năng bán ra: </span>
-          <span>Khá</span>
-        </div>
-   
-        <!-- Cable Configuration -->
-        <div class="cable-config">
-          <span>Giá một phần: </span>
-          <span>4.000.000 VND</span>
-        </div>
 
-        <div class="cable-config">
-          <span>Tổng số phần: </span>
-          <span>50</span>
-        </div>
-        <div class="cable-config">
-          <span>Tổng giá trị: </span>
-          <span>200.000.000 VND</span>
-        </div>
-
-        <div class="cable-config">
-          <span>Số phần bạn mua: </span>
-          <input type="number" class="text-center">
-          <button ><i class="eva eva-arrow-ios-upward"></i></button>
-          <button ><i class="eva eva-arrow-ios-downward"></i></button>
-        </div>
+    <!-- Product Configuration -->
+    <div class="product-configuration">
+      <!-- Product Color -->
+      <div class="cable-config">
+        <span>Khả năng bán ra: </span>
+        <span>{{ product.status }}</span>
       </div>
-   
-      <!-- Product Pricing -->
-      <div class="product-price">
-        <span style="font-size: 16px;">Tổng giá trị</span>
-        <span style="font-size: 18px; font-weight: bolder;"></span>
-        <a href="#" class="cart-btn">Add to cart</a>
+
+      <!-- Cable Configuration -->
+      <div class="cable-config">
+        <span>Giá một phần: </span>
+        <span>{{ product.priceOfPiece }}</span>
+      </div>
+
+      <div class="cable-config">
+        <span>Tổng số phần: </span>
+        <span>{{ product.totalPieces }}</span>
+      </div>
+      <div class="cable-config">
+        <span>Số phần đã bán: </span>
+        <span>{{ product.soldPieces }}</span>
+      </div>
+      <div class="cable-config">
+        <span>Tổng giá trị: </span>
+        <span>{{ product.totalPrice }}</span>
+      </div>
+
+      <div class="cable-config">
+        <span>Số phần bạn mua: </span>
+        <input type="number" value="{{ quantities }}" class="text-center">
+        <button class="btn btn-danger" (click)="decreNum()"><i class="eva eva-arrow-ios-downward"></i></button>
+        <button class="btn btn-primary" (click)="increNum()"><i class="eva eva-arrow-ios-upward"></i></button>
+
       </div>
     </div>
-  </main>
+
+    <!-- Product Pricing -->
+    <div class="product-price">
+      <span style="font-size: 16px;">Tổng giá trị</span>
+      <span style="font-size: 18px; font-weight: bolder;">{{ (quantities *
+        product.priceOfPiece) }}</span>
+      <button class="cart-btn" (click)="addToCart()">Add to cart</button>
+    </div>
+  </div>
+
+
+</main>
+<div class="popup-success" [class.active]="showSuccessPopup">
+  <div class="icon-success">
+    <i class="eva eva-checkmark"></i>
+  </div>
+  <div class="notice">
+    <h4>Thành công</h4>
+    <p>Sản phẩm đã được thêm vào giỏ hàng thành công</p>
+  </div>
+  <div class="icon-close">
+    <button (click)="hiddenSuccessPopup()"><i class="eva eva-close"></i></button>
+  </div>
+</div>
