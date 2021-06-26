@@ -1,11 +1,19 @@
-page = 1;
+import { Component, OnInit } from '@angular/core';
+import { ProductService } from 'src/app/services/product.service'; 
+@Component({
+  selector: 'app-listproducts',
+  templateUrl: './products-list.component.html',
+  styleUrls: ['./products-list.component.scss']
+})
+export class ProductsListComponent implements OnInit {
+
+  page = 1;
   count = 0;
   tableSize = 9;
   tableSizesArr = [4, 8, 12];
 
   constructor(
-    private productsService: ProductsService,
-    public formatNumberService: FormatNumberService
+    private productService: ProductService,
     ) { }
 
   products: any[] = [];
@@ -14,7 +22,7 @@ page = 1;
   }
 
   showData() {
-    this.productsService.getAllProduct().subscribe(
+    this.productService.getAllProduct().subscribe(
       item => {
         this.products = item
       } 
@@ -25,3 +33,5 @@ page = 1;
     this.page = event;
     this.showData();
   }  
+  
+}
