@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from 'src/app/services/product.service'; 
+import { CartService } from '../../../services/cart.service';
 
 @Component({
   selector: 'app-productsingle',
@@ -37,6 +38,7 @@ export class ProductSingleComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService,
+    private cartService: CartService,
     ) { }
 
   ngOnInit(): void {
@@ -88,13 +90,38 @@ export class ProductSingleComponent implements OnInit {
 
   // format number
   
+ // format number
+  
 
- hiddenSuccessPopup(){
+  addToCart(){
+    this.product['quantity'] = this.quantities
+    this.cartService.addToCart(this.product.id, this.product)
+    this.cartNumberFunc()
+    this.showSuccessPopupFunc()
+  }
+  
+  // Increase number of items in real time
+  cartNumber: number = 0
+  cartNumberFunc() {
+    let count = 0
+    let cartValue = JSON.parse(localStorage.getItem('localCart') || '{}')
+    this.cartNumber = cartValue.length
+    for(let i = 0; i < cartValue.length; i++){
+      count += cartValue[i]['product']['quantity']
+    }
+    this.cartNumber = count
+    this.cartService.cartSubject.next(this.cartNumber)
+    console.log(this.cartNumber)
+  }
 
- }
+  showSuccessPopupFunc(){
+    this.showSuccessPopup = true
+    setTimeout(() => {
+      this.showSuccessPopup = false;
+    }, 2000)
+  }
 
-
- addToCart(){
-   
- }
+  hiddenSuccessPopup(){
+    this.showSuccessPopup = false
+  }
 }
