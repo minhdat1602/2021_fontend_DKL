@@ -156,6 +156,39 @@
   .cart-btn:hover {
     background-color: #64af3d;
   }
+.popup-success {
+  z-index: 1;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #63ab61;
+  width: 30em;
+  position: fixed;
+  top: 80%;
+  left: 0;
+  color: white;
+
+  .eva {
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 1em 0;
+
+    .eva-checkmark {
+      margin-right: 0.2em;
+      font-size: 50px;
+    }
+  }
+
+  button {
+    background-color: inherit;
+    border: none;
+    color: white;
+  }
+}
+
+.popup-success.active {
+  display: flex;
+}
   /* Responsive */
 @media (max-width: 940px) {
     .container {
