@@ -8,42 +8,27 @@
         <li><a class="active" routerLink="/">Home</a></li>
         <li><a routerLink="/products">Products</a></li>
         <li><a href="#">Contact</a></li>
-        <li><a href="#">
+        <li><a routerLink="/cart">
                 <i class="eva eva-shopping-cart"></i>
+                <span class="cart_value">{{ cartItem }}</span>
             </a></li>
         <li>
 
             <div class="dropdown">
-                <button class="btn dropdown-toggle" type="button" id="dropdownMenu2"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
                     <i class="eva eva-person"></i>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <a 
-                    class="dropdown-item"
-                    routerLink="/login"
-                    *ngIf="!authService.isLoggedIn()" 
-                    >
-                    Log in</a>
-                <a 
-                    class="dropdown-item"
-                    routerLink="/register"
-                    *ngIf="!authService.isLoggedIn()" 
-                    >
-                    Register</a>
-                <a 
-                    *ngIf="authService.isLoggedIn()" 
-                    class="dropdown-item" 
-                    href="#"
-                    >
-                    Infomation</a>
-                <a 
-                    *ngIf="authService.isLoggedIn()" 
-                    class="dropdown-item"
-                    (click)="authService.logout()"
-                    >
-                    Log
-                    out</a>
+                    <a class="dropdown-item" routerLink="/login" *ngIf="!authService.isLoggedIn()">
+                        Log in</a>
+                    <a class="dropdown-item" routerLink="/register" *ngIf="!authService.isLoggedIn()">
+                        Register</a>
+                    <a *ngIf="authService.isLoggedIn()" class="dropdown-item" href="#">
+                        Infomation</a>
+                    <a *ngIf="authService.isLoggedIn()" class="dropdown-item" (click)="authService.logout()">
+                        Log
+                        out</a>
                 </div>
             </div>
 
