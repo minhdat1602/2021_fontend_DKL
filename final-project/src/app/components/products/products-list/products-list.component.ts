@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service'; 
+import { FormatNumberService } from '../../../services/format-number.service';
 @Component({
   selector: 'app-listproducts',
   templateUrl: './products-list.component.html',
@@ -14,6 +15,7 @@ export class ProductsListComponent implements OnInit {
 
   constructor(
     private productService: ProductService,
+    public formatNumberService: FormatNumberService
     ) { }
 
   products: any[] = [];

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormatNumberService } from '../../service/format-number.service';
-import { CartService } from '../../service/cart.service';
+import { FormatNumberService } from 'src/app/services/format-number.service';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-cart',
