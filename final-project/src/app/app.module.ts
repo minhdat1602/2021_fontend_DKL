@@ -24,6 +24,9 @@ import { CartComponent } from './components/cart/cart.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { SuccessComponent } from './components/success/success.component';
+import { SearchPipe } from './pipes/search.pipe';
+import { FilterPipe } from './pipes/filter.pipe';
+import { PriceFilterPipe } from './pipes/price-filter.pipe';
 
 
 @NgModule({
@@ -37,7 +40,10 @@ import { SuccessComponent } from './components/success/success.component';
     CartComponent,
     CheckoutComponent,
     PagenotfoundComponent,
-    SuccessComponent
+    SuccessComponent,
+    SearchPipe,
+    FilterPipe,
+    PriceFilterPipe
   ],
   imports: [
     BrowserModule,
