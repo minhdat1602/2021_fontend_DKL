@@ -16,8 +16,8 @@
                             <div class="card-body">
                                 <form class="pb-3">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" name="search" id="search-text" autofocus
-                                            placeholder="Search">
+                                        <input type="text" class="form-control" [(ngModel)]="searchText" name="search"
+                                            id="search-text" autofocus placeholder="Search">
                                         <div class="input-group-append">
                                             <button class="btn btn-light" type="button"><i
                                                     class="eva eva-search"></i></button>
@@ -85,7 +85,8 @@
                         </header>
                         <div class="filter-content collapse show" id="collapse_3">
                             <div class="card-body">
-                                <input type="range" class="custom-range" min="1" max="100" name="price">
+                                <input type="range" class="custom-range" min="1" max="100" name="price"
+                                    [(ngModel)]="filterPrice" (change)="filterPriceFunc()">
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label>Min</label>
@@ -157,6 +158,8 @@
 
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-12 mb-2" *ngFor="let item of products
+                        | filter: searchText
+                        | priceFilter: priceValue
                         | paginate : {
                         itemsPerPage: tableSize,
                         currentPage: page,
