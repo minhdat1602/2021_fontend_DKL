@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from 'src/app/services/product.service'; 
 import { CartService } from '../../../services/cart.service';
+import { FormatNumberService } from '../../../services/format-number.service';
 
 @Component({
   selector: 'app-productsingle',
@@ -39,6 +40,7 @@ export class ProductSingleComponent implements OnInit {
     private route: ActivatedRoute,
     private productService: ProductService,
     private cartService: CartService,
+    public formatNumberService: FormatNumberService
     ) { }
 
   ngOnInit(): void {

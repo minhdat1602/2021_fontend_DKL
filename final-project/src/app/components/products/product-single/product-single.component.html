@@ -26,7 +26,7 @@
       <!-- Cable Configuration -->
       <div class="cable-config">
         <span>Giá một phần: </span>
-        <span>{{ product.priceOfPiece }}</span>
+        <span>{{ formatNumberService.formatNumber(product.priceOfPiece) }}</span>
       </div>
 
       <div class="cable-config">
@@ -39,7 +39,7 @@
       </div>
       <div class="cable-config">
         <span>Tổng giá trị: </span>
-        <span>{{ product.totalPrice }}</span>
+        <span>{{ formatNumberService.formatNumber(product.totalPrice) }}</span>
       </div>
 
       <div class="cable-config">
@@ -54,7 +54,7 @@
     <!-- Product Pricing -->
     <div class="product-price">
       <span style="font-size: 16px;">Tổng giá trị</span>
-      <span style="font-size: 18px; font-weight: bolder;">{{ (quantities *
+      <span style="font-size: 18px; font-weight: bolder;">{{ formatNumberService.formatNumber(quantities *
         product.priceOfPiece) }}</span>
       <button class="cart-btn" (click)="addToCart()">Add to cart</button>
     </div>
