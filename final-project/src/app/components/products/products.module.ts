@@ -8,6 +8,7 @@ import { ProductSingleComponent } from './product-single/product-single.componen
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FilterPipe } from 'src/app/pipes/filter.pipe';
 import { PriceFilterPipe } from '../../pipes/price-filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { PriceFilterPipe } from '../../pipes/price-filter.pipe';
   imports: [
     CommonModule,
     ProductsRoutingModule,
+    FormsModule,
     NgxPaginationModule,
     Ng2SearchPipeModule
   ]
