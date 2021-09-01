@@ -62,8 +62,10 @@ export class CheckoutComponent implements OnInit {
       this.router.navigate(['/success'])
       this.loadCart()
       this.cartNumberFunc()
+    } else {
+
+      this.router.navigate(['/login'])
     }
-    this.router.navigate(['/login'])
   }
 
   cartNumber: number = 0
