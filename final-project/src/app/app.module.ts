@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 // Carousel animation
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -24,6 +25,11 @@ import { CartComponent } from './components/cart/cart.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { SuccessComponent } from './components/success/success.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ProductSlideItemComponent } from './components/home/items/product-slide-item/product-slide-item.component';
+import { AngularSvgIconModule } from 'angular-svg-icon';
+import { RouterModule } from '@angular/router';
+
 
 
 @NgModule({
@@ -38,14 +44,19 @@ import { SuccessComponent } from './components/success/success.component';
     CheckoutComponent,
     PagenotfoundComponent,
     SuccessComponent,
+    ProductSlideItemComponent,
   ],
   imports: [
+    AngularSvgIconModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    RouterModule, // carousel required???
     CarouselModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
+    FontAwesomeModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
