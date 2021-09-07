@@ -63,7 +63,6 @@ export class CheckoutComponent implements OnInit {
       this.loadCart()
       this.cartNumberFunc()
     } else {
-
       this.router.navigate(['/login'])
     }
   }
