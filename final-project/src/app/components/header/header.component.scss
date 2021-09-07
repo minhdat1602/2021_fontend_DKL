@@ -1,100 +1,160 @@
-nav{
+nav {
     background-color: #282c34;
     width: 100%;
-    
-    // Responsive container
-    @media(max-width:1200px){
-        .container{
+
+    .container {
+        width: 80%;
+    }
+
+    // drawer (vertical menu)
+    @media (max-width: 1050px) {
+        .container {
             width: 100%;
+
+            .main-nav {
+                .drawer-btn {
+                    display: block;
+                }
+
+                ul.main-menu.show {
+                    transform: translateX(-20px);
+                }
+                ul.main-menu {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 50%;
+                    height: 1000%;
+                    background-color: #282c34;
+                    border-right: 1px solid #b7c9cc;
+                    opacity: 0.9;
+                    padding: 60px 40px;
+                    transform: translateX(-600px);
+                    display: flex;
+                    flex-direction: column;
+                    z-index: 100;
+
+                    .close-drawer-btn {
+                        display: block;
+                    }
+
+                    .drawer-btn fa-icon {
+                        font-size: 22px;
+                    }
+
+                    li {
+                        padding: 20px 0 !important;
+                        border-bottom: #29b35b 1px solid;
+                    }
+                    li:last-child {
+                        border-bottom: none;
+                    }
+                    .close-drawer-btn {
+                        position: absolute;
+                        top: 15px;
+                        right: 20px;
+                        fa-icon {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
         }
     }
-   
-  
 
-    .main-nav{
+    .main-nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 70px;
 
-        .nav-logo{
-           a{
+        // Đây là nút menu và nút đóng menu ẩn hiện
+        .drawer-btn {
+            display: none;
+        }
+        .close-drawer-btn {
+            display: none;
+        }
+
+        .nav-logo {
+            a {
                 color: green;
                 font-family: "PT Serif";
                 font-weight: bold;
                 font-size: 35px;
-                span{
+                text-decoration: none;
+                span {
                     color: greenyellow;
                 }
-           }
-           a{
-               text-decoration: none;
-           }
+            }
         }
 
-        ul.main-menu{
+        ul.main-menu {
             display: flex;
-            
-            li{
+
+            li {
                 padding: 0 10px;
 
-                a{
+                a {
                     font-size: 16px;
                     font-weight: bold;
                     color: #b7c9cc;
                     text-transform: uppercase;
                 }
-                a:hover{
+                a:hover {
                     text-decoration: none;
                     color: #fff;
                     cursor: pointer;
                 }
 
-                .navSelected{
-                    border-bottom: 2px solid #fff;
+                .navSelected {
+                    // border-bottom: 2px solid #fff;
                     color: #fff;
                 }
             }
         }
 
-        
-
-        ul.right-menu{
+        ul.right-menu {
             display: flex;
             align-items: center;
 
-            li{
-                padding: 0 20px;
-                
-                a{
+            li {
+                padding: 0 10px;
+
+                a {
                     color: #b7c9cc;
                     font-weight: bold;
                     font-size: 14px;
 
-                    fa-icon{
-                        font-size: 18px;
-                    }
-                    sup{
+                    sup {
                         font-weight: bold;
                         font-size: 13px;
                         padding-left: 1.5px;
                         top: -1em;
                     }
                 }
-                a:hover{
+                a:hover {
                     text-decoration: none;
                     color: #fff;
                 }
-                .navSelected{
-                    border-bottom: 2px solid #fff;
+                .navSelected {
+                    // border-bottom: 2px solid #fff;
                     color: #fff;
                 }
-               
+                button.auth-btn {
+                    color: #b7c9cc;
+                    font-weight: 600;
+                    font-size: 16px;
+
+                    fa-icon {
+                        padding-right: 5px;
+                    }
+                }
             }
         }
     }
 }
-
 
 // *{
 //     list-style-type: none;
@@ -177,7 +237,7 @@ nav{
 //             font-size: 30px;
 //             padding-left: 50px;
 //         }
-    
+
 //         ul li a {
 //             font-size: 16px;
 //         }
@@ -192,7 +252,7 @@ nav{
 //         .checkbtn{
 //             display: block;
 //         }
-    
+
 //         ul {
 //             position: fixed;
 //             width: 100%;
@@ -203,7 +263,7 @@ nav{
 //             text-align: center;
 //             transition: all .5s;
 //         }
-    
+
 //         ul li {
 //             display: block;
 //             margin: 50px 0;
@@ -223,6 +283,5 @@ nav{
 //             left: 0;
 //         }
 
-        
 //     }
 // }

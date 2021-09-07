@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MatButtonModule } from '@angular/material/button';
 
 // Carousel animation
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -29,6 +30,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProductSlideItemComponent } from './components/home/items/product-slide-item/product-slide-item.component';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { RouterModule } from '@angular/router';
+import { MaterialModule } from './material/material.module';
 
 
 
@@ -47,6 +49,7 @@ import { RouterModule } from '@angular/router';
     ProductSlideItemComponent,
   ],
   imports: [
+    MaterialModule,
     AngularSvgIconModule.forRoot(),
     BrowserModule,
     AppRoutingModule,

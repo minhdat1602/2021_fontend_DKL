@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../auth/auth.service';
 import { CartService } from '../../services/cart.service';
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart, faUser, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { KeyValue } from '@angular/common';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -12,6 +13,16 @@ import { KeyValue } from '@angular/common';
 export class HeaderComponent implements OnInit {
 
   faShoppingCart = faShoppingCart;
+  faUser = faUser;
+  faBars = faBars;
+  faTimes = faTimes;
+
+  showDrawer: boolean = false;
+  clickDrawerBtn(): void {
+    this.showDrawer = !this.showDrawer;
+  }
+
+
   menuSelected: String = "";
   menus: KeyValue<String, any>[] = [
     { key: "Trang chủ", value: "" },

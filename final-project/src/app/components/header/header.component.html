@@ -1,25 +1,41 @@
 <nav>
     <div class="container">
         <div class="main-nav">
+            <button mat-icon-button (click)="clickDrawerBtn()" class="drawer-btn drawer-btn-show">
+                <fa-icon [icon]="faBars"></fa-icon>
+            </button>
             <div class="nav-logo">
                 <a href="">Xin<span>homes</span></a>
             </div>
-            <ul class="main-menu">
+            <ul class="main-menu" [class.show]="showDrawer==true">
+                <button (click)="clickDrawerBtn()" class="close-drawer-btn" mat-icon-button>
+                    <fa-icon [icon]="faTimes"></fa-icon>
+                </button>
                 <li *ngFor="let menu of menus">
                     <a (click)="changeMenu(menu.key)" [class.navSelected]="menu.key===menuSelected"
                         [routerLink]="menu.value">{{menu.key}}</a>
                 </li>
             </ul>
             <ul class="right-menu">
-                <li><a (click)="changeMenu('login')" [class.navSelected]="'login'===menuSelected"
-                        routerLink="login">Đăng nhập</a></li>
-                <li><a (click)="changeMenu('register')" [class.navSelected]="'register'===menuSelected"
-                        routerLink="register">Đăng ký</a></li>
+
                 <li>
-                    <a (click)="changeMenu('cart')" [class.navSelected]="'cart'===menuSelected" href="cart">
-                        <fa-icon [icon]="faShoppingCart"></fa-icon>
-                        <sup>2</sup>
-                    </a>
+                    <button matBadge="5" matBadgeSize="small" matBadgeColor="warn" mat-icon-button>
+                        <a (click)="changeMenu('cart')" [class.navSelected]="'cart'===menuSelected" routerLink="cart">
+                            <fa-icon [icon]="faShoppingCart"></fa-icon>
+                        </a>
+                    </button>
+                </li>
+                <li>
+                    <mat-menu #appMenu="matMenu">
+                        <ng-template matMenuContent>
+                            <a routerLink="login"><button mat-menu-item>Đăng nhập</button></a>
+                            <a routerLink="register"><button mat-menu-item>Đăng ký</button></a>
+                        </ng-template>
+                    </mat-menu>
+                    <button class="auth-btn" mat-button [matMenuTriggerFor]="appMenu">
+                        <fa-icon [icon]="faUser"></fa-icon>
+                        <span>Minh Đạt</span>
+                    </button>
                 </li>
             </ul>
         </div>
