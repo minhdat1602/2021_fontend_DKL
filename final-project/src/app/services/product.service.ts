@@ -12,9 +12,9 @@ export class ProductService {
 
   public product?: Observable<any>;
 
-  constructor(private afDb: AngularFireDatabase) {}
-  ngOnInit(){
-    
+  constructor(private afDb: AngularFireDatabase) { }
+  ngOnInit() {
+
   }
 
   getAllProduct = () => {
