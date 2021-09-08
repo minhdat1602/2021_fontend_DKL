@@ -37,7 +37,7 @@ import { IntroduceComponent } from './components/introduce/introduce.component';
 import { MaterialModule } from './material/material.module';
 import { ProjectDescriptionComponent } from './components/project-description/project-description.component';
 
-
+import { WestPointComponent } from './components/introduce/west-point/west-point.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,8 +53,8 @@ import { ProjectDescriptionComponent } from './components/project-description/pr
     ProductSlideItemComponent,
     ProductDetailsComponent,
     IntroduceComponent,
-    ProjectDescriptionComponent
-
+    ProjectDescriptionComponent,
+    WestPointComponent
   ],
   imports: [
     MaterialModule,

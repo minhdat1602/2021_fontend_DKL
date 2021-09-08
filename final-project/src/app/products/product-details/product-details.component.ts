@@ -41,6 +41,8 @@ export class ProductDetailsComponent implements OnInit {
   fillContent() {
     return this.apartment.details;
   }
-
+  getMap(){
+    return this.apartment.project.map;
+}
 
 }

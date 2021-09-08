@@ -109,6 +109,7 @@
           "id":1,
           "name": "Xinhomes West Point",
           "location": "Gia Lâm, Hà Nội",
+          "map": "<iframe src='https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d35434.83602635765!2d105.775474058535!3d21.00752776826224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1svinhome%20west%20point!5e0!3m2!1svi!2s!4v1631081795110!5m2!1svi!2s' width='100%' height='500' style='border:0;' allowfullscreen='' loading='lazy'></iframe>",
           "flat":"https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dwfc08c515/images/VH_Westpoint/W1/Apartment/DESC/Keyplan-toa-W1.jpg",
           "imgUrl": "https://westpoint.vinhomes.vn/wp-content/uploads/2018/08/banner-1292x635.png",
           "investor":{
