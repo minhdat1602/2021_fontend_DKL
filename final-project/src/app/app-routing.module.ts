@@ -11,7 +11,7 @@ import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.co
 import {ProductDetailsComponent} from './products/product-details/product-details.component'
 
 import { IntroduceComponent } from './components/introduce/introduce.component';
-
+import {WestPointComponent} from'./components/introduce/west-point/west-point.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -23,6 +23,7 @@ const routes: Routes = [
   { path: 'introduce', component: IntroduceComponent },
   { path: 'products', loadChildren: () => import('./components/products/products.module').then(m => m.ProductsModule) },
   { path: 'product-details', component: ProductDetailsComponent},
+  {path: 'west-point-introduce', component: WestPointComponent},
   { path: '**', component: PagenotfoundComponent },
 ];
 

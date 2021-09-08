@@ -34,7 +34,7 @@ import { ProductDetailsComponent } from './products/product-details/product-deta
 
 import { IntroduceComponent } from './components/introduce/introduce.component';
 
-
+import { WestPointComponent } from './components/introduce/west-point/west-point.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +50,7 @@ import { IntroduceComponent } from './components/introduce/introduce.component';
     ProductSlideItemComponent,
     ProductDetailsComponent,
     IntroduceComponent,
-
+    WestPointComponent
   ],
   imports: [
     AngularSvgIconModule.forRoot(),

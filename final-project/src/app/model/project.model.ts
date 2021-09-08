@@ -6,15 +6,17 @@ export class Project {
     name: string;
     location: string;
     flat: string;
+    map:string;
     utilities: Utilities[];
     investor: Investor;
-    constructor(id: number, name: string, location: string,flat: string, utilities: Utilities[],investor: Investor){
+    constructor(id: number, name: string,map:string, location: string,flat: string, utilities: Utilities[],investor: Investor){
         this.id = id;
         this.name = name;
         this.location = location;
         this.utilities = utilities;
         this.investor = investor;
         this.flat = flat;
+        this.map = map;
     }
 
 }
