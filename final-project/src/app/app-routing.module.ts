@@ -7,7 +7,11 @@ import { RegisterComponent } from './components/register/register.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { SuccessComponent } from './components/success/success.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+
+import {ProductDetailsComponent} from './products/product-details/product-details.component'
+
 import { IntroduceComponent } from './components/introduce/introduce.component';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,7 +22,8 @@ const routes: Routes = [
   { path: 'success', component: SuccessComponent },
   { path: 'introduce', component: IntroduceComponent },
   { path: 'products', loadChildren: () => import('./components/products/products.module').then(m => m.ProductsModule) },
-  { path: '**', component: PagenotfoundComponent }
+  { path: 'product-details', component: ProductDetailsComponent},
+  { path: '**', component: PagenotfoundComponent },
 ];
 
 @NgModule({
