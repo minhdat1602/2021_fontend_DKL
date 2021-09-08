@@ -29,8 +29,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProductSlideItemComponent } from './components/home/items/product-slide-item/product-slide-item.component';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { RouterModule } from '@angular/router';
-
-
+import { ProductDetailsComponent } from './products/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +44,7 @@ import { RouterModule } from '@angular/router';
     PagenotfoundComponent,
     SuccessComponent,
     ProductSlideItemComponent,
+    ProductDetailsComponent,
   ],
   imports: [
     AngularSvgIconModule.forRoot(),
@@ -56,7 +56,7 @@ import { RouterModule } from '@angular/router';
     CarouselModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    FontAwesomeModule,
+    FontAwesomeModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
