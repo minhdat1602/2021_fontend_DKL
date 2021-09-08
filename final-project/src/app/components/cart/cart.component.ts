@@ -55,20 +55,21 @@ export class CartComponent implements OnInit {
     if (localStorage.getItem('localCart')) {
       this.getCartDetails = JSON.parse(localStorage.getItem('localCart') || '{}')
       this.total = this.getCartDetails.reduce((acc: any, val: any) => {
-       return acc +  (val['product']['priceOfPiece'] * val['product']['quantity'])
+        return acc + (val['product']['priceOfPiece'] * val['product']['quantity'])
       }, 0)
     }
   }
 
-  deleteItem(item: any){
-    if(localStorage.getItem('localCart')){
+  deleteItem(item: any) {
+    if (localStorage.getItem('localCart')) {
       this.getCartDetails = JSON.parse(localStorage.getItem('localCart') || '{}')
-      for(let i = 0; i < this.getCartDetails.length; i++){
-        if(item['id'] === this.getCartDetails[i]['id']){
+      for (let i = 0; i < this.getCartDetails.length; i++) {
+        if (item['id'] === this.getCartDetails[i]['id']) {
           this.getCartDetails.splice(i, 1)
           localStorage.setItem('localCart', JSON.stringify(this.getCartDetails))
           this.loadCart()
           this.cartService.cartSubject.next(this.cartNumber)
+          this.isShowWarningPopup = false
         }
       }
     }
@@ -80,7 +81,7 @@ export class CartComponent implements OnInit {
     let count = 0
     let cartValue = JSON.parse(localStorage.getItem('localCart') || '{}')
     this.cartNumber = cartValue.length
-    for(let i = 0; i < cartValue.length; i++){
+    for (let i = 0; i < cartValue.length; i++) {
       count += cartValue[i]['product']['quantity']
     }
     this.cartNumber = count
@@ -91,7 +92,7 @@ export class CartComponent implements OnInit {
     this.isShowWarningPopup = true
   }
 
-  hiddenWarningPopup(){
+  hiddenWarningPopup() {
     this.isShowWarningPopup = false
   }
 

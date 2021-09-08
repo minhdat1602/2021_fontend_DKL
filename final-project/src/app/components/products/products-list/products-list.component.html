@@ -171,8 +171,10 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{ item.name }}</h5>
                                 <p class="card-text">{{ formatNumberService.formatNumber(item.priceOfPiece) }}</p>
-                                <a routerLink="/products/{{item.id}}" class="btn btn-primary">Xem chi tiết <i
-                                        class="eva eva-arrow-forward"></i></a>
+                                <!-- <a routerLink="/products/{{item.id}}" class="btn btn-primary">Xem chi tiết <i
+                                        class="eva eva-arrow-forward"></i></a> -->
+                                <a routerLink="/product-details" class="btn btn-primary">Xem chi tiết <i
+                                class="eva eva-arrow-forward"></i></a>
                             </div>
                         </div>
                     </div>
