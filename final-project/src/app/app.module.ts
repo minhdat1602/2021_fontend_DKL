@@ -29,6 +29,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProductSlideItemComponent } from './components/home/items/product-slide-item/product-slide-item.component';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { RouterModule } from '@angular/router';
+import { IntroduceComponent } from './components/introduce/introduce.component';
 
 
 
@@ -45,6 +46,7 @@ import { RouterModule } from '@angular/router';
     PagenotfoundComponent,
     SuccessComponent,
     ProductSlideItemComponent,
+    IntroduceComponent,
   ],
   imports: [
     AngularSvgIconModule.forRoot(),
