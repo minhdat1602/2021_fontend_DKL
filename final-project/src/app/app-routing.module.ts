@@ -11,6 +11,7 @@ import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.co
 import {ProductDetailsComponent} from './products/product-details/product-details.component'
 
 import { IntroduceComponent } from './components/introduce/introduce.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'checkout', component: CheckoutComponent },
   { path: 'success', component: SuccessComponent },
   { path: 'introduce', component: IntroduceComponent },
+  { path: 'contact', component: ContactComponent },
   { path: 'products', loadChildren: () => import('./components/products/products.module').then(m => m.ProductsModule) },
   { path: 'product-details', component: ProductDetailsComponent},
   { path: '**', component: PagenotfoundComponent },

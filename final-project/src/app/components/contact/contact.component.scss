@@ -1,0 +1,130 @@
+.follow {
+  background-color: #eee;
+  position: relative;
+  min-height: 40vh;
+  padding: 5em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  .content {
+    max-width: 800px;
+    text-align: center;
+
+    h1 {
+      font-weight: 500;
+    }
+  }
+}
+
+.follow-container {
+  text-align: start;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
+
+  .contactInfo {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+
+    .box {
+      position: relative;
+      padding: 20px 0;
+      display: flex;
+
+      .icon {
+        min-width: 60px;
+        height: 60px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 22px;
+      }
+
+      .text {
+        display: flex;
+        margin-left: 20px;
+        font-size: 16px;
+        flex-direction: column;
+        font-weight: 300;
+
+        h3 {
+          font-weight: 500;
+          color: #0082e6;
+        }
+      }
+    }
+  }
+
+  .contactForm {
+      width: 40%;
+    max-width: 700px;
+    min-width: 400px;
+    padding: 40px;
+    background: #fff;
+
+    h2 {
+      font-size: 30px;
+      font-weight: 500;
+    }
+
+    .inputBox {
+      position: relative;
+      width: 100%;
+      margin-top: 10px;
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 5px 0;
+        font-size: 16px;
+        margin: 10px 0;
+        border: none;
+        border-bottom: 2px solid #333;
+        outline: none;
+        resize: none;
+      }
+
+      span {
+        position: absolute;
+        left: 0;
+        padding: 5px 0;
+        font-size: 16px;
+        margin: 10px 0;
+        pointer-events: none;
+        transition: .5s;
+        color: #666;
+      }
+
+      input:focus~span,
+      input:valid~span,
+      textarea:focus~span,
+      textarea:valid~span {
+        color: #e91e63;
+        font-size: 12px;
+        transform: translateY(-20px);
+      }
+
+      input[type="submit"] {
+        width: 100px;
+        background: #1b9bff;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 18px;
+        color: white;
+
+        &:hover {
+          background: #0082e6;
+        }
+      }
+    }
+  }
+}
