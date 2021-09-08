@@ -29,7 +29,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProductSlideItemComponent } from './components/home/items/product-slide-item/product-slide-item.component';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { RouterModule } from '@angular/router';
+
 import { ProductDetailsComponent } from './products/product-details/product-details.component';
+
+import { IntroduceComponent } from './components/introduce/introduce.component';
+
 
 @NgModule({
   declarations: [
@@ -45,6 +49,8 @@ import { ProductDetailsComponent } from './products/product-details/product-deta
     SuccessComponent,
     ProductSlideItemComponent,
     ProductDetailsComponent,
+    IntroduceComponent,
+
   ],
   imports: [
     AngularSvgIconModule.forRoot(),
