@@ -31,6 +31,7 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 import { RouterModule } from '@angular/router';
 import { IntroduceComponent } from './components/introduce/introduce.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { ProductDetailsComponent } from './products/product-details/product-details.component';
 
 
 
@@ -47,6 +48,7 @@ import { ContactComponent } from './components/contact/contact.component';
     PagenotfoundComponent,
     SuccessComponent,
     ProductSlideItemComponent,
+    ProductDetailsComponent,
     IntroduceComponent,
     ContactComponent,
   ],
@@ -60,7 +62,7 @@ import { ContactComponent } from './components/contact/contact.component';
     CarouselModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    FontAwesomeModule,
+    FontAwesomeModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
