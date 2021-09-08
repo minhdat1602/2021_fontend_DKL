@@ -1,9 +1,10 @@
-footer {
+footer{
+    position: relative;
     bottom: 0;
     width: 100%;
     height: auto;
-    padding-top: 50px;
-    background-color: #282c34;
+    padding: 50px 0px;
+    background-color: #111;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -20,8 +21,8 @@ footer {
                 color: #fff;
                 font-weight: 500;
                 margin-bottom: 15px;
-                &::before {
-                    content: "";
+                &::before{
+                    content: '';
                     position: absolute;
                     bottom: -5px;
                     left: 0;
@@ -31,33 +32,12 @@ footer {
                 }
             }
             &.aboutus {
-                width: 30%;
-                color: #b7c9cc;
-
-                .phone {
-                    margin-bottom: 10px;
-
-                    span {
-                        letter-spacing: 0.5px;
-                        padding-left: 5px;
-                    }
-                }
-                .logo {
-                    padding-bottom: 30px;
-                    color: green;
-                    font-size: 35px;
-                    font-weight: bold;
-                    font-family: "PT Serif";
-                    span {
-                        font-family: "PT Serif";
-                        color: greenyellow;
-                    }
-                }
+                width: 40%;   
             }
         }
     }
     p {
-        color: #b7c9cc;
+        color: #999;
     }
     .sci {
         margin-top: 20px;
@@ -82,12 +62,13 @@ footer {
                 }
             }
         }
+        
     }
     .quickLinks {
         position: relative;
         width: 25%;
-        ul li a {
-            color: #b7c9cc;
+        ul li a{
+            color: #999;
             text-decoration: none;
             margin-bottom: 10px;
             display: inline-block;
@@ -104,37 +85,19 @@ footer {
             li {
                 display: flex;
                 margin-bottom: 16px;
-
-                .icon-detail {
-                    svg-icon {
-                        font-size: 35px;
-                    }
-                }
-
-                .text-detail {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    padding-left: 5px;
-
-                    p {
-                        margin: 0;
-                        width: 200px;
-                    }
-                }
-
-                span:nth-child(1) {
+                span:nth-child(1){
                     color: #fff;
                     font-size: 20px;
                     margin-right: 10px;
                 }
                 span {
-                    color: #b7c9cc;
+                    color: #999;
+                    
                 }
                 a {
-                    color: #b7c9cc;
+                    color: #999;
                     &:hover {
-                        color: #fff;
+                        color: #fff
                     }
                 }
             }
@@ -144,24 +107,22 @@ footer {
 
 .copyrightText {
     width: 100%;
-    background-color: #282c34;
+    background-color: #181818;
+    padding: 8px 0;
     text-align: center;
-    padding: 15px;
-    color: #b7c9cc;
+    color: #999;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 991px){
     footer {
         .container {
             flex-direction: column;
             .sec {
-                max-width: 80%;
-                margin: 0 30px;
+               max-width: 80%;
+               margin: 0 30px;
                 margin-right: 0;
                 margin-bottom: 40px;
-                &.aboutus,
-                .quickLinks,
-                .contact {
+                &.aboutus, .quickLinks, .contact {
                     width: 100%;
                 }
             }
