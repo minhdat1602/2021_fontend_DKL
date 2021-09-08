@@ -30,6 +30,7 @@ import { ProductSlideItemComponent } from './components/home/items/product-slide
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { RouterModule } from '@angular/router';
 import { IntroduceComponent } from './components/introduce/introduce.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 
@@ -47,6 +48,7 @@ import { IntroduceComponent } from './components/introduce/introduce.component';
     SuccessComponent,
     ProductSlideItemComponent,
     IntroduceComponent,
+    ContactComponent,
   ],
   imports: [
     AngularSvgIconModule.forRoot(),
