@@ -27,9 +27,14 @@ body{
 li {
     list-style-type: none;
 }
+ul{
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style-type: none;
+}
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -46,3 +51,6 @@ input[type=number] {
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

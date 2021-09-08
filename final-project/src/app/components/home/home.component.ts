@@ -62,6 +62,15 @@ export class HomeComponent implements OnInit {
     navText: ['&#8249', '&#8250;'],
     lazyLoad: true,
     responsive: {
+      // 0: {
+      //   items: 1
+      // },
+      // 500: {
+      //   items: 2
+      // },
+      // 1000: {
+      //   items: 3
+      // },
     },
     // nav: true
   }

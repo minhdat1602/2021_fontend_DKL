@@ -34,6 +34,7 @@ import { RouterModule } from '@angular/router';
 import { ProductDetailsComponent } from './products/product-details/product-details.component';
 
 import { IntroduceComponent } from './components/introduce/introduce.component';
+import { MaterialModule } from './material/material.module';
 
 
 @NgModule({
@@ -54,6 +55,7 @@ import { IntroduceComponent } from './components/introduce/introduce.component';
 
   ],
   imports: [
+    MaterialModule,
     AngularSvgIconModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
