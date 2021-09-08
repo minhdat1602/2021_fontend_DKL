@@ -1,5 +1,3 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
 
 <header>
@@ -9,7 +7,7 @@
         <div class="search-form">
             <input type="text" placeholder="Tìm kiếm căn nhà của bạn...">
             <button>
-                <fa-icon title="Tìm kiếm"[icon]="faSearch" ></fa-icon>
+                <fa-icon title="Tìm kiếm" [icon]="faSearch"></fa-icon>
             </button>
         </div>
     </div>
@@ -38,7 +36,7 @@
         </div>
     </div>
 
-    <div class="highligh product-slide">
+    <div data-aos="fade-up" data-aos-duration="600" class="highligh product-slide">
         <div class="container">
             <h2 class="highligh-title">Bất động sản nổi bật</h2>
             <owl-carousel-o *ngIf="products" [options]="customOptions">
@@ -50,7 +48,7 @@
             </owl-carousel-o>
         </div>
     </div>
-    <div data-aos="fade-down" data-aos-duration="600" class="best-seller product-slide">
+    <div data-aos="fade-up" data-aos-duration="600" class="best-seller product-slide">
         <div class="container">
             <h2 class="best-seller-title">Căn hộ bán chạy nhất</h2>
             <owl-carousel-o *ngIf="products" [options]="customOptions">
