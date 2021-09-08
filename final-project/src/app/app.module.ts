@@ -30,9 +30,11 @@ import { ProductSlideItemComponent } from './components/home/items/product-slide
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { RouterModule } from '@angular/router';
 
+
 import { ProductDetailsComponent } from './products/product-details/product-details.component';
 
 import { IntroduceComponent } from './components/introduce/introduce.component';
+import { MaterialModule } from './material/material.module';
 
 import { WestPointComponent } from './components/introduce/west-point/west-point.component';
 @NgModule({
@@ -53,6 +55,7 @@ import { WestPointComponent } from './components/introduce/west-point/west-point
     WestPointComponent
   ],
   imports: [
+    MaterialModule,
     AngularSvgIconModule.forRoot(),
     BrowserModule,
     AppRoutingModule,

@@ -8,7 +8,7 @@ import { Product } from 'src/app/model/product';
 })
 export class ProductService {
 
-  private apiUrl = "http://localhost:3000/products";
+  private apiUrl = "http://localhost:5000/products";
   constructor(private http: HttpClient) { }
 
   fetchProducts(): Observable<Product[]> {
