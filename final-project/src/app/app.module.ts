@@ -36,7 +36,7 @@ import { ProductDetailsComponent } from './products/product-details/product-deta
 import { IntroduceComponent } from './components/introduce/introduce.component';
 import { MaterialModule } from './material/material.module';
 
-
+import { WestPointComponent } from './components/introduce/west-point/west-point.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,8 +51,8 @@ import { MaterialModule } from './material/material.module';
     SuccessComponent,
     ProductSlideItemComponent,
     ProductDetailsComponent,
-    IntroduceComponent
-
+    IntroduceComponent,
+    WestPointComponent
   ],
   imports: [
     MaterialModule,
