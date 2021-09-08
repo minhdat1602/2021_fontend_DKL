@@ -32,9 +32,6 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from './material/material.module';
 
-import { ProductDetailsComponent } from './products/product-details/product-details.component';
-
-import { IntroduceComponent } from './components/introduce/introduce.component';
 
 
 @NgModule({
@@ -50,9 +47,6 @@ import { IntroduceComponent } from './components/introduce/introduce.component';
     PagenotfoundComponent,
     SuccessComponent,
     ProductSlideItemComponent,
-    ProductDetailsComponent,
-    IntroduceComponent,
-
   ],
   imports: [
     MaterialModule,
@@ -65,7 +59,7 @@ import { IntroduceComponent } from './components/introduce/introduce.component';
     CarouselModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    FontAwesomeModule
+    FontAwesomeModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
