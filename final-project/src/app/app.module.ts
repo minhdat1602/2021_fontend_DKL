@@ -35,6 +35,7 @@ import { ProductDetailsComponent } from './products/product-details/product-deta
 
 import { IntroduceComponent } from './components/introduce/introduce.component';
 import { MaterialModule } from './material/material.module';
+import { ProjectDescriptionComponent } from './components/project-description/project-description.component';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { MaterialModule } from './material/material.module';
     SuccessComponent,
     ProductSlideItemComponent,
     ProductDetailsComponent,
-    IntroduceComponent
+    IntroduceComponent,
+    ProjectDescriptionComponent
 
   ],
   imports: [
