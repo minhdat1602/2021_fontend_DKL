@@ -9,6 +9,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FilterPipe } from 'src/app/pipes/filter.pipe';
 import { PriceFilterPipe } from '../../pipes/price-filter.pipe';
 import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     ProductsRoutingModule,
     FormsModule,
     NgxPaginationModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    FontAwesomeModule
   ]
 })
 export class ProductsModule { }

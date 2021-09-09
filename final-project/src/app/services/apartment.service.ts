@@ -6,13 +6,10 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApartmentService {
-  
+
   private apiUrl = "http://localhost:5000/apartments";
   constructor(private http: HttpClient) { }
-  fetchApartments(): Observable<Apartment[]> {
-
-    const a = this.http.get<Apartment[]>(this.apiUrl);
-    // a.subscribe((apartments) =>  console.log(apartments));
-    return a
+  fetchApartments(param: any): Observable<Apartment[]> {
+    return this.http.get<Apartment[]>(this.apiUrl + `/${param}`)
   }
 }

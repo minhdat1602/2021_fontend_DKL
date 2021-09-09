@@ -5,6 +5,7 @@ import { Product } from 'src/app/model/product';
 import { PRODUCTS } from 'src/data/data';
 import AOS from 'aos';
 import { ProductService } from 'src/app/services/product-service/product.service';
+import { Router, Navigation, NavigationStart } from '@angular/router';
 
 
 @Component({
@@ -14,7 +15,9 @@ import { ProductService } from 'src/app/services/product-service/product.service
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService) {
+
+  }
   faSearch = faSearch;
 
   typewriter_text: string = "Hạnh phúc là có người đồng hành gửi trao tin cậy";
@@ -62,6 +65,15 @@ export class HomeComponent implements OnInit {
     navText: ['&#8249', '&#8250;'],
     lazyLoad: true,
     responsive: {
+      // 0: {
+      //   items: 1
+      // },
+      // 500: {
+      //   items: 2
+      // },
+      // 1000: {
+      //   items: 3
+      // },
     },
     // nav: true
   }
