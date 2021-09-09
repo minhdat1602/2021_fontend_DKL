@@ -27,7 +27,7 @@ export class HeaderComponent implements OnInit {
   menus: KeyValue<String, any>[] = [
     { key: "Trang chủ", value: "" },
     { key: "Căn hộ", value: "products" },
-    { key: "Dự Án", value: "products" },
+    { key: "Dự Án", value: "project-description" },
     { key: "Giới Thiệu", value: "about-us" },
     { key: "Liên hệ", value: "contact" },
   ];
