@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
 import { FormatNumberService } from '../../../services/format-number.service';
 import { Product } from '../../../model/product';
+import { faBed, faLocationArrow, faChartArea, faBath, faCompass } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-listproducts',
   templateUrl: './products-list.component.html',
@@ -12,7 +13,7 @@ export class ProductsListComponent implements OnInit {
   // Pagination
   page = 1;
   count = 0;
-  tableSize = 9;
+  tableSize = 6;
   tableSizesArr = [4, 8, 12];
 
   // Search and filter
@@ -21,6 +22,13 @@ export class ProductsListComponent implements OnInit {
   priceValue: number = 100000
 
   public products: Product[] = []
+
+  // icons
+  faBed = faBed
+  faLocationArrow = faLocationArrow
+  faChartArea = faChartArea
+  faBath = faBath
+  faCompass = faCompass
 
   constructor(
     private productService: ProductService,
