@@ -14,7 +14,8 @@ export class AppComponent {
   constructor(private router: Router) {
     router.events.forEach((event) => {
       if (event instanceof NavigationStart) {
-        if (event['url'] == '/login') {
+        console.log(event['url']);
+        if (event['url'] == '/login' || event['url'] == '/west-point-introduce') {
           this.showHead = false;
         } else {
           this.showHead = true;
