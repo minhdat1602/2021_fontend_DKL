@@ -155,7 +155,6 @@
                         </div>
                     </div>
                 </header><!-- sect-heading -->
-
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-12 mb-2" *ngFor="let item of products
                         | filter: searchText
@@ -165,16 +164,18 @@
                         currentPage: page,
                         totalItems: count
                       };
-                let i = index" [class.active]="i == 1">
+                let i = index" [class.active]="i == 1
+                    ">
                         <div class="card" style="width: 16rem;">
-                            <img class="card-img-top" src={{item.img}} alt="Card image cap">
+                            <img class="card-img-top" src={{item.image}} alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">{{ item.name }}</h5>
-                                <p class="card-text">{{ formatNumberService.formatNumber(item.priceOfPiece) }}</p>
+                                <p class="card-text">{{ formatNumberService.formatNumber(item.price) }}</p>
                                 <!-- <a routerLink="/products/{{item.id}}" class="btn btn-primary">Xem chi tiết <i
                                         class="eva eva-arrow-forward"></i></a> -->
-                                <a routerLink="/product-details" class="btn btn-primary">Xem chi tiết <i
-                                class="eva eva-arrow-forward"></i></a>
+                                <a routerLink="/products/{{item.id}}" class="btn btn-primary">Xem chi tiết <i
+                                        class="eva eva-arrow-forward"></i></a>
+
                             </div>
                         </div>
                     </div>
