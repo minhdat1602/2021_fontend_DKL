@@ -15,7 +15,7 @@ export class AppComponent {
     router.events.forEach((event) => {
       if (event instanceof NavigationStart) {
         console.log(event['url']);
-        if (event['url'] == '/login') {
+        if (event['url'] == '/login' || event['url'] == '/west-point-introduce') {
           this.showHead = false;
         } else {
           this.showHead = true;
