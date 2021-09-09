@@ -28,11 +28,9 @@ export class ProductDetailsComponent implements OnInit {
 
   apartments: Apartment[] = [];
   ngOnInit(): void {
-    this.apartmentService.fetchApartments().subscribe((apartments) => {
+    this.apartmentService.fetchApartments('2').subscribe((apartments) => {
       this.apartment = apartments[0];
-      console.log(apartments);
     });
-
   }
   isFirst(img: Image) {
     return img.id == this.apartment.images[0].id;
@@ -41,8 +39,8 @@ export class ProductDetailsComponent implements OnInit {
   fillContent() {
     return this.apartment.details;
   }
-  getMap(){
+  getMap() {
     return this.apartment.project.map;
-}
+  }
 
 }

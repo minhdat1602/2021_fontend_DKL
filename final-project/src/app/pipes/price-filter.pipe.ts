@@ -13,7 +13,7 @@ export class PriceFilterPipe implements PipeTransform {
       return items
     }
     return items.filter((item) => {
-      return item.priceOfPiece > price
+      return item.price > price
     })
   }
 

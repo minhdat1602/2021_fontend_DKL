@@ -29,14 +29,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProductSlideItemComponent } from './components/home/items/product-slide-item/product-slide-item.component';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { RouterModule } from '@angular/router';
-
-
+import { ContactComponent } from './components/contact/contact.component';
 import { ProductDetailsComponent } from './products/product-details/product-details.component';
-
 import { IntroduceComponent } from './components/introduce/introduce.component';
 import { MaterialModule } from './material/material.module';
 import { ProjectDescriptionComponent } from './components/project-description/project-description.component';
-
 import { WestPointComponent } from './components/introduce/west-point/west-point.component';
 @NgModule({
   declarations: [
@@ -53,6 +50,7 @@ import { WestPointComponent } from './components/introduce/west-point/west-point
     ProductSlideItemComponent,
     ProductDetailsComponent,
     IntroduceComponent,
+    ContactComponent,
     ProjectDescriptionComponent,
     WestPointComponent
   ],
