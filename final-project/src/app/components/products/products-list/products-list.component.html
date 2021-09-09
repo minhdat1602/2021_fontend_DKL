@@ -137,26 +137,7 @@
 
             </aside> <!-- col.// -->
             <main class="col-lg-9 col-md-8 col-sm-12">
-
-                <header cla ss="border-bottom mb-4 pb-3">
-                    <div class="form-inline">
-                        <select class="mr-2 form-control">
-                            <option>Latest items</option>
-                            <option>Trending</option>
-                            <option>Most Popular</option>
-                            <option>Cheapest</option>
-                        </select>
-                        <div class="btn-group">
-                            <a href="#" class="btn btn-outline-secondary" data-toggle="tooltip" title="List view">
-                                <i class="fa fa-bars"></i></a>
-                            <a href="#" class="btn  btn-outline-secondary active" data-toggle="tooltip"
-                                title="Grid view">
-                                <i class="fa fa-th"></i></a>
-                        </div>
-                    </div>
-                </header><!-- sect-heading -->
-
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-12 mb-2" *ngFor="let item of products
                         | filter: searchText
                         | filterPrice: priceValue
@@ -165,23 +146,143 @@
                         currentPage: page,
                         totalItems: count
                       };
-                let i = index" [class.active]="i == 1">
+                let i = index" [class.active]="i == 1
+                    ">
                         <div class="card" style="width: 16rem;">
-                            <img class="card-img-top" src={{item.img}} alt="Card image cap">
+                            <img class="card-img-top" src={{item.image}} alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">{{ item.name }}</h5>
-                                <p class="card-text">{{ formatNumberService.formatNumber(item.priceOfPiece) }}</p>
-                                <!-- <a routerLink="/products/{{item.id}}" class="btn btn-primary">Xem chi tiết <i
-                                        class="eva eva-arrow-forward"></i></a> -->
-                                <a routerLink="/product-details" class="btn btn-primary">Xem chi tiết <i
-                                class="eva eva-arrow-forward"></i></a>
+                                <p class="card-text">{{ formatNumberService.formatNumber(item.price) }}</p>
+        
+                                <a routerLink="/products/{{item.id}}" class="btn btn-primary">Xem chi tiết <i
+                                        class="eva eva-arrow-forward"></i></a>
+
                             </div>
                         </div>
                     </div>
-                    <!-- col.// -->
 
 
-                </div> <!-- row end.// -->
+                </div> -->
+                <!-- <div class="container mt-5 mb-5">
+                    <div class="d-flex justify-content-center row">
+                        <div class="col-md-10">
+                            <div class="row p-2 bg-white border rounded mt-2" *ngFor="let item of products
+                        | filter: searchText
+                        | filterPrice: priceValue
+                        | paginate : {
+                        itemsPerPage: tableSize,
+                        currentPage: page,
+                        totalItems: count
+                      };
+                let i = index" [class.active]="i == 1
+                    ">
+                                <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image"
+                                        src={{item.image}}></div>
+                                <div class="col-md-6 mt-1">
+                                    <h5>{{item.name}}</h5>
+
+                                    <div class="product_description">
+                                        <div class="flex">
+                                            <div class="room-detail area-total">
+                                                <span class="">
+                                                    <fa-icon [icon]="faChartArea"></fa-icon> {{item.area}} m<sup>2</sup>
+                                                </span>
+                                            </div>
+                                            <div class="room-detail direction">
+                                                <span>
+                                                    <fa-icon [icon]="faCompass"></fa-icon> {{item.direct}}
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="flex">
+                                            <div class="room-detail bedroom-total">
+                                                <fa-icon [icon]="faBed" d-block></fa-icon>
+                                                <span>
+
+                                                    {{item.bedroom}} phòng ngủ</span>
+                                            </div>
+                                            <div class="room-detail bathroom-total">
+                                                <span>
+                                                    <fa-icon [icon]="faBath"></fa-icon> {{item.bathroom}} phòng tắm
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <h4 class="mr-1">{{formatNumberService.formatNumber(item.price) }}</h4>
+                                    </div>
+                                    <div class="d-flex flex-column mt-4">
+                                        <a class="btn btn-primary btn-sm" routerLink="/products/{{item.id}}"
+                                            type="button">Xem chi tiết</a>
+                 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+
+                <section class="light">
+                    <div class="container py-2">
+
+
+
+                        <article class="postcard light yellow" *ngFor="let item of products
+                        | filter: searchText
+                        | filterPrice: priceValue
+                        | paginate : {
+                        itemsPerPage: tableSize,
+                        currentPage: page,
+                        totalItems: count
+                      };
+                let i = index" [class.active]="i == 1
+                    ">
+                            <a class="postcard__img_link" routerLink="/products/{{item.id}}">
+                                <img class="postcard__img" src={{item.image}} alt="Image Title" />
+
+                                <div class="postcard__text t-dark">
+                                    <h1 class="postcard__title yellow"><a href="#">{{item.name}}</a></h1>
+
+                                    <div class="postcard__bar"></div>
+                                    <div class="postcard__preview-txt"
+                                        style="font-size: x-large; font-weight: 600; padding: 1em 0;">
+                                        {{formatNumberService.formatNumber(item.price)}}
+                                    </div>
+                                    <ul class="postcard__tagbox">
+                                        <li class="tag__item"><i class="fas fa-tag mr-2"></i>
+                                            <span class="">
+                                                <fa-icon [icon]="faChartArea"></fa-icon> {{item.area}} m<sup>2</sup>
+                                            </span>
+                                        </li>
+                                        <li class="tag__item"><i class="fas fa-clock mr-2"></i>
+                                            <fa-icon [icon]="faBed" d-block></fa-icon>
+                                            <span>
+
+                                                {{item.bedroom}} phòng ngủ</span>
+                                        </li>
+                                        <li class="tag__item play yellow">
+                                            <a href="#"><i class="fas fa-play mr-2"></i><span>
+                                                    <fa-icon [icon]="faBath"></fa-icon> {{item.bathroom}} phòng tắm
+                                                </span></a>
+                                        </li>
+                                        <li class="tag__item play yellow">
+                                            <a href="#"><i class="fas fa-play mr-2"></i>
+                                                <span>
+                                                    <fa-icon [icon]="faCompass"></fa-icon> {{item.direct}}
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                </section>
 
 
                 <nav class="mt-4" aria-label="Page navigation sample">

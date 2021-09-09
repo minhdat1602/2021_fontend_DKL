@@ -1,228 +1,213 @@
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 15px;
-    display: flex;
-    margin-top: 6rem !important;
-    margin-bottom: 2rem !important;
-  }
-  /* Columns */
-.left-column {
-    width: 65%;
-    position: relative;
-    .left {
-      position: absolute;
-      left: 2px;
-      top: 150px;
-      background-color: black;
-      outline: none;
-      border: none;
-      color: white;
-    }
-    .right{
-      position: absolute;
-      right: 80px;
-      top: 150px;
-      background-color: black;
-      outline: none;
-      border: none;
-      color: white;
-    }
-  }
-   
-  .right-column {
-    width: 35%;
-    margin-top: 60px;
-  }
-  /* Left Column */
-.left-column img {
-    width: 90%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: none;
-    transition: all 0.3s ease;
-  }
-   
-  .left-column img.active {
-    display: block;
-  }
-  /* Product Description */
-.product-description {
-    border-bottom: 1px solid #E1E8EE;
-    margin-bottom: 20px;
-  }
-  .product-description span {
-    font-size: 12px;
-    color: #358ED7;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+.products-information {
+  padding: 100px 0px;
+
+  a {
     text-decoration: none;
   }
-  .product-description h1 {
-    font-weight: 300;
-    font-size: 52px;
-    color: #43484D;
-    letter-spacing: -2px;
-  }
-  .product-description p {
-    font-size: 16px;
-    font-weight: 300;
-    color: #86939E;
-    line-height: 24px;
-  }
-  /* Product Color */
-.product-color {
-    margin-bottom: 30px;
-  }
-   
-  .color-choose div {
-    display: inline-block;
-  }
-   
-.cable-choose {
-    margin-bottom: 20px;
-  }
-   
-  .cable-choose button {
-    border: 2px solid #E1E8EE;
-    border-radius: 6px;
-    padding: 13px 20px;
-    font-size: 14px;
-    color: #5E6977;
-    background-color: #fff;
-    cursor: pointer;
-    transition: all .5s;
-  }
-   
-  .cable-choose button:hover,
-  .cable-choose button:active,
-  .cable-choose button:focus {
-    border: 2px solid #86939E;
-    outline: none;
-  }
-   
-  .cable-config {
-    border-bottom: 1px solid #E1E8EE;
-    margin-bottom: 20px;
-  }
-   
-  .cable-config a {
-    color: #358ED7;
-    text-decoration: none;
-    font-size: 12px;
-    position: relative;
-    margin: 10px 0;
-    display: inline-block;
-  }
-  .cable-config a:before {
-    // content: &amp;quot;?&amp;quot;;
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    border: 2px solid rgba(53, 142, 215, 0.5);
-    display: inline-block;
-    text-align: center;
-    line-height: 16px;
-    opacity: 0.5;
-    margin-right: 5px;
-  }
-  /* Product Price */
-.product-price {
-    display: flex;
-    align-items: center;
-  }
-   
-  .product-price span {
-    font-size: 26px;
-    font-weight: 300;
-    color: #43474D;
-    margin-right: 20px;
-  }
-   
-  .cart-btn {
-    display: inline-block;
-    background-color: #7DC855;
-    border-radius: 6px;
-    font-size: 16px;
-    color: #FFFFFF;
-    text-decoration: none;
-    padding: 12px 30px;
-    transition: all .5s;
-  }
-  .cart-btn:hover {
-    background-color: #64af3d;
-  }
-.popup-success {
-  z-index: 1;
-  display: none;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #63ab61;
-  width: 30em;
-  position: fixed;
-  top: 80%;
-  left: 0;
-  color: white;
 
-  .eva {
-    font-size: 30px;
-    font-weight: bolder;
-    padding: 1em 0;
-
-    .eva-checkmark {
-      margin-right: 0.2em;
-      font-size: 50px;
-    }
+  #carousel {
+    float: left;
   }
 
-  button {
-    background-color: inherit;
-    border: none;
-    color: white;
-  }
-}
+  .content-product {
+    float: left;
+    padding: 25px 25px 35px 35px;
+    box-shadow: 0 0 4px #00000038;
 
-.popup-success.active {
-  display: flex;
-}
-  /* Responsive */
-@media (max-width: 940px) {
-    .container {
-      flex-direction: column;
-      margin-top: 8em;
-    }
-   
-    .left-column,
-    .right-column {
-      width: 100%;
-      .right{
-        position: absolute;
-        right: 2px;
-        top: 150px;
-        background-color: black;
-        outline: none;
-        border: none;
-        color: white;
+    .product-project.col-12 {
+      a {
+        color: #000000c7;
+        font-size: 19px;
+        font-weight: 700;
       }
     }
-   
-    .left-column img {
-      width: 100%;
-      margin: 0 !important;
-      position: relative;
-      right: 0;
-      top: -35px;
-      left: initial;
+
+    p.product-adress a {
+      color: #585757;
+      font-size: 14px;
+    }
+
+    .line-break {
+      width: 80px;
+      height: 3px;
+      background-color: #000147;
+    }
+
+    h1.product-name.hidden-sm-down2 {
+      font-size: 26px;
+      color: black;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .product_description {
+      display: flex;
+      justify-content: space-between;
+
+      fa-icon.ng-fa-icon {
+        display: block;
+        text-align: center;
+      }
+    }
+
+    .attribute {
+      padding-top: 15px;
+
+      .price-detail-content .row {
+        padding-left: 8px;
+      }
+
+      span#lablePrice {
+        font-size: 18px;
+        font-weight: 600;
+        padding-top: 8px;
+        display: inline-block;
+      }
+
+      span#contentprice {
+        font-size: 26px;
+        color: #ff0000eb;
+        font-weight: 700;
+      }
+
+      span#lableUnitPrice {
+        font-size: 13px;
+      }
+
+      div#unitPrice {
+        margin-top: 7px;
+      }
+
+      span#contentUnitPrice {
+        color: #c47c18;
+        font-weight: 700;
+        font-size: 15px;
+      }
+
+      button#addToCart {
+        background: linear-gradient(to right, #c78a34 0%, #f4b11a 100%);
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        border-radius: 40px;
+        width: 168px;
+        height: 39px;
+        font-size: 14px;
+        line-height: 39px;
+        padding: 0;
+        margin-top: 15px;
+        border: none;
+      }
+
+      .box-bottom a {
+        background: linear-gradient(to right, #c78a34, #f4b11a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 17px;
+        font-weight: 600;
+        margin-left: -8px;
+      }
+
+      span#lableHotline {
+        font-weight: 600;
+        font-size: 16px;
+        padding-top: 4px;
+        display: inline-block;
+      }
+
+      div#hotline {
+        margin-top: 15px;
+      }
+
+      span#contentHotline {
+        color: red;
+        font-size: 20px;
+        font-weight: 700;
+      }
     }
   }
-   
-  @media (max-width: 535px) {
-    .left-column img {
-      width: 100%;
-      top: -35px;
+}
+
+.information-details {
+  margin-bottom: 100px;
+
+  h2 {
+    text-align: center;
+    font-weight: 600;
+    padding-top: 25px;
+  }
+
+  .tab-content {
+    border: 1px solid #ddd;
+    border-top: none;
+    padding: 10px 25px;
+
+    ul#utilities {
+      display: inline-block;
+
+      li {
+        width: 25%;
+        float: left;
+        margin-left: 5.5%;
+        margin-bottom: 75px;
+        height: 185px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      h3 {
+        text-align: center;
+        font-size: 20px;
+      }
+    }
+
+  }
+
+  ul.nav.nav-tabs {
+    display: flex;
+
+    li a {
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: grey;
+    }
+
+    li.active a {
+      color: #c47c18;
     }
   }
+
+  .content-pane img {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 1180px) {
+  .information-details .tab-content ul#utilities li {
+    width: 40%;
+  }
+
+  .information-details .tab-content ul#utilities h3 {
+    font-size: 20px;
+  }
+
+  .content-pane iframe {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .information-details .tab-content ul#utilities li {
+    width: 90%;
+  }
+
+  .information-details .tab-content ul#utilities h3 {
+    font-size: 15px;
+  }
+}

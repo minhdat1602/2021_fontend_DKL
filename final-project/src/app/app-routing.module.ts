@@ -7,16 +7,17 @@ import { RegisterComponent } from './components/register/register.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { SuccessComponent } from './components/success/success.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
-
 import { ProductDetailsComponent } from './products/product-details/product-details.component'
-
 import { IntroduceComponent } from './components/introduce/introduce.component';
-
 import { ContactComponent } from './components/contact/contact.component';
+<<<<<<< HEAD
 
 
 import { WestPointComponent } from './components/introduce/west-point/west-point.component';
 import { ProjectDescriptionComponent } from './components/project-description/project-description.component';
+=======
+import {WestPointComponent} from'./components/introduce/west-point/west-point.component';
+>>>>>>> 43e794db8ccf3327faa56c7b1283d7891a389e41
 
 
 const routes: Routes = [
