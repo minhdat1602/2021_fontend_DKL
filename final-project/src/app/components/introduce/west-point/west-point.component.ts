@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import AOS from 'aos';
+import { ElementRef } from '@angular/core';
+import { Renderer2 } from '@angular/core';
 @Component({
   selector: 'app-west-point',
   templateUrl: './west-point.component.html',
@@ -18,11 +20,19 @@ export class WestPointComponent implements OnInit {
       this.typewriter_display = "";
     }
   }
-  constructor() { }
+  constructor(private renderer: Renderer2, private elem: ElementRef) { 
+
+  }
+
+  hover(){
+    let elements = this.elem.nativeElement.querySelectorAll('.col-md-2');
+    console.log(elements);
+  }
 
   ngOnInit(): void {
     AOS.init();
     this.typingCallback(this);
+    this.hover();
   }
 
 }
