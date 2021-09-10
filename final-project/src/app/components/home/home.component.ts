@@ -40,9 +40,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     try {
       AOS.init();
-      console.log("a");
     } catch (e) {
-      console.log("b");
+      console.log(e)
     }
     this.typingCallback(this);
     this.getProducts();
@@ -50,9 +49,18 @@ export class HomeComponent implements OnInit {
   }
 
   products: Product[] = [];
+  bestSellerProducts: Product[] = []
   getProducts(): void {
-    console.log("fetch DATA");
-    this.productService.fetchProducts().subscribe((products) => this.products = products);
+    this.productService.fetchProducts().subscribe(
+      (products) => {
+        this.products = products
+        this.bestSellerProducts = this.products.filter(
+          (item) => {
+            return item.id % 2 === 0
+          }
+        )
+      }
+    );
   }
 
   customOptions: OwlOptions = {

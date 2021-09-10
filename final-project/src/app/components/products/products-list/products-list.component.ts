@@ -13,7 +13,7 @@ export class ProductsListComponent implements OnInit {
   // Pagination
   page = 1;
   count = 0;
-  tableSize = 6;
+  tableSize = 5;
   tableSizesArr = [4, 8, 12];
 
   // Search and filter

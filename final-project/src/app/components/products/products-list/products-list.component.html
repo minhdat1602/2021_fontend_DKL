@@ -6,12 +6,6 @@
 
                 <div class="card">
                     <article class="filter-group">
-                        <header class="card-header">
-                            <a href="#" data-toggle="collapse" data-target="#collapse_1" aria-expanded="true" class="">
-                                <i class="icon-control fa fa-chevron-down"></i>
-                                <h6 class="title">Product type</h6>
-                            </a>
-                        </header>
                         <div class="filter-content collapse show" id="collapse_1">
                             <div class="card-body">
                                 <form class="pb-3">
@@ -26,63 +20,15 @@
                                     </div>
                                 </form>
 
-                                <ul class="list-menu">
-                                    <li><a href="#">Nhà có hồ bơi</a></li>
-                                    <li><a href="#">Nhà gần sân golf</a></li>
-                                    <li><a href="#">Nhà có sân rộng</a></li>
-                                    <li><a href="#">Nhà có phòng sang trọng</a></li>
-                                    <li><a href="#">Nhà có phòng ngủ lớn</a></li>
-                                    <li><a href="#">Nhà gần mạch đường chính</a></li>
-                                    <li><a href="#">Nhà gần khu thể thao</a></li>
+                                <ul class="banner-discount">
+                                    <img src="assets/img/banner_discount.jpg" alt="">
                                 </ul>
 
                             </div> <!-- card-body.// -->
                         </div>
                     </article> <!-- filter-group  .// -->
-                    <article class="filter-group">
-                        <header class="card-header">
-                            <a href="#" data-toggle="collapse" data-target="#collapse_2" aria-expanded="true" class="">
-                                <i class="icon-control fa fa-chevron-down"></i>
-                                <h6 class="title">Brands </h6>
-                            </a>
-                        </header>
-                        <div class="filter-content collapse show" id="collapse_2">
-                            <div class="card-body">
-                                <label class="custom-control custom-checkbox">
-                                    <input type="checkbox" checked="" class="custom-control-input">
-                                    <div class="custom-control-label">Phía nam
-                                        <b class="badge badge-pill badge-light float-right">120</b>
-                                    </div>
-                                </label>
-                                <label class="custom-control custom-checkbox">
-                                    <input type="checkbox" checked="" class="custom-control-input">
-                                    <div class="custom-control-label">Phía đông
-                                        <b class="badge badge-pill badge-light float-right">15</b>
-                                    </div>
-                                </label>
-                                <label class="custom-control custom-checkbox">
-                                    <input type="checkbox" checked="" class="custom-control-input">
-                                    <div class="custom-control-label">Phía tây
-                                        <b class="badge badge-pill badge-light float-right">35</b>
-                                    </div>
-                                </label>
-                                <label class="custom-control custom-checkbox">
-                                    <input type="checkbox" checked="" class="custom-control-input">
-                                    <div class="custom-control-label">Phía bắc
-                                        <b class="badge badge-pill badge-light float-right">89</b>
-                                    </div>
-                                </label>
 
-                            </div> <!-- card-body.// -->
-                        </div>
-                    </article> <!-- filter-group .// -->
                     <article class="filter-group">
-                        <header class="card-header">
-                            <a href="#" data-toggle="collapse" data-target="#collapse_3" aria-expanded="true" class="">
-                                <i class="icon-control fa fa-chevron-down"></i>
-                                <h6 class="title">Price range </h6>
-                            </a>
-                        </header>
                         <div class="filter-content collapse show" id="collapse_3">
                             <div class="card-body">
                                 <input type="range" class="custom-range" min="1" max="100" name="price"
@@ -97,140 +43,20 @@
                                         <input class="form-control" placeholder="50.000.000 đ" type="number">
                                     </div>
                                 </div> <!-- form-row.// -->
-                                <button class="btn btn-block btn-primary">Apply</button>
                             </div><!-- card-body.// -->
                         </div>
                     </article> <!-- filter-group .// -->
                     <article class="filter-group">
-                        <header class="card-header">
-                            <a href="#" data-toggle="collapse" data-target="#collapse_5" aria-expanded="false" class="">
-                                <i class="icon-control fa fa-chevron-down"></i>
-                                <h6 class="title">More filter </h6>
-                            </a>
-                        </header>
-
-                        <div class="filter-content collapse in" id="collapse_5">
-                            <div class="card-body">
-                                <label class="custom-control custom-radio">
-                                    <input type="radio" name="myfilter_radio" checked="" class="custom-control-input">
-                                    <div class="custom-control-label">Any condition</div>
-                                </label>
-
-                                <label class="custom-control custom-radio">
-                                    <input type="radio" name="myfilter_radio" class="custom-control-input">
-                                    <div class="custom-control-label">Brand new </div>
-                                </label>
-
-                                <label class="custom-control custom-radio">
-                                    <input type="radio" name="myfilter_radio" class="custom-control-input">
-                                    <div class="custom-control-label">Used items</div>
-                                </label>
-
-                                <label class="custom-control custom-radio">
-                                    <input type="radio" name="myfilter_radio" class="custom-control-input">
-                                    <div class="custom-control-label">Very old</div>
-                                </label>
-                            </div><!-- card-body.// -->
-                        </div>
+                        <ul class="banner-discount">
+                            <img src="assets/img/banner_sale.jpg" style="padding-left: 1em;" alt="">
+                        </ul>
                     </article> <!-- filter-group .// -->
                 </div> <!-- card.// -->
 
             </aside> <!-- col.// -->
             <main class="col-lg-9 col-md-8 col-sm-12">
-                <!-- <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-12 mb-2" *ngFor="let item of products
-                        | filter: searchText
-                        | filterPrice: priceValue
-                        | paginate : {
-                        itemsPerPage: tableSize,
-                        currentPage: page,
-                        totalItems: count
-                      };
-                let i = index" [class.active]="i == 1
-                    ">
-                        <div class="card" style="width: 16rem;">
-                            <img class="card-img-top" src={{item.image}} alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ item.name }}</h5>
-                                <p class="card-text">{{ formatNumberService.formatNumber(item.price) }}</p>
-        
-                                <a routerLink="/products/{{item.id}}" class="btn btn-primary">Xem chi tiết <i
-                                        class="eva eva-arrow-forward"></i></a>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div> -->
-                <!-- <div class="container mt-5 mb-5">
-                    <div class="d-flex justify-content-center row">
-                        <div class="col-md-10">
-                            <div class="row p-2 bg-white border rounded mt-2" *ngFor="let item of products
-                        | filter: searchText
-                        | filterPrice: priceValue
-                        | paginate : {
-                        itemsPerPage: tableSize,
-                        currentPage: page,
-                        totalItems: count
-                      };
-                let i = index" [class.active]="i == 1
-                    ">
-                                <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image"
-                                        src={{item.image}}></div>
-                                <div class="col-md-6 mt-1">
-                                    <h5>{{item.name}}</h5>
-
-                                    <div class="product_description">
-                                        <div class="flex">
-                                            <div class="room-detail area-total">
-                                                <span class="">
-                                                    <fa-icon [icon]="faChartArea"></fa-icon> {{item.area}} m<sup>2</sup>
-                                                </span>
-                                            </div>
-                                            <div class="room-detail direction">
-                                                <span>
-                                                    <fa-icon [icon]="faCompass"></fa-icon> {{item.direct}}
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="flex">
-                                            <div class="room-detail bedroom-total">
-                                                <fa-icon [icon]="faBed" d-block></fa-icon>
-                                                <span>
-
-                                                    {{item.bedroom}} phòng ngủ</span>
-                                            </div>
-                                            <div class="room-detail bathroom-total">
-                                                <span>
-                                                    <fa-icon [icon]="faBath"></fa-icon> {{item.bathroom}} phòng tắm
-                                                </span>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="align-items-center align-content-center col-md-3 border-left mt-1">
-                                    <div class="d-flex flex-row align-items-center">
-                                        <h4 class="mr-1">{{formatNumberService.formatNumber(item.price) }}</h4>
-                                    </div>
-                                    <div class="d-flex flex-column mt-4">
-                                        <a class="btn btn-primary btn-sm" routerLink="/products/{{item.id}}"
-                                            type="button">Xem chi tiết</a>
-                 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
-
                 <section class="light">
                     <div class="container py-2">
-
-
-
                         <article class="postcard light yellow" *ngFor="let item of products
                         | filter: searchText
                         | filterPrice: priceValue
@@ -289,11 +115,6 @@
                     <ul class="pagination">
                         <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="tabSize($event)">
                         </pagination-controls>
-                        <!-- <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">Next</a></li> -->
                     </ul>
                 </nav>
 
@@ -303,5 +124,3 @@
 
     </div> <!-- container .//  -->
 </section>
-
-<!-- ========================= SECTION CONTENT END// ========================= -->
