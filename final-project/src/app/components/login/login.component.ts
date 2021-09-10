@@ -10,12 +10,17 @@ export class LoginComponent implements OnInit {
 
   username = '';
   password = '';
+  isActiveLoading: boolean = false;
 
   constructor(
     public authService: AuthService
   ) { }
 
   ngOnInit(): void {
+  }
+
+  activeLoading() {
+    this.isActiveLoading = true
   }
 
 }

@@ -5,6 +5,8 @@ import { ApartmentService } from 'src/app/services/apartment.service';
 import { Image } from 'src/app/model/image.model';
 import { FormatNumberService } from 'src/app/services/format-number.service';
 import { ActivatedRoute } from '@angular/router';
+import { Comment } from '../../../model/comment.model';
+import { CommentService } from '../../../services/comment.service';
 
 @Component({
   selector: 'app-productsingle',
@@ -14,17 +16,22 @@ import { ActivatedRoute } from '@angular/router';
 export class ProductSingleComponent implements OnInit {
 
   private param?: String
-
+  // Icons for UI
   faBed = faBed
   faLocationArrow = faLocationArrow
   faChartArea = faChartArea
   faBath = faBath
   faCompass = faCompass
 
+  // Comments
+  public textComment?: String = ''
+  public comment: Comment = new Comment(Date.now(), "Ẩn danh", "Không có comment")
+
   constructor(
     private apartmentService: ApartmentService,
     public formatNumberService: FormatNumberService,
     private route: ActivatedRoute,
+    public commentService: CommentService
   ) { }
 
 
@@ -35,7 +42,6 @@ export class ProductSingleComponent implements OnInit {
     this.route.params
       .subscribe(param => {
         this.param = param.id;
-        console.log(this.param)
       })
 
     this.apartmentService.fetchApartments(this.param).subscribe(
@@ -52,5 +58,21 @@ export class ProductSingleComponent implements OnInit {
   }
   getMap() {
     return this.apartment.project.map;
+  }
+
+  // For comment part
+  sendComment(comment: string) {
+    if (!comment) {
+      window.alert('Bạn phải nhập bình luận')
+    } else {
+      if (!localStorage.getItem('user')) {
+        this.comment.author = "Ẩn danh"
+      } else {
+        let user = JSON.parse(localStorage.getItem('user') || '{}')
+        this.comment.author = user['email']
+      }
+      this.comment.comment = comment
+      this.commentService.updateComment(this.param, this.comment)
+    }
   }
 }

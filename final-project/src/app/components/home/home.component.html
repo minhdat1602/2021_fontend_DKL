@@ -42,7 +42,8 @@
             <owl-carousel-o *ngIf="products" [options]="customOptions">
                 <ng-container *ngFor="let product of products">
                     <ng-template carouselSlide [id]="product.id.toString()">
-                        <app-product-slide-item primary="white" secondary="white"></app-product-slide-item>
+                        <app-product-slide-item [product]="product" primary="white" secondary="white">
+                        </app-product-slide-item>
                     </ng-template>
                 </ng-container>
             </owl-carousel-o>
@@ -52,9 +53,9 @@
         <div class="container">
             <h2 class="best-seller-title">Căn hộ bán chạy nhất</h2>
             <owl-carousel-o *ngIf="products" [options]="customOptions">
-                <ng-container *ngFor="let product of products">
+                <ng-container *ngFor="let product of bestSellerProducts">
                     <ng-template carouselSlide [id]="product.id.toString()">
-                        <app-product-slide-item></app-product-slide-item>
+                        <app-product-slide-item [product]="product"></app-product-slide-item>
                     </ng-template>
                 </ng-container>
             </owl-carousel-o>

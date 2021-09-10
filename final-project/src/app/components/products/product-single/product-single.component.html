@@ -242,3 +242,52 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+<div class="container mt-5 mb-5 comment">
+  <div class="d-flex justify-content-center row">
+    <div class="d-flex flex-column col-md-12">
+      <div class="coment-bottom bg-white p-2 px-4">
+        <form>
+          <div class="d-flex flex-row add-comment-section mt-4 mb-4">
+            <img class="img-fluid img-responsive rounded-circle mr-2" src="assets/img/person-profile.png" width="38">
+            <input type="text" class="form-control mr-3" placeholder="Bình luận ý kiến của bạn..."
+              [(ngModel)]="textComment" #comment=ngModel name="textComment">
+            <button class="btn btn-primary" type="button" (click)="sendComment(comment.value)">Comment</button>
+          </div>
+        </form>
+        <div class="commented-section mt-4">
+          <div class="d-flex flex-row align-items-center commented-user">
+            <h5 class="mr-2">Corey oates</h5>
+          </div>
+          <div class="comment-text-sm"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation
+              ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></div>
+        </div>
+        <div class="commented-section mt-4">
+          <div class="d-flex flex-row align-items-center commented-user">
+            <h5 class="mr-2">Corey oates</h5>
+          </div>
+          <div class="comment-text-sm"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation
+              ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></div>
+        </div>
+        <div class="commented-section mt-4">
+          <div class="d-flex flex-row align-items-center commented-user">
+            <h5 class="mr-2">Corey oates</h5>
+          </div>
+          <div class="comment-text-sm"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation
+              ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
