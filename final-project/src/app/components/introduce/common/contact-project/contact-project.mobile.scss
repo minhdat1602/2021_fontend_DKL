@@ -1,0 +1,38 @@
+
+@media (max-width:540px) {
+    .contact-project{
+        height: 9%;
+        width: 100%;
+        bottom: 0;
+        top: 92%;
+        .wrap{
+            position: absolute;
+            display: flex;
+            bottom: 0;
+            .facebook-contact{
+                height: 50px;
+                width: 15%;
+                margin-bottom: 0px;
+            }
+            .phone{
+                height: 50px;
+                width: 15%;
+                line-height: 55px;
+                margin-bottom: 0px;
+            }
+            .contact{
+                width: 70%;
+                height: 50px;
+                .btn.button-contact{
+                    writing-mode: horizontal-tb;
+                }
+            }
+        }
+    }
+}  
+
+
+
+
+
+
