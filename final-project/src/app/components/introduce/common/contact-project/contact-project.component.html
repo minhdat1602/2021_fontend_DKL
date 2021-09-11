@@ -1,0 +1,37 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<div class="contact-project">
+    <div class="wrap">
+        <div class="facebook-contact">
+            <a routerLink="/"><i class="fas fa-home"></i></a>
+        </div>
+        <div class="phone">
+            <a routerLink="/products"><fa-icon [icon]="faShoppingCart" ></fa-icon></a>
+        </div>
+        <div class="contact" (click)="clickContact()">
+            <div class="btn button-contact">
+                LIÊN HỆ ĐẶT MUA
+            </div>
+        </div>
+    </div>
+</div>
+<div class="form-contact" [class.appear] = "click" >
+    <div (click) = "closeForm()" class="close-btn">
+        <span class="line-one"></span>
+        <span class="line-two"></span>
+    </div>
+    <div class="main-form">
+        <div class="title">
+            <p>LIÊN HỆ ĐẶT MUA</p>
+            <p>XINHOMES WEST POINT</p>    
+        </div>
+        <div class="form-contact-project">
+            <form action="">
+                <input type="text" placeholder="Họ tên: Nguyễn Văn A">
+                <input type="email" placeholder="Email: vana@email.com">
+                <input type="text" placeholder="Số điện thoại:">
+                <textarea name="" id="" cols="30" rows="5" placeholder="Gửi lời nhắn cho chúng tôi"></textarea>
+                <input type="submit" class="btn">
+            </form>
+        </div>
+    </div>
+</div>

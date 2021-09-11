@@ -1,0 +1,241 @@
+@media(max-width: 540px){
+    .westpoint{
+        .header{
+            height: 350px;
+            .content-header {
+                h1, h2 {
+                    font-size: 35px;
+                    letter-spacing: 10px;
+                    margin-top: 50px;
+                }
+                h2{
+                    font-size: 25px;
+                    margin-top: 30px;
+                }
+            }
+        }
+        //header   
+
+        .location{
+            height: 1300px;
+            .container-fluid {  
+                .row {
+                    .left.col-xl-6 {                 
+                        iframe {
+                            right: 5%;
+                            top: 0;
+                            height: 60%;
+                        }
+                    }
+                    .right.col-xl-6 {    
+                        margin-top: -300px;   
+                        .decor-right {
+                            top: 60px;
+                        }    
+                        .content-right {
+                            padding: 65px 25px 20px 20px;
+                            h4, h2 {
+                                text-align: center;
+                                font-size: 26px;
+                                margin-top: 20px;
+                                margin-bottom: 10px;
+                            }
+                            h4 {
+                                font-size: 22px;
+                            }
+                            p {
+                                font-size: 16px;
+                                line-height: 40px;
+                                letter-spacing: 0px;
+                                word-spacing: 0;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+
+        }
+        //location
+
+        .citizen{
+            .header-content {
+                h3 {
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                }
+                h2 {
+                    font-size: 24px;
+                    color: #14254c;
+                    margin-top: 0;
+                    margin-bottom:0px;
+                
+                }
+            }
+
+
+            .content-citizen {
+                width: 90%;
+                height: 700px;
+                margin-left: 5%;
+                .decor-citizen img{
+                    width: 100px;
+                }
+                p {
+                    width: 100%;
+                    padding: 15px 15px 15px 15px;
+                    font-size: 16px;
+                    border: none;
+                    line-height: 30px;
+                }
+            }
+        }
+        //citizen
+
+        .value {
+            height: 1100px;
+            .header-content {
+                h3 {
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                }
+                h2 {
+                    font-size: 24px;
+                    color: #14254c;
+                    margin-top: 0;
+                    margin-bottom:0px;
+                
+                }
+            }
+
+            
+
+
+            .content-value.container-fluid {
+                padding: 0;
+                height: 350px;
+                .row {
+                    .col-xl-2 {
+                        padding: 0;
+                        img {
+                            width: 100%;
+                        }
+                        .order-value {
+                            bottom: 50px;
+                            p {
+                                font-size: 16px;
+                            }
+                            .box-content {
+                                height: 220px;
+                                span {
+                                    width: 100px;
+                                    font-size: 16px;
+                                    line-height: 30px;     
+                                }
+                            }
+                            
+                            .box-content::before {
+                                content: "";
+                                position: absolute;
+                                width: 50px;
+                                height: 2px;
+                                background: #ea3b3b;
+                                bottom: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+
+
+
+        
+        }
+        //value
+
+        .utility{
+            height: 800px;
+            .header-content {
+                h3 {
+                    font-size: 18px;
+                    margin-bottom: 0px;
+                }
+                h2 {
+                    font-size: 24px;
+                    color: #14254c;
+                    margin-top: 0;
+                    margin-bottom:0px;
+                
+                }
+            }
+            .content-utility {
+                .image-utility {
+                    display: none;
+                }
+                .box-text {
+                    padding: 0;
+                    transform: translateX(0%);
+                    .btn {
+                        width: 200px;
+                        height: 50px;       
+                        font-size: 16px;
+                        margin-top: 20px;
+                    }
+                    .wrap{
+                        .col-lg-6{
+                           padding-top: 15px;
+                        }
+                        p {
+                            font-size: 16px;
+                            line-height: 20px;
+                        }
+                        ul {       
+                            li {
+                                font-size: 16px;
+                                height: 40px;
+                                padding-left: 20px;
+                                list-style: none;
+                            }
+                        }
+                    }
+          
+                }
+            }
+        }
+        //utility   
+
+
+        .flat{
+            .header-content {
+                h3 {
+                    font-size: 18px;
+                    margin-bottom: 0px;
+                }
+                h2 {
+                    font-size: 24px;
+                    margin-top: 0;
+                    margin-bottom:10px;
+                
+                }
+            }
+            .content-flat {
+                width: 90%;
+                margin-left: 5%;
+                p {
+                    width: 100%;
+                    font-size: 16px;
+                    line-height: 25px;
+                }
+                h3 {
+                    font-size: 20px;
+                    letter-spacing: 2px;
+                    word-spacing: 2px;
+                }
+            }
+        }
+        
+    }
+     //westpoint
+}
