@@ -1,7 +1,7 @@
 // Banner Section
-.banner{
+.banner {
     background-image: url("/../assets/img/bg.jpg");
-    height: 94vh;
+    height: calc(100vh - 70px);
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -14,33 +14,60 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 40px;
-    z-index: -100;
+    position: relative;
+    z-index: 1;
 
-    h2{
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        // background-color: rgba(0, 0, 0, 0.6);
+        z-index: -2;
+        box-shadow: inset 80px 50px 300px #000000;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        // background-color: rgba(0, 0, 0, 0.6);
+        z-index: -2;
+        box-shadow: inset -80px -50px 300px #000000;
+    }
+
+    h2 {
         font-size: 40px;
         font-weight: bold;
-        font-family: 'EB Garamond', serif;
+        font-family: "EB Garamond", serif;
         letter-spacing: 0.03em;
         margin-bottom: 15px;
         color: #fff;
+        z-index: 2;
     }
 
-    p{
+    p {
         color: #fff;
         height: 15px;
         margin-bottom: 40px;
         font-weight: 500;
+        z-index: 2;
     }
-    
-    .search-form{
+
+    .search-form {
         display: flex;
         justify-content: space-between;
         width: 550px;
         background-color: #fff;
         border-radius: 5px;
         align-items: center;
-        
-        input{
+        z-index: 2;
+
+        input {
             padding: 13px 25px;
             font-size: 16px;
             color: #858993;
@@ -51,7 +78,7 @@
             border-radius: 5px;
         }
 
-        button{
+        button {
             height: 50px;
             box-sizing: border-box;
             padding: 0 20px;
@@ -63,113 +90,114 @@
             border-bottom-right-radius: 5px;
             border-top-right-radius: 5px;
         }
-        button:hover{
+        button:hover {
             opacity: 0.7;
         }
-        fa-icon{
+        fa-icon {
             cursor: pointer;
             font-size: 20px;
             color: #858993;
         }
     }
-    @media(max-width: 768px){
-        .welcome{
+    @media (max-width: 768px) {
+        .welcome {
             font-size: 28px !important;
         }
-        .search-form{
+        .search-form {
             width: 300px;
         }
     }
 }
 
 // Introduction Section
-.introduction{
+.introduction {
     display: flex;
     justify-content: center;
     width: 80%px;
     margin: 70px auto;
-    color: #282c34;
+    color: #252525;
 
-    .sub-intro{
+    .sub-intro {
         padding: 0 15px;
         width: 333px;
         box-sizing: border-box;
         text-align: justify;
     }
 
-    .sub1 .intro-title{
+    @media (max-width: 768px) {
+        font-size: 16px;
+        letter-spacing: 1.4px;
+    }
+
+    .sub1 .intro-title {
         font-weight: bold;
         font-size: 25px;
         line-height: 1.2em;
         text-transform: uppercase;
         margin-bottom: 5px;
-        font-family: 'EB Garamond', serif;
+        font-family: "EB Garamond", serif;
     }
 
-    .sub3 .sub-intro-btn{
+    .sub3 .sub-intro-btn {
         font-weight: bold;
         color: indigo;
         text-decoration: none;
         float: right;
     }
-    .sub3 .sub-intro-btn:hover{
+    .sub3 .sub-intro-btn:hover {
         text-decoration: underline;
     }
 }
-@media(max-width: 768px){
-    .introduction{
+@media (max-width: 768px) {
+    .introduction {
         display: block;
 
-        .sub-intro{
+        .sub-intro {
             width: auto;
             margin: 10px auto;
             padding: 0 10px;
         }
     }
 }
-@media(max-width: 768px){
-   
+@media (max-width: 768px) {
 }
 
 // Carousel list product bess-seller
-@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
-@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+@import "~ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+@import "~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
 
 // Carousel best-seller
 
+.highligh {
+    background-color: #162b75;
+    opacity: 0.9;
+    color: #fff;
+    background-image: url("https://stay.vinhomes.vn/on/demandware.static/Sites-vhm_leasing_en-Site/-/vi_VN/v1629454430659/images/leasing/hompage-bg-slider.png");
+    background-position: center;
+    object-fit: cover;
+    width: 100%;
+    // height: 100%;
+}
 
-    .highligh{
-        background-color: #162b75;
-        opacity: 0.9;
-        color: #fff;
-        background-image: url("https://stay.vinhomes.vn/on/demandware.static/Sites-vhm_leasing_en-Site/-/vi_VN/v1629454430659/images/leasing/hompage-bg-slider.png");
-        background-position: center;
-        object-fit: cover;  
-        width: 100%;
-        height: 100%;
+.best-seller {
+    background-color: #fff;
+}
+
+.product-slide {
+    padding: 60px 0;
+
+    .container {
+        width: 80%;
+        margin: auto;
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: bold;
+            font-size: 35px;
+            font-family: "EB Garamond", serif;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
     }
-
-    .best-seller{
-        background-color: #fff;
-    }
-
-    .product-slide{
-        padding: 60px 0;
-
-        .container{
-            width: 80%;
-            margin: auto;
-    
-            h2{
-                text-align: center;
-                margin-bottom: 30px;
-                font-weight: bold;
-                font-size: 35px;
-                font-family: 'EB Garamond', serif;
-                letter-spacing: 0.03em;
-                text-transform: uppercase;
-            }
-    }
-    
-}   
-
+}

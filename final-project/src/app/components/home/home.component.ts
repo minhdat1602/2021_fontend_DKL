@@ -68,10 +68,10 @@ export class HomeComponent implements OnInit {
       // 0: {
       //   items: 1
       // },
-      // 500: {
+      // 768: {
       //   items: 2
       // },
-      // 1000: {
+      // 1024: {
       //   items: 3
       // },
     },
