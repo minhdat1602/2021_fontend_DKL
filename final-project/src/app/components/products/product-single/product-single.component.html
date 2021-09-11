@@ -114,7 +114,7 @@
             </div>
             <div class="row">
               <div class="col">
-                <button id="addToCart" class="btn btn-primary">Mua online ngay</button>
+                <button id="addToCart" (click)="addToCart(apartment)" class="btn btn-primary">Mua online ngay</button>
               </div>
             </div>
             <div class="box-support">
@@ -254,39 +254,17 @@
             <img class="img-fluid img-responsive rounded-circle mr-2" src="assets/img/person-profile.png" width="38">
             <input type="text" class="form-control mr-3" placeholder="Bình luận ý kiến của bạn..."
               [(ngModel)]="textComment" #comment=ngModel name="textComment">
-            <button class="btn btn-primary" type="button" (click)="sendComment(comment.value)">Comment</button>
+            <button class="btn btn-primary" type="button"
+              (click)="sendComment(apartment, comment.value)">Comment</button>
           </div>
         </form>
-        <div class="commented-section mt-4">
+        <div class="commented-section mt-4" *ngFor="let comment of apartment.comments">
           <div class="d-flex flex-row align-items-center commented-user">
-            <h5 class="mr-2">Corey oates</h5>
+            <h5 class="mr-2">{{comment.author}}</h5>
           </div>
-          <div class="comment-text-sm"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation
-              ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></div>
+          <div class="comment-text-sm"><span>{{comment.comment}}</span></div>
         </div>
-        <div class="commented-section mt-4">
-          <div class="d-flex flex-row align-items-center commented-user">
-            <h5 class="mr-2">Corey oates</h5>
-          </div>
-          <div class="comment-text-sm"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation
-              ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></div>
-        </div>
-        <div class="commented-section mt-4">
-          <div class="d-flex flex-row align-items-center commented-user">
-            <h5 class="mr-2">Corey oates</h5>
-          </div>
-          <div class="comment-text-sm"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation
-              ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></div>
-        </div>
+
       </div>
     </div>
   </div>

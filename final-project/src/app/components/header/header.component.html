@@ -19,7 +19,7 @@
             <ul class="right-menu">
 
                 <li>
-                    <button matBadge="0" matBadgeSize="small" matBadgeColor="warn" mat-icon-button>
+                    <button matBadge={{cartItem}} matBadgeSize="small" matBadgeColor="warn" mat-icon-button>
                         <a (click)="changeMenu('cart')" [class.navSelected]="'cart'===menuSelected" routerLink="cart">
                             <fa-icon [icon]="faShoppingCart"></fa-icon>
                         </a>

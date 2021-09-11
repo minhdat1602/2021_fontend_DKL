@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { Apartment } from '../model/apartment.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Comment } from '../model/comment.model';
+import { ApartmentService } from './apartment.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,24 +11,16 @@ import { Comment } from '../model/comment.model';
 export class CommentService {
 
   constructor(
-    private httpClient: HttpClient
+    private httpClient: HttpClient,
   ) { }
 
   private apiServer = "http://localhost:5000/apartments"
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json'
-    })
-  }
+  headers = new HttpHeaders().set('Content-Type', 'application/json')
 
-  updateComment(id: any, comment: Comment) {
-    let comments = []
-    return this.httpClient.get<Comment>(`${this.apiServer}\\${id}\\comments`).subscribe(
-      (response) => {
-        comments = [...Array(response), comment]
-        return this.httpClient.post<Comment>(`${this.apiServer}\\${id}\\comments`, JSON.stringify(comments), this.httpOptions)
-      }
-    )
+  addComment(apartment: Apartment, comment: Comment) {
+    apartment.comments = [...apartment.comments, comment]
+    let API_URL = this.apiServer + `\/${apartment.id}`
+    return this.httpClient.put(API_URL, apartment, { headers: this.headers })
   }
 
 }

@@ -7,6 +7,7 @@ import { FormatNumberService } from 'src/app/services/format-number.service';
 import { ActivatedRoute } from '@angular/router';
 import { Comment } from '../../../model/comment.model';
 import { CommentService } from '../../../services/comment.service';
+import { CartService } from '../../../services/cart.service';
 
 @Component({
   selector: 'app-productsingle',
@@ -31,7 +32,8 @@ export class ProductSingleComponent implements OnInit {
     private apartmentService: ApartmentService,
     public formatNumberService: FormatNumberService,
     private route: ActivatedRoute,
-    public commentService: CommentService
+    public commentService: CommentService,
+    public cartService: CartService
   ) { }
 
 
@@ -60,8 +62,27 @@ export class ProductSingleComponent implements OnInit {
     return this.apartment.project.map;
   }
 
+  // Add to cart 
+  addToCart(apartment: Apartment) {
+    this.cartService.addToCart(apartment)
+    this.cartNumberFunc()
+  }
+
+  // Increase number of item in cart realtime
+  cartNumber: number = 0
+  cartNumberFunc() {
+    let count = 0
+    let cartValue = JSON.parse(localStorage.getItem('localCart') || '{}')
+    this.cartNumber = cartValue.length
+    for (let i = 0; i < cartValue.length; i++) {
+      count += cartValue[i].quantity
+    }
+    this.cartNumber = count
+    this.cartService.cartSubject.next(this.cartNumber)
+  }
+
   // For comment part
-  sendComment(comment: string) {
+  sendComment(apartment: Apartment, comment: string) {
     if (!comment) {
       window.alert('Bạn phải nhập bình luận')
     } else {
@@ -72,7 +93,8 @@ export class ProductSingleComponent implements OnInit {
         this.comment.author = user['email']
       }
       this.comment.comment = comment
-      this.commentService.updateComment(this.param, this.comment)
+      this.commentService.addComment(apartment, this.comment)
+      this.textComment = ''
     }
   }
 }
