@@ -9,7 +9,11 @@ import { SuccessComponent } from './components/success/success.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { ProductDetailsComponent } from './products/product-details/product-details.component'
 import { IntroduceComponent } from './components/introduce/introduce.component';
+<<<<<<< HEAD
 import { ContactComponent } from './components/contact/contact.component';
+=======
+import { ContactComponent } from './components/contact/contact.component'
+>>>>>>> 056f17c0053189462ebd2bca2de7e8341630f6f9
 
 
 import { WestPointComponent } from './components/introduce/west-point/west-point.component';

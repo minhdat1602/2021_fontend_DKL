@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import AOS from 'aos';
+import { ElementRef } from '@angular/core';
+import { Renderer2 } from '@angular/core';
 @Component({
   selector: 'app-west-point',
   templateUrl: './west-point.component.html',
-  styleUrls: ['./west-point.component.scss']
+  styleUrls: ['./west-point.pc.scss','./west-point.mobile.scss', './west-point.ipad.scss']
 })
 export class WestPointComponent implements OnInit {
   typewriter_text: string = "XINHOMES  WEST  POINT";
@@ -18,11 +20,19 @@ export class WestPointComponent implements OnInit {
       this.typewriter_display = "";
     }
   }
-  constructor() { }
+  constructor(private renderer: Renderer2, private elem: ElementRef) { 
+
+  }
+
+  hover(){
+    let elements = this.elem.nativeElement.querySelectorAll('.close-btn');
+    console.log(elements);
+  }
 
   ngOnInit(): void {
     AOS.init();
     this.typingCallback(this);
+    this.hover();
   }
 
 }

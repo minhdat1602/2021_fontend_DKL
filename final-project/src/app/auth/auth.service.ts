@@ -14,21 +14,20 @@ export class AuthService {
     private fApp: FirebaseApp,
     public afAuth: AngularFireAuth,
     private router: Router,
-  ) { 
+  ) {
     this.afAuth.authState.subscribe(user => {
-      if(user){
+      if (user) {
         this.userData = user;
         localStorage.setItem('user', JSON.stringify(this.userData))
         // JSON.parse(localStorage.getItem('user')!)
-      }else {
-        localStorage.setItem('user' ,'');
+      } else {
+        localStorage.setItem('user', '');
         // JSON.parse(localStorage.getItem('user')!)  
       }
     })
   }
 
   async login(email: string, password: string) {
-
     await this.afAuth.signInWithEmailAndPassword(email, password)
       .then((res) => {
         this.router.navigate(['..']);
@@ -41,25 +40,25 @@ export class AuthService {
 
   isLoggedIn(): boolean {
     const user = JSON.parse(localStorage.getItem('user') || '{}')
-    return (JSON.stringify(user) !== '{}' ) ? true : false;
+    return (JSON.stringify(user) !== '{}') ? true : false;
   }
 
   async logout() {
     return this.afAuth.signOut()
-    .then(() => {
-      localStorage.removeItem('user');
-      this.router.navigate(['..']);
-      window.alert('You are logged out!')
-    })
+      .then(() => {
+        localStorage.removeItem('user');
+        this.router.navigate(['..']);
+        window.alert('You are logged out!')
+      })
   }
 
-   async register(email: string, password: string){
-     return this.afAuth.createUserWithEmailAndPassword(email, password)
-     .then((result) => {
-       this.router.navigate([''])
-       window.alert('You are logged in!')
-     }).catch((error) => {
-       window.alert(error.message)
-     }) 
-   }
+  async register(email: string, password: string) {
+    return this.afAuth.createUserWithEmailAndPassword(email, password)
+      .then((result) => {
+        this.router.navigate([''])
+        window.alert('You are logged in!')
+      }).catch((error) => {
+        window.alert(error.message)
+      })
+  }
 }

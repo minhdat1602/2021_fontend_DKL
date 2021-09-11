@@ -109,3 +109,30 @@
         }
     }
 }
+.login-container {
+  height: 100%;
+  padding-bottom: 5em;
+  position: relative;
+
+  .lazyImage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #d6d6d6;
+    opacity: 60%;
+  }
+
+  .eva {
+    font-size: 100px;
+    animation: spin 1s linear infinite;
+  }
+
+  .lazyImage.active {
+    display: flex;
+  }
+}

@@ -44,6 +44,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     if (this.menuSelected === "")
       this.menuSelected = this.menus[0].key;
+    this.countItemInCart()
   }
 
   changeMenu(menu: String): void {
@@ -57,10 +58,11 @@ export class HeaderComponent implements OnInit {
     if (localStorage.getItem('localCart') != null) {
       let cartCount = JSON.parse(localStorage.getItem('localCart') || '{}')
       for (let i = 0; i < cartCount.length; i++) {
-        count += cartCount[i]['product']['quantity']
+        count += cartCount[i].quantity
       }
     }
     this.cartItem = count
+    console.log(this.cartItem)
   }
 
 }
