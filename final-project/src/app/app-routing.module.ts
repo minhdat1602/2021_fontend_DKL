@@ -14,6 +14,8 @@ import { ContactComponent } from './components/contact/contact.component'
 
 import { WestPointComponent } from './components/introduce/west-point/west-point.component';
 import { ProjectDescriptionComponent } from './components/project-description/project-description.component';
+import { QnaComponent } from './components/qna/qna.component';
+import { PrivacyComponent } from './components/privacy/privacy.component';
 
 
 const routes: Routes = [
@@ -29,6 +31,8 @@ const routes: Routes = [
   { path: 'products', loadChildren: () => import('./components/products/products.module').then(m => m.ProductsModule) },
   { path: 'product-details', component: ProductDetailsComponent },
   { path: 'west-point-introduce', component: WestPointComponent },
+  { path: 'qna', component: QnaComponent },
+  { path: 'privacy', component: PrivacyComponent },
   { path: '**', component: PagenotfoundComponent },
 ];
 
