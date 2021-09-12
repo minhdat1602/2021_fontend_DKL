@@ -3,10 +3,11 @@ footer {
     width: 100%;
     height: auto;
     padding-top: 50px;
-    background-color: #282c34;
+    background-color: #ffffff;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    border-top: 1px #282c34 solid;
 
     .container {
         max-width: 1204px;
@@ -18,7 +19,7 @@ footer {
         .sec {
             h2 {
                 position: relative;
-                color: #fff;
+                color: #282c34;
                 font-weight: 500;
                 margin-bottom: 15px;
                 &::before {
@@ -28,12 +29,12 @@ footer {
                     left: 0;
                     width: 50px;
                     height: 2px;
-                    background-color: #0082e6;
+                    background-color: #282c34;
                 }
             }
             &.aboutus {
                 width: 30%;
-                color: #b7c9cc;
+                color: #282c34;
 
                 .phone {
                     margin-bottom: 10px;
@@ -58,7 +59,7 @@ footer {
         }
     }
     p {
-        color: #b7c9cc;
+        color: #282c34;
     }
     .sci {
         margin-top: 20px;
@@ -87,14 +88,21 @@ footer {
     .quickLinks {
         position: relative;
         width: 25%;
+
+        @media (max-width: 768px) {
+            h2 {
+                width: 200px;
+            }
+        }
+
         ul li a {
-            color: #b7c9cc;
+            color: #282c34;
             text-decoration: none;
             margin-bottom: 10px;
             display: inline-block;
-            &:hover {
-                color: #fff;
-            }
+            // &:hover {
+            //     // color: #fff;
+            // }
         }
     }
     .contact {
@@ -109,6 +117,7 @@ footer {
                 .icon-detail {
                     svg-icon {
                         font-size: 35px;
+                        line-height: 35px;
                     }
                 }
 
@@ -130,10 +139,10 @@ footer {
                     margin-right: 10px;
                 }
                 span {
-                    color: #b7c9cc;
+                    color: #282c34;
                 }
                 a {
-                    color: #b7c9cc;
+                    color: #282c34;
                     &:hover {
                         color: #fff;
                     }
@@ -148,10 +157,10 @@ footer {
     background-color: #282c34;
     text-align: center;
     padding: 15px;
-    color: #b7c9cc;
+    color: #ffffff;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
     footer {
         .container {
             flex-direction: column;

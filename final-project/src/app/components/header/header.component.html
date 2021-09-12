@@ -1,8 +1,8 @@
 <nav>
     <div class="container">
         <div class="main-nav">
-            <button mat-icon-button (click)="clickDrawerBtn()" class="drawer-btn drawer-btn-show">
-                <fa-icon [icon]="faBars"></fa-icon>
+            <button class="menu-btn-resp" mat-icon-button (click)="clickDrawerBtn()" class="drawer-btn drawer-btn-show">
+                <fa-icon style="font-size: 25px" [icon]="faBars"></fa-icon>
             </button>
             <div class="nav-logo">
                 <a href="">Xin<span>homes</span></a>
@@ -19,7 +19,7 @@
             <ul class="right-menu">
 
                 <li>
-                    <button matBadge="5" matBadgeSize="small" matBadgeColor="warn" mat-icon-button>
+                    <button matBadge={{cartItem}} matBadgeSize="small" matBadgeColor="warn" mat-icon-button>
                         <a (click)="changeMenu('cart')" [class.navSelected]="'cart'===menuSelected" routerLink="cart">
                             <fa-icon [icon]="faShoppingCart"></fa-icon>
                         </a>
@@ -28,52 +28,23 @@
                 <li>
                     <mat-menu #appMenu="matMenu">
                         <ng-template matMenuContent>
-                            <a routerLink="login"><button mat-menu-item>Đăng nhập</button></a>
-                            <a routerLink="register"><button mat-menu-item>Đăng ký</button></a>
+
+                            <a *ngIf="!authService.isLoggedIn()" routerLink="login"><button mat-menu-item>Đăng
+                                    nhập</button></a>
+                            <a *ngIf="!authService.isLoggedIn()" routerLink="register"><button mat-menu-item>Đăng
+                                    ký</button></a>
+                            <a *ngIf="authService.isLoggedIn()" (click)="authService.logout()"><button
+                                    mat-menu-item>Đăng
+                                    xuất</button></a>
                         </ng-template>
                     </mat-menu>
                     <button class="auth-btn" mat-button [matMenuTriggerFor]="appMenu">
                         <fa-icon [icon]="faUser"></fa-icon>
-                        <span>Minh Đạt</span>
+                        <span *ngIf="authService.isLoggedIn()">Xin chào Minh Đạt</span>
+                        <span *ngIf="!authService.isLoggedIn()">Đăng nhập</span>
                     </button>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
-<!-- <nav>
-    <input type="checkbox" id="check">
-    <label for="check" class="checkbtn">
-        <i class="eva eva-menu"></i>
-    </label>
-    <label class="logo">LOGO</label>
-    <ul>
-        <li><a class="active" routerLink="/">Home</a></li>
-        <li><a routerLink="/products">Products</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a routerLink="/cart">
-                <i class="eva eva-shopping-cart"></i>
-                <span class="cart_value">{{ cartItem }}</span>
-            </a></li>
-        <li>
-
-            <div class="dropdown">
-                <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <i class="eva eva-person"></i>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <a class="dropdown-item" routerLink="/login" *ngIf="!authService.isLoggedIn()">
-                        Log in</a>
-                    <a class="dropdown-item" routerLink="/register" *ngIf="!authService.isLoggedIn()">
-                        Register</a>
-                    <a *ngIf="authService.isLoggedIn()" class="dropdown-item" href="#">
-                        Infomation</a>
-                    <a *ngIf="authService.isLoggedIn()" class="dropdown-item" (click)="authService.logout()">
-                        Log
-                        out</a>
-                </div>
-            </div>
-        </li>
-    </ul>
-</nav> -->

@@ -27,8 +27,8 @@ export class HeaderComponent implements OnInit {
   menus: KeyValue<String, any>[] = [
     { key: "Trang chủ", value: "" },
     { key: "Căn hộ", value: "products" },
-    { key: "Dự Án", value: "project-description" },
-    { key: "Giới Thiệu", value: "about-us" },
+    { key: "Dự án", value: "project-description" },
+    { key: "Dự án phía tây", value: "west-point-introduce" },
     { key: "Liên hệ", value: "contact" },
   ];
 
@@ -44,6 +44,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     if (this.menuSelected === "")
       this.menuSelected = this.menus[0].key;
+    this.countItemInCart()
   }
 
   changeMenu(menu: String): void {
@@ -57,10 +58,11 @@ export class HeaderComponent implements OnInit {
     if (localStorage.getItem('localCart') != null) {
       let cartCount = JSON.parse(localStorage.getItem('localCart') || '{}')
       for (let i = 0; i < cartCount.length; i++) {
-        count += cartCount[i]['product']['quantity']
+        count += cartCount[i].quantity
       }
     }
     this.cartItem = count
+    console.log(this.cartItem)
   }
 
 }

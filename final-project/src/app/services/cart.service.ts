@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 
 import { Subject } from 'rxjs'
+import { Apartment } from '../model/apartment.model';
+import { Cart } from '../model/cart.model';
 
 @Injectable({
   providedIn: 'root'
@@ -11,51 +13,46 @@ export class CartService {
 
 
   // Add to cart
-  itemsCart: any = []
+  itemsCart: Cart[] = []
   termObj = {}
-  addToCart(prodId: number, prod: any) {
-    let cart: any = {
-      id: prodId,
-      product: prod
-    }
-
+  addToCart(apartment: Apartment) {
+    let item: Cart = new Cart(apartment, 1)
     let cartDataNull = localStorage.getItem('localCart')
-
     if (cartDataNull == null) {
-      let storeDataGet: any = []
-      storeDataGet.push(cart)
+      let storeDataGet: Cart[] = []
+      storeDataGet.push(item)
       localStorage.setItem('localCart', JSON.stringify(storeDataGet))
     } else {
-      let id = prodId
+      let id = apartment.id
       let index: number = -1
       this.itemsCart = JSON.parse(localStorage.getItem('localCart') || '{}')
       for (let i = 0; i < this.itemsCart.length; i++) {
-        if (id === parseInt(this.itemsCart[i].id)) {
-          this.itemsCart[i]['product']['quantity'] += prod['quantity']
+        if (id === this.itemsCart[i].apartment.id) {
+          this.itemsCart[i].quantity = this.itemsCart[i].quantity + 1
           index = i
           break
         }
       }
-      if(index == -1){
-        this.itemsCart.push(cart)
+      if (index == -1) {
+        this.itemsCart.push(item)
         localStorage.setItem('localCart', JSON.stringify(this.itemsCart))
-      }else {
+      } else {
         localStorage.setItem('localCart', JSON.stringify(this.itemsCart))
       }
     }
     // this.cartNumberFunc()
   }
-  
+
 
   // End add to cart
-  
+
   // delete all items
-  removeAll(){
+  removeAll() {
     localStorage.removeItem('localCart');
   }
 
 
-  
+
   // end delete all items
 
 

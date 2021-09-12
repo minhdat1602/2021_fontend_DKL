@@ -1,0 +1,64 @@
+<div class="container">
+    <h1>Các câu hỏi thường gặp</h1>
+    <div class="filter">
+        <div class="filter">
+            <input type="text" placeholder="Nhập cụm từ cần tìm kiếm...">
+        </div>
+    </div>
+    <div class="account">
+        <div class="row">
+            <div class="col">
+                <h2><b>Về tài khoản</b></h2>
+                <div class="tabs">
+                    <div class="tab" *ngFor="let item of accountArray">
+                        <input type="checkbox" [id]="item.id">
+                        <label class="tab-label" [for]="item.id">{{item.id}}. {{item.question}}</label>
+                        <div class="tab-content">
+                            {{item.answer}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h2><b>Về quy trình mua BĐS online</b></h2>
+                <div class="tabs">
+                    <div class="tab" *ngFor="let item of progressArray">
+                        <input type="checkbox" [id]="item.id">
+                        <label class="tab-label" [for]="item.id">{{item.id}}. {{item.question}}</label>
+                        <div class="tab-content">
+                            {{item.answer}}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2><b>Về thanh toán</b></h2>
+                <div class="tabs">
+                    <div class="tab" *ngFor="let item of paymentArray">
+                        <input type="checkbox" [id]="item.id">
+                        <label class="tab-label" [for]="item.id">{{item.id}}. {{item.question}}</label>
+                        <div class="tab-content">
+                            {{item.answer}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h2><b>Về những vấn đề khác</b></h2>
+                <div class="tabs">
+                    <div class="tab" *ngFor="let item of otherArray">
+                        <input type="checkbox" [id]="item.id">
+                        <label class="tab-label" [for]="item.id">{{item.id}}. {{item.question}}</label>
+                        <div class="tab-content">
+                            {{item.answer}}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
