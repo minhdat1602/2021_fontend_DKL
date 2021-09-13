@@ -39,6 +39,7 @@ import { ContactProjectComponent } from './components/introduce/common/contact-p
 import { BackToTopComponent } from './components/introduce/common/back-to-top/back-to-top.component';
 import { QnaComponent } from './components/qna/qna.component';
 import { PrivacyComponent } from './components/privacy/privacy.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,7 +61,8 @@ import { PrivacyComponent } from './components/privacy/privacy.component';
     ContactProjectComponent,
     BackToTopComponent,
     QnaComponent,
-    PrivacyComponent
+    PrivacyComponent,
+    AboutUsComponent
   ],
   imports: [
     MaterialModule,
