@@ -201,16 +201,188 @@
       "image": "https://www.teahub.io/photos/full/233-2331196_dream-house-images-hd.jpg"
     }
   ],
-  "posts": [
+  "questions": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "topic": "account",
+      "question": "Tôi có thể đăng ký tài khoản Xinhomes Online như thế nào?",
+      "answer": "Để đăng ký tài khoản, Quý khách vui lòng xem hướng dẫn tại đây."
+    },
+    {
+      "id": 2,
+      "topic": "account",
+      "question": "Tôi đã đăng ký tài khoản mà không (chưa) nhận được email kích hoạt. Làm thế nào để kích hoạt tài khoản?",
+      "answer": "Sau khi chọn phương thức xác thực bằng email và đăng ký thành công, email xác thực sẽ được gửi tới địa chỉ email của Quý khách. Quý khách không nhận được email xác nhận"
+    },
+    {
+      "id": 3,
+      "topic": "account",
+      "question": "Làm thế nào khi tôi quên kích hoạt tài khoản?",
+      "answer": "Trường hợp quên kích hoạt tài khoản, Quý khách vui lòng xem hướng dẫn tại đây."
+    },
+    {
+      "id": 4,
+      "topic": "account",
+      "question": "Tôi đã đăng ký tài khoản mà không (chưa) nhận được mã OTP kích hoạt. Làm thế nào để kích hoạt tài khoản?",
+      "answer": "Trường hợp Quý khách không nhận được mã OTP, vui lòng ấn vào “Gửi lại mã OTP” ngay dưới ô “Xác nhận” để nhận mã mới."
+    },
+    {
+      "id": 5,
+      "topic": "account",
+      "question": "Tôi bị báo lỗi đăng nhập?",
+      "answer": "Trường hợp Quý khách không nhận được mã OTP, vui lòng ấn vào “Gửi lại mã OTP” ngay dưới ô “Xác nhận” để nhận mã mới."
+    },
+    {
+      "id": 6,
+      "topic": "account",
+      "question": "Làm thế nào khi tôi quên mật khẩu?",
+      "answer": "Trường hợp quên mật khẩu đăng nhập, Quý khách vui lòng xem hướng dẫn tại đây để đặt lại mật khẩu."
+    },
+    {
+      "id": 7,
+      "topic": "account",
+      "question": "Thông tin tài khoản của tôi có được bảo mật không?",
+      "answer": "Xinhomes Online cam kết các thông tin của Quý khách luôn được bảo mật. Vui lòng đọc thêm chi tiết tại Bảo mật thông tin."
+    },
+    {
+      "id": 8,
+      "topic": "account",
+      "question": "Tại sao tôi nên đăng ký tài khoản tại Xinhomes Online?",
+      "answer": "Khách hàng có tài khoản có thể dễ dàng tự mình đặt mua BĐS Vinhomes chỉ với vài thao tác đơn giản, tiết kiệm thời gian, chủ động mọi lúc, mọi nơi."
+    },
+    {
+      "id": 9,
+      "topic": "account",
+      "question": "Làm thế nào để tôi quản lý và chỉnh sửa thông tin trong tài khoản?",
+      "answer": "Để quản lý và chỉnh sửa thông tin tài khoản, Quý khách vui lòng xem hướng dẫn tại đây."
+    },
+    {
+      "id": 10,
+      "topic": "progress",
+      "question": "Tôi thấy có BĐS ở tình trạng “Xếp hàng mua”. Vậy tình trạng “Xếp hàng mua” là gì?",
+      "answer": "Khi BĐS ở tình trạng “Xếp hàng mua”, tức là đã có khách hàng khác đang/ đã đặt mua trước đó. Quý khách có thể lựa chọn “Xếp hàng mua” để chờ tới lượt đặt mua hoặc để được ưu tiên khi người đặt mua trước không tiếp tục mua. Trong trường hợp này, chúng tôi sẽ cập nhật tình trạng BĐS tới Quý khách."
+    },
+    {
+      "id": 11,
+      "topic": "progress",
+      "question": "Tôi xếp hàng mua BĐS, khi nào tôi biết mình đến lượt được đặt mua?",
+      "answer": "Vinhomes Online cung cấp thông tin về số lượng khách hàng đang xếp hàng mua BĐS và hiển thị số người đang xếp hàng mua tại thông tin BĐS trên Bảng giao dịch."
+    },
+    {
+      "id": 12,
+      "topic": "progress",
+      "question": "Tôi muốn xem thông tin của dự án mà mình quan tâm?",
+      "answer": "Để xem thông tin dự án, Quý khách vui lòng di chuột tới Thông tin dự án trên thanh menu và chọn dự án mà Quý khách quan tâm."
+    },
+    {
+      "id": 13,
+      "topic": "progress",
+      "question": "Quy trình mua BĐS trên Vinhomes Online như thế nào?",
+      "answer": "Để hiểu rõ cách thức mua BĐS trên Vinhomes Online, Quý khách vui lòng chọn “Hướng dẫn mua BĐS online” tại mục Hỗ trợ hoặc nhấn tại đây."
+    },
+    {
+      "id": 14,
+      "topic": "progress",
+      "question": "Nếu tôi điền sai thông tin Bên Mua, có cách nào để sửa lại không?",
+      "answer": "Thông tin họ và tên trên tài khoản và thông tin người đặt mua phải trùng khớp nhau. Trong trường hợp Quý khách cần thay đổi thông tin tài khoản, hãy nhấn vào Thông Tin Tài Khoản để điều chỉnh."
+    },
+    {
+      "id": 15,
+      "topic": "progress",
+      "question": "Tôi cần gặp nhân viên tư vấn để chọn mua BĐS, phương thức thanh toán, cách đặt mua BĐS online thì liên hệ như thế nào?",
+      "answer": "Để được tư vấn và hỗ trợ mua BĐS online, vui lòng liên hệ với chúng tôi theo các phương thức sau:"
+    },
+    {
+      "id": 16,
+      "topic": "progress",
+      "question": "Tôi có thể mua cùng lúc nhiều căn không?",
+      "answer": "Nhằm giúp Quý khách hàng tập trung mua được BĐS phù hợp nhất, hệ thống hiện tại không cho phép mua và thanh toán cùng lúc nhiều BĐS. Vì vậy, Quý khách vui lòng đặt mua nhiều lần nếu muốn mua nhiều căn tại một thời điểm."
+    },
+    {
+      "id": 17,
+      "topic": "payment",
+      "question": "Tôi đã đặt mua thành công nhưng chuyển tiền chậm sau 30 phút thì có được hỗ trợ không?",
+      "answer": "Nhằm đảm bảo công bằng cho mọi Khách hàng, Vinhomes Online giữ đơn hàng đã đặt trong vòng 30 phút để chờ Khách hàng thanh toán. Nếu sau 30 phút, Quý khách mới hoàn tất thanh toán thì hệ thống tự động hủy đơn hàng và mã căn đã đặt mua. Quý khách có thể đặt mua BĐS mới hoặc đặt mua lại BĐS này nếu BĐS này còn trống."
+    },
+    {
+      "id": 18,
+      "topic": "payment",
+      "question": "Tôi phát hiện mình đã tải nhầm Ủy nhiệm chi/Biên lai chuyển tiền, tôi có thể cập nhật Ủy nhiệm chi/Biên lai chuyển tiền chính xác không?",
+      "answer": "Có. Trước khi đơn hàng được xác nhận, Quý khách có thể truy cập vào Tài khoản của tôi, mục Lịch sử đơn hàng, chọn đơn hàng Quý khách đã đặt mua, xóa file đã tải và tải lại Ủy nhiệm chi/Biên lai chuyển tiền đúng. Quý khách có thể tải lên tối đa 5 file và tối đa 5 lần."
+    },
+    {
+      "id": 19,
+      "topic": "payment",
+      "question": "Xác nhận thỏa thuận đặt cọc trực tuyến trên Vinhomes Online thế nào?",
+      "answer": "Khi mua BĐS trên Vinhomes Online, Quý khách thực hiện việc xác nhận mua và xác nhận đặt cọc trực tuyến khi ấn vào nút Xác nhận tại bước nhập thông tin nhân thân (bao gồm địa chỉ thường trú, số CMND/CCCD/Hộ chiếu). Bằng cách nhấn Xác nhận, Quý khách cam kết các thông tin cung cấp là chính xác và đồng ý với các Điều kiện & Điều khoản và Chính sách bán hàng của Vinhomes."
+    },
+    {
+      "id": 20,
+      "topic": "payment",
+      "question": "Sau khi đặt cọc, nếu tôi thay đổi ý định, không muốn mua nữa, thì có được hoàn trả tiền cọc không?",
+      "answer": "Sau khi đặt cọc, theo quy định của Vinhomes Online, Quý khách KHÔNG được hoàn trả tiền cọc."
+    },
+    {
+      "id": 21,
+      "topic": "payment",
+      "question": "Tôi đã chuyển khoản thành công đến tài khoản ngân hàng chỉ định, tuy nhiên nội dung chuyển khoản tôi viết bị sai mã BĐS, tôi phải liên hệ với ai để cập nhật lại nội dung chuyển khoản?",
+      "answer": "Quý khách vui lòng liên hệ với Vinhomes Online để được hỗ trợ."
+    },
+    {
+      "id": 22,
+      "topic": "payment",
+      "question": "Tôi chuyển khoản qua Internet Banking của ngân hàng. Vậy sẽ lấy hình ảnh Ủy nhiệm chi/Biên lai chuyển tiền ở đâu?",
+      "answer": "Quý khách vui lòng truy cập lịch sử giao dịch trong tài khoản Internet Banking, xem chi tiết giao dịch, chụp màn hình giao dịch có đầy đủ các thông tin: Số tài khoản, Tên tài khoản, Số tiền giao dịch, Nội dung chuyển tiền. Hình ảnh này có giá trị tương đương với Ủy nhiệm chi/Biên lai chuyển tiền."
+    },
+    {
+      "id": 23,
+      "topic": "payment",
+      "question": "Do lỗi hệ thống tôi đã thanh toán/chuyển khoản nhiều lần cho cùng một mã BĐS, Vinhomes Online có thể xác nhận hoàn tiền cho tôi được không?",
+      "answer": "Có. Quý khách vui lòng liên hệ với chúng tôi để được hỗ trợ tra soát và hoàn tiền."
+    },
+    {
+      "id": 24,
+      "topic": "payment",
+      "question": "Tôi dùng nhiều tài khoản để chuyển đủ số tiền cọc có được không?",
+      "answer": "Có. Quý khách vui lòng đăng tải đầy đủ các Ủy nhiệm chi/Biên lai chuyển tiền trên."
+    },
+    {
+      "id": 25,
+      "topic": "payment",
+      "question": " Website cho phép tải lên tối đa 5 ảnh, nhưng tôi chuyển khoản/nộp tiền nhiều hơn 5 lần, vậy tôi cần bổ sung Ủy nhiệm chi/Biên lai chuyển tiền như thế nào?",
+      "answer": "Quý khách vui lòng đăng tải 5 file đầu tiên, các file tiếp theo Quý khách vui lòng liên hệ Vinhomes Online để được hướng dẫn bổ sung."
+    },
+    {
+      "id": 26,
+      "topic": "payment",
+      "question": "Tôi dùng nhiều tài khoản để chuyển đủ số tiền cọc có được không?",
+      "answer": "Có. Quý khách vui lòng đăng tải đầy đủ các Ủy nhiệm chi/Biên lai chuyển tiền trên."
+    },
+    {
+      "id": 27,
+      "topic": "payment",
+      "question": "Tôi chuyển khoản 50.000.000 đồng nhưng lựa chọn nhầm người nhận trả phí chuyển khoản, nên số tiền đặt cọc dưới 50.000.000 đồng. Xinhomes Online có thể hỗ trợ tôi giữ căn không?",
+      "answer": "Quý khách vui lòng chuyển khoản bổ sung số tiền thiếu và cập nhật Ủy nhiệm chi/Biên lai chuyển tiền trong vòng 30 phút. Trường hợp cần hỗ ngay trợ vui lòng liên hệ chat ngay với chúng tôi hoặc gọi hotline 1900 2323 89 (nhánh số 4)."
+    },
+    {
+      "id": 28,
+      "topic": "other",
+      "question": "Tôi đã ký Hợp đồng mua bán, tôi muốn thay đổi thông tin Bên Mua thì có được không? Thủ tục như thế nào?",
+      "answer": "Quý khách vui lòng liên hệ Vinhomes Online để được hướng dẫn chi tiết về thủ tục."
+    },
+    {
+      "id": 29,
+      "topic": "other",
+      "question": "Khách hàng người nước ngoài mua nhà tại dự án cần những điều kiện gì?",
+      "answer": "Quý khách vui lòng xem thông tin về đối tượng Khách Hàng tại Các Điều kiện và Điều khoản."
+    },
+    {
+      "id": 30,
+      "topic": "other",
+      "question": "Mua Xinhomes có được tích điểm XinID không?",
+      "answer": "Theo chính sách hiện tại, Quý khách sẽ KHÔNG được tích điểm VinID khi mua sản phẩm của Vinhomes, tuy nhiên, tất cả các khách hàng mua nhà Vinhomes sẽ được miễn phí nâng cấp hạng thẻ VinID lên hạng Khách hàng VIP và được hưởng thêm những đặc quyền dành riêng cho chủ thẻ VIP:"
     }
   ],
-  "profile": {
-    "name": "typicode"
-  },
   "apartments": [
     {
       "id": 1,
@@ -225,7 +397,7 @@
         {
           "id": 18921,
           "author": "Ẩn danh",
-          "comment": "Sản phẩm này thế nào ạ"
+          "comment": "Nhà ở khá là hiện đại, khuôn viên thoáng mát, an ninh trật tự và mọi người ở đây khá là thân thiện."
         }
       ],
       "image": "https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw776c4bfb/images/VH_Westpoint/W1/Apartment/PIM/3PN/3PN_01.jpg",

@@ -37,6 +37,9 @@ import { ProjectDescriptionComponent } from './components/project-description/pr
 import { WestPointComponent } from './components/introduce/west-point/west-point.component';
 import { ContactProjectComponent } from './components/introduce/common/contact-project/contact-project.component';
 import { BackToTopComponent } from './components/introduce/common/back-to-top/back-to-top.component';
+import { QnaComponent } from './components/qna/qna.component';
+import { PrivacyComponent } from './components/privacy/privacy.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +59,10 @@ import { BackToTopComponent } from './components/introduce/common/back-to-top/ba
     ProjectDescriptionComponent,
     WestPointComponent,
     ContactProjectComponent,
-    BackToTopComponent
+    BackToTopComponent,
+    QnaComponent,
+    PrivacyComponent,
+    AboutUsComponent
   ],
   imports: [
     MaterialModule,
