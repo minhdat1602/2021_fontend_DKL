@@ -64,5 +64,8 @@ export class HeaderComponent implements OnInit {
     this.cartItem = count
     console.log(this.cartItem)
   }
+  goToLink(url: string) {
+    window.open(url, "_blank");
+  }
 
 }
