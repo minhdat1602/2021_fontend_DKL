@@ -10,6 +10,7 @@ import { FilterPipe } from 'src/app/pipes/filter.pipe';
 import { PriceFilterPipe } from '../../pipes/price-filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LocationFilterPipe } from '../../pipes/location-filter.pipe';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ProductsListComponent,
     ProductSingleComponent,
     FilterPipe,
-    PriceFilterPipe
+    PriceFilterPipe,
+    LocationFilterPipe
   ],
   imports: [
     CommonModule,

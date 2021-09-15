@@ -25,6 +25,8 @@ export class OceanParkComponent implements OnInit {
   ];
   kientruc?: String;
 
+  location = 'ocean'
+
   ngOnInit(): void {
     AOS.init();
     this.kientruc = this.kientrucs[0];

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { AuthService } from '../../auth/auth.service';
 import { CartService } from '../../services/cart.service';
 import { faShoppingCart, faUser, faChevronDown } from '@fortawesome/free-solid-svg-icons';
@@ -21,6 +21,16 @@ export class HeaderComponent implements OnInit {
   clickDrawerBtn(): void {
     this.showDrawer = !this.showDrawer;
   }
+  // opacity header when scroll page down
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    let element = document.querySelector('.menu') as HTMLElement;
+    if (window.pageYOffset > element.clientHeight) {
+      element.classList.add('on-scroll');
+    } else {
+      element.classList.remove('on-scroll');
+    }
+  }
 
 
   menuSelected: String = "";
@@ -40,6 +50,8 @@ export class HeaderComponent implements OnInit {
       this.cartItem = data
     })
   }
+
+
 
   ngOnInit(): void {
     if (this.menuSelected === "")
@@ -63,6 +75,9 @@ export class HeaderComponent implements OnInit {
     }
     this.cartItem = count
     console.log(this.cartItem)
+  }
+  goToLink(url: string) {
+    window.open(url, "_blank");
   }
 
 }

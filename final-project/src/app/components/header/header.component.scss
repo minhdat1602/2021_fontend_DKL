@@ -2,8 +2,12 @@ nav {
     // background-color: #282c34;
     background-color: #ffffff;
     width: 100%;
-    z-index: 3;
+    z-index: 300;
+    position: fixed;
 
+    &.on-scroll {
+        opacity: 0.9;
+    }
     // &::after {
     //     content: "";
     //     position: absolute;
