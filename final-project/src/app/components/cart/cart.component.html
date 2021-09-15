@@ -3,25 +3,19 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">
-				<div class="apartment-info">
+				<div class="apartment-info" >
 					<div class="apart-img">
 						<img src="https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw776c4bfb/images/VH_Westpoint/W1/Apartment/PIM/3PN/3PN_01.jpg" alt="">
 					</div>
 					<div class="apart-name">
-						<h4>{{apartment.name}} - TÒA R1.02</h4>
+						<a href=""><h4>{{apartment.name}} - TÒA R1.02</h4></a>
+
 						<p>{{apartment.project.name}}</p>
 					</div>
-					<div class="apart-area">
-						<h4>Diện tích</h4>
-						<p>{{apartment.area}} m <sup>2</sup></p>
-					</div>
-					<div class="apart-furniture">
-						<h4>Nội thất</h4>
-						<p>{{apartment.bathroom}} <fa-icon [icon]="faBath"></fa-icon> +  {{apartment.bedroom}} <fa-icon [icon]="faBed"></fa-icon> </p>
-					</div>
+					
 					<div class="apart-price">
-						<h4>Thành tiền</h4>
-						<p class="price">2.470.931.000 <sup>đ</sup></p>
+						<h4>Gía BDS</h4>
+						<p class="price"> {{ formatNumberService.formatNumber(apartment.price)}}<sup>đ</sup></p>
 					</div>
 					<div class="remove">
 						<fa-icon [icon]="faTimes"></fa-icon>
@@ -70,8 +64,8 @@
 							</div>
 						</div>
 					</div>
-					<div class="line-total">
-						<p><b>Tổng tiền mua online</b></p>
+					<div class="line-total" style="margin-top: 15px;">
+						<p ><b>Tổng tiền mua online</b></p>
 						<p class="price"><b>{{ formatNumberService.formatNumber(totalPrice)}}<sup>đ</sup></b></p>
 					</div>
 					<div class="button-ver">

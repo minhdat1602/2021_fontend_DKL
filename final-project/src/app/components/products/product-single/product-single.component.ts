@@ -73,7 +73,7 @@ export class ProductSingleComponent implements OnInit {
     }
   }
 
-  // Increase number of item in cart realtime
+  // Increase number of item in cart realtime 
   cartNumber: number = 0
   cartNumberFunc() {
     let count = 0

@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 1,
-      "name": "S2.170606 - 1 PN Deluxe - Xinhomes Ocean Park",
+      "name": "S2.170606 - 1 PN Deluxe",
       "area": 47,
       "bedroom": 2,
       "bathroom": 1,
@@ -12,7 +12,7 @@
     },
     {
       "id": 2,
-      "name": "S3.170607 - 2 PN Deluxe - Xinhomes Ocean Park",
+      "name": "S3.170607 - 2 PN Deluxe",
       "area": 36,
       "bedroom": 2,
       "bathroom": 1,
@@ -386,7 +386,7 @@
   "apartments": [
     {
       "id": 1,
-      "name": "Căn hộ S2.170606 - 1 PN Deluxe - Xinhomes Ocean Park",
+      "name": "Căn hộ S2.170606 - 1 PN Deluxe",
       "area": 47,
       "bedroom": 2,
       "bathroom": 1,
