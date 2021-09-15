@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormatNumberService } from '../../services/format-number.service';
 
 @Component({
   selector: 'app-success',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SuccessComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public formatNumberService: FormatNumberService
+  ) { }
 
   ngOnInit(): void {
   }
