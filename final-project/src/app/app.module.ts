@@ -38,6 +38,7 @@ import { BackToTopComponent } from './components/introduce/common/back-to-top/ba
 import { QnaComponent } from './components/qna/qna.component';
 import { PrivacyComponent } from './components/privacy/privacy.component';
 import { OceanParkComponent } from './components/introduce/ocean-park/ocean-park.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 // import { AboutUsComponent } from './components/about-us/about-us.component';
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { OceanParkComponent } from './components/introduce/ocean-park/ocean-park
     BackToTopComponent,
     QnaComponent,
     PrivacyComponent,
-    OceanParkComponent
+    OceanParkComponent,
+    AboutUsComponent
     // AboutUsComponent
   ],
   imports: [
