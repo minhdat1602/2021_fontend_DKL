@@ -1,118 +1,80 @@
-<div class="container-fluid background">
-  <div class="row padding-top-20">
-    <div
-      class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-8 offset-md-1 offset-lg-1 offset-xl-2 padding-horizontal-40">
-      <div class="row">
-        <div class="col-12 main-wrapper">
-          <div class="row">
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-              <div id="template" class="row panel-wrapper">
-                <div class="col-12 panel-header basket-header">
-                  <div class="row">
-                    <div class="col-6 basket-title">
-                      <span class="description"></span><br><span class="emphasized">Thanh toán</span>
-                    </div>
-                    <div class="col-6 order-number align-right">
-                      <span class="description">Đơn hàng #</span><br><span class="emphasized">223</span>
-                    </div>
-                  </div>
-                  <div class="row column-titles padding-top-10">
-                    <div class="col-2 align-center"><span>Hình ảnh</span></div>
-                    <div class="col-5 align-center"><span>Tên</span></div>
-                    <div class="col-2 align-center"><span>Số lượng</span></div>
-                    <div class="col-3 align-right"><span>Giá</span></div>
-                  </div>
-                </div>
-                <div class="col-12 panel-body basket-body">
-                  <!-- {{#products}} -->
-                  <div class="row product">
-                    <div class="col-2 product-image"><img
-                        src="https://stay.vinhomes.vn/on/demandware.static/-/Sites-vhm_leasing_en_master/vi_VN/dw5fe2e3e9/images/Vinhomes%20Ocean%20Park/Studio/Studio_4_medium.jpg">
-                    </div>
-                    <div class="col-5">S2-....<br><span class="additional">1 căn</span></div>
-                    <div class="col-2 align-right"><span
-                        class="sub"></span>{{formatNumberService.formatNumber(900000000)}}</div>
-                    <!-- <div class="col-3 align-right"><span class="sub">{{{currency}}}</span> {{price}}</div> -->
-                  </div>
-                  <!-- {{/products}} -->
-                </div>
-                <div class="col-12 panel-footer basket-footer">
-                  <hr>
-                  <div class="row">
-                    <div class="col-4 align-right description">
-                      <div class="dive">Tạm tính</div>
-                    </div>
-                    <div class="col-8 align-right"><span
-                        class="emphasized">{{formatNumberService.formatNumber(900000000)}}</span></div>
-                    <div class="col-4 align-right description">
-                      <div class="dive">Thuế (15%)</div>
-                    </div>
-                    <div class="col-8 align-right"><span class="emphasized">{{formatNumberService.formatNumber(900000000
-                        * 15 / 100)}}</span></div>
-                    <div class="col-4 align-right description">
-                      <div class="dive">Khuyến mãi (10%)</div>
-                    </div>
-                    <div class="col-8 align-right"><span class="emphasized">{{formatNumberService.formatNumber(900000000
-                        * 10 / 100)}}</span></div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-4 align-right description">
-                      <div class="dive">Tổng</div>
-                    </div>
-                    <div class="col-8 align-right"><span
-                        class="very emphasized">{{formatNumberService.formatNumber(900000000 + (900000000 * 15 / 100) -
-                        (900000000 * 10 / 100))}}</span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-              <div class="row panel-wrapper">
-                <div class="col-12 panel-header creditcard-header">
-                  <div class="row">
-                    <div class="col-12 creditcard-title">
-                      <span class="description">Điền vào</span><br><span class="emphasized">Số ngân hàng</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 panel-body creditcard-body">
-                  <form action="#" method="post" target="_self">
-                    <fieldset>
-                      <label for="card-name">Tên người sở hữu</label><br>
-                      <i class="fa fa-user-o" aria-hidden="true"></i><input type='text' id='card-name' name='card-name'
-                        placeholder='Example' title='Name on the Card'>
-                    </fieldset>
-                    <fieldset>
-                      <label for="card-number">Mã số thẻ</label><br>
-                      <i class="fa fa-credit-card" aria-hidden="true"></i><input type='text' id='card-number'
-                        name='card-number' placeholder='1234 5678 9123 4567' title='Card Number'>
-                    </fieldset>
-                    <fieldset>
-                      <label for="card-expiration">Tên ngân hàng</label><br>
-                      <i class="fa fa-calendar" aria-hidden="true"></i><input type='text' id='card-expiration'
-                        name='card-expiration' placeholder='BIDV' title='Expiration' class="card-expiration">
-                    </fieldset>
-                    <fieldset>
-                      <label for="card-ccv">Mã ngân hàng chuyển đến</label>&nbsp;<i class="fa fa-info-circle"
-                        aria-hidden="true" data-toggle="tooltip" data-placement="right"
-                        title="The CVV Number on your credit card or debit card is a 3 digit number on VISA, MasterCard and Discover branded credit and debit cards. On your American Express branded credit or debit card it is a 4 digit numeric code."></i><br>
-                      <i class="fa fa-lock" aria-hidden="true"></i><input type='text' id='card-ccv' name='card-ccv'
-                        placeholder='19144336688666' title='CVC/CCV'>
-                    </fieldset>
-                  </form>
-                </div>
-                <div class="col-12 panel-footer creditcard-footer">
-                  <div class="row">
-                    <div class="col-12 align-right"><button class="cancel">Hủy</button>&nbsp;<button class="confirm"
-                        (click)="payment()">Thanh toán</button></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+<main>
+  <div class="basket">
+    <div class="basket-module">
+      <label for="promo-code">Enter a promotional code</label>
+      <input id="promo-code" type="text" name="promo-code" maxlength="5" class="promo-code-field">
+      <button class="promo-code-cta">Apply</button>
+    </div>
+    <div class="basket-labels">
+      <ul>
+        <li class="item item-heading">Item</li>
+        <li class="price">Price</li>
+        <li class="quantity">Quantity</li>
+        <li class="subtotal">Subtotal</li>
+      </ul>
+    </div>
+    <div class="basket-product" *ngFor="let item of localCart">
+
+      <div class="item">
+        <div class="product-image">
+          <img src="{{ item.product.img }}" alt="Placholder Image 2" class="product-frame">
+        </div>
+        <div class="product-details">
+          <h1><strong><span class="item-quantity">{{ item.product.quantity }}</span> x {{ item.product.name }}</strong>
+          </h1>
+          <!-- <p><strong>Navy, Size 18</strong></p> -->
+          <p>Product Code - 232321939</p>
         </div>
       </div>
+      <div class="price">{{ formatNumberService.formatNumber(item.product.priceOfPiece) }}</div>
+      <div class="quantity">
+        <input type="number" value="{{ item.product.quantity }}" min="1" class="quantity-field">
+      </div>
+      <div class="subtotal">{{ formatNumberService.formatNumber(item.product.priceOfPiece * item.product.quantity) }}
+      </div>
+      <div class="remove">
+        <button>Remove</button>
+      </div>
     </div>
+
   </div>
-</div>
+  <aside>
+    <div class="summary">
+      <div class="summary-total-items"><span class="total-items"></span> Items in your Bag</div>
+      <div class="summary-subtotal">
+        <div class="subtotal-title">Tạm tính</div>
+        <div class="subtotal-value final-value" id="basket-subtotal">{{ formatNumberService.formatNumber(subTotalPrice)
+          }}</div>
+        <div class="summary-promo hide">
+          <div class="promo-title">Promotion</div>
+          <div class="promo-value final-value" id="basket-promo"></div>
+        </div>
+      </div>
+      <div class="summary-subtotal">
+        <div class="subtotal-title">Giảm giá</div>
+        <div class="subtotal-value final-value" id="basket-subtotal">{{ formatNumberService.formatNumber(0)}}</div>
+        <div class="summary-promo hide">
+          <div class="promo-title">Promotion</div>
+          <div class="promo-value final-value" id="basket-promo"></div>
+        </div>
+      </div>
+      <div class="summary-delivery">
+        <div class="subtotal-title">Tax (12%)</div>
+        <div class="subtotal-value final-value" id="basket-subtotal">{{ formatNumberService.formatNumber(tax) }}</div>
+        <div class="summary-promo hide">
+          <div class="promo-title">Promotion</div>
+          <div class="promo-value final-value" id="basket-promo"></div>
+        </div>
+      </div>
+
+
+      <div class="summary-total">
+        <div class="total-title">Total</div>
+        <div class="total-value final-value" id="basket-total">{{ formatNumberService.formatNumber(total) }}</div>
+      </div>
+      <div class="summary-checkout">
+        <button class="checkout-cta" (click)="navigate()">Check out</button>
+      </div>
+    </div>
+  </aside>
+</main>

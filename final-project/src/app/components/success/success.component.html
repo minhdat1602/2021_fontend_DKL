@@ -1,38 +1,10 @@
-<div class="bg">
-
-    <div class="card">
-
-        <span class="card__success"><i class="ion-checkmark"></i></span>
-
-        <h1 class="card__msg">Giao dịch thành công</h1>
-        <h2 class="card__submsg">Cảm ơn quý khách đã tin tưởng</h2>
-
-        <div class="card__body">
-
-            <div class="card__recipient-info">
-                <p class="card__recipient">Minh Đạt</p>
-                <p class="card__email">minhdat@gmail.com</p>
-            </div>
-
-            <h1 class="card__price"><span>{{formatNumberService.formatNumber(940000000)}}</span></h1>
-
-            <p class="card__method">Hình thức thanh toán</p>
-            <div class="card__payment">
-                <!-- <img src="https://seeklogo.com/images/V/VISA-logo-F3440F512B-seeklogo.com.png"
-                    class="card__credit-card"> -->
-                <div class="card__card-details">
-                    <p class="card__card-type">Ngân hàng</p>
-                    <p class="card__card-number">Số cuối của ngân hàng **89</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="card__tags">
-            <span class="card__tag">Hoàn thành</span>
-            <span class="card__tag">#123456789</span>
-        </div>
-
+<div class="container">
+    <h1>Bạn đã thanh toán thành công</h1>
+    <div class="icon">
+        <i class="eva eva-checkmark-circle-2"></i>
     </div>
-
+    <div class="button">
+        <a class="btn btn-success" routerLink="/products">Trở lại mua sẳm</a>
+        <a class="btn btn-info">Xem hồ sơ</a>
+    </div>
 </div>

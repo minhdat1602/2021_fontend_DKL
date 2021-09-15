@@ -1,49 +1,114 @@
 <div class="register-container">
     <div class="container">
-        <div class="title">Đăng ký</div>
+        <div class="title">Registration</div>
         <form (ngSubmit)="submitForm()" #registerForm="ngForm">
             <div class="user-details">
                 <div class="input-box">
-                    <span class="details">Họ & tên</span>
-                    <input type="text" [(ngModel)]="user.displayName" name="fullname" #userName=ngModel
-                        [ngClass]="{'error': userName.invalid && userName.touched}" required>
-                    <p *ngIf="userName.invalid && userName.dirty" style="color: red;">
-                        Yêu cầu tên của bạn</p>
+                    <span class="details">Full Name</span>
+                    <input 
+                        type="text" 
+                        placeholder="Enter your name" 
+                        [(ngModel)]="user.displayName"
+                        name="fullname"
+                        #userName = ngModel
+                        [ngClass]="{'error': userName.invalid && userName.touched}"
+                        required
+                        >
+                    <p
+                        *ngIf="userName.invalid && userName.dirty"
+                        style="color: red;"
+                    >
+                    Your name is required</p>
                 </div>
                 <div class="input-box">
-                    <span class="details">Số CMND</span>
-                    <input type="number" [(ngModel)]="user.providerId" #userproviderId=ngModel required name="tenantId">
-                    <p *ngIf="userproviderId.invalid && userproviderId.dirty" style="color: red;">
-                        CMND của bạn được yêu cầu</p>
+                    <span class="details">Your UID</span>
+                    <input
+                        type="number"
+                        placeholder="Enter your UID" 
+                        [(ngModel)]="user.providerId"
+                        #userproviderId=ngModel
+                        required
+                        name="tenantId"
+                        >
+                        <p
+                        *ngIf="userproviderId.invalid && userproviderId.dirty"
+                        style="color: red;"
+                    >
+                    Your UID is required and number type</p>
                 </div>
                 <div class="input-box">
                     <span class="details">Email</span>
-                    <input type="email" required [(ngModel)]="user.email" name="email" #userEmail=ngModel>
-                    <p *ngIf="userEmail.invalid && userEmail.dirty" style="color: red;">
-                        Email của bạn được yêu cầu</p>
+                    <input 
+                        type="email" 
+                        placeholder="Enter your email" 
+                        required
+                        [(ngModel)]="user.email"
+                        name="email"
+                        #userEmail=ngModel
+                        >
+                        <p
+                        *ngIf="userEmail.invalid && userEmail.dirty"
+                        style="color: red;"
+                    >
+                    Your email is required</p>
                 </div>
                 <div class="input-box">
-                    <span class="details">Số điện thoại</span>
-                    <input type="number" [(ngModel)]="user.phoneNumber" name="phoneNumber" #userPhoneNumber=ngModel
+                    <span class="details">Phone Number</span>
+                    <input
+                        type="number"
+                        placeholder="Enter your phone number" 
+                        [(ngModel)]="user.phoneNumber"
+                        name="phoneNumber"
+                        #userPhoneNumber=ngModel
                         required>
-                    <p *ngIf="userPhoneNumber.invalid && userPhoneNumber.dirty" style="color: red;">
-                        Số điện thoại của bạn được yêu cầu</p>
+                    <p
+                    *ngIf="userPhoneNumber.invalid && userPhoneNumber.dirty"
+                    style="color: red;"
+                >
+                Your email is required and type number</p>
                 </div>
                 <div class="input-box">
-                    <span class="details">Mật khẩu</span>
-                    <input type="password" required [(ngModel)]="user.password" name="password" #userPassword=ngModel>
-                    <p *ngIf="userPassword.invalid && userPassword.dirty" style="color: red;">
-                        Mật khẩu của bạn được yêu cầu</p>
-                    <p *ngIf="userPassword.invalid && userPassword.dirty" style="color: red;">
-                        Passwr</p>
+                    <span class="details">Password</span>
+                    <input 
+                        type="password" 
+                        placeholder="Enter your password" 
+                        required
+                        [(ngModel)]="user.password"
+                        name="password"
+                        #userPassword=ngModel
+                        >
+                        <p
+                        *ngIf="userPassword.invalid && userPassword.dirty"
+                        style="color: red;"
+                    >
+                    Your password is required</p>
+                    <p
+                    *ngIf="userPassword.invalid && userPassword.dirty"
+                    style="color: red;"
+                >
+                Your password has more then 6 character</p>
                 </div>
                 <div class="input-box">
-                    <span class="details">Xác nhận lại mật khẩu</span>
-                    <input type="password" required [(ngModel)]=" user.confirmPassword" name="confirmPassword"
-                        #confirmPassword=ngModel [disabled]="userPassword.invalid === true">
-                    <p *ngIf="confirmPassword.invalid && confirmPassword.dirty" style="color: red;">
-                        Yêu cầu xác nhận lại mật khẩu</p>
-
+                    <span class="details">Confirm Password</span>
+                    <input 
+                        type="password" 
+                        placeholder="Confirm your password" 
+                        required
+                        [(ngModel)]="user.confirmPassword"
+                        name="confirmPassword"
+                        #confirmPassword=ngModel
+                        [disabled]="userPassword.invalid === true"
+                        >
+                        <p
+                        *ngIf="confirmPassword.invalid && confirmPassword.dirty"
+                        style="color: red;"
+                    >
+                    Confirm password</p>
+                    <p
+                        *ngIf="userPassword !== confirmPassword && confirmPassword.dirty"
+                        style="color: red;"
+                    >
+                    Confirm wrong password</p>
                 </div>
             </div>
             <!-- <div class="gender-details">
@@ -66,9 +131,14 @@
                     </label>
                 </div>
             </div> -->
-
-            <input class="button" type="submit" value="Register" [disabled]="registerForm.invalid" />
+          
+            <input 
+                class="button"
+                type="submit" 
+                value="Register"
+                [disabled]="registerForm.invalid"
+                />
         </form>
     </div>
-
+    
 </div>
