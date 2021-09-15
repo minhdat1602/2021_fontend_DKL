@@ -1,4 +1,112 @@
-<div class="container">
+<div class="cart">
+	<p class="cart-title">Giỏ hàng</p>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="apartment-info" >
+					<div class="apart-img">
+						<img src="https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw776c4bfb/images/VH_Westpoint/W1/Apartment/PIM/3PN/3PN_01.jpg" alt="">
+					</div>
+					<div class="apart-name">
+						<a href=""><h4>{{apartment.name}} - TÒA R1.02</h4></a>
+
+						<p>{{apartment.project.name}}</p>
+					</div>
+					
+					<div class="apart-price">
+						<h4>Gía BDS</h4>
+						<p class="price"> {{ formatNumberService.formatNumber(apartment.price)}}<sup>đ</sup></p>
+					</div>
+					<div class="remove">
+						<fa-icon [icon]="faTimes"></fa-icon>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="wrap-total">
+					<div class="line-total">
+						<p>Giá BĐS</p>
+						<p><b>{{ formatNumberService.formatNumber(apartment.price)}}<sup>đ</sup></b></p>
+					</div>
+					<div class="line-total">
+						<p>Thuế GTGT (tạm tính)</p>
+						<p><b>{{ formatNumberService.formatNumber(apartment.price*0.1)}}<sup>đ</sup></b></p>
+					</div>
+					<div class="line-total">
+						<p>Kinh phí bảo trì (tạm tính)</p>
+						<p><b>{{ formatNumberService.formatNumber(apartment.price*0.02)}}<sup>đ</sup></b></p>
+					</div>
+					<div class="line-total">
+						<p><b>Tổng tiền niêm yết</b></p>
+						<p class="price"><b>{{ formatNumberService.formatNumber(totalPrice)}}<sup>đ</sup></b></p>
+					</div>
+					<div class="coupon">
+						<form action="">
+							<div class="input-group mb-1">
+								<input #couponCode auto type="text" class="form-control" placeholder="Nhập mã giảm giá" >
+	
+								<div class="input-group-append">
+								  <span class="input-group-text" id="button-apply">
+									  <div (click) = "applyCoupon()" class="apply">ÁP DỤNG</div>
+								  </span>
+								</div>
+							</div>
+						</form>
+						<div class="error-coupon" [class.appear]="errorShow">Mã giảm giá không hợp lệ!</div>
+						<div class="success-coupon"[class.appear]="successShow">
+							<div class="notifice">
+								Áp dụng thành công! <br>
+								Mã {{couponCode.value}} giảm {{couponPercent}} %
+							</div>
+							<div class="line-total">
+								<p><b>Giảm giá</b></p>
+								<p class="price"><b>{{ formatNumberService.formatNumber(couponValue)}}<sup>đ</sup></b></p>
+							</div>
+						</div>
+					</div>
+					<div class="line-total" style="margin-top: 15px;">
+						<p ><b>Tổng tiền mua online</b></p>
+						<p class="price"><b>{{ formatNumberService.formatNumber(totalPrice)}}<sup>đ</sup></b></p>
+					</div>
+					<div class="button-ver">
+						<div class="btn">XÁC NHẬN</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
 	<table id="cart" class="table table-hover table-condensed">
 		<thead>
 			<tr>
@@ -62,4 +170,4 @@
 		</tfoot>
 	</table>
 	
-</div>
+</div> -->

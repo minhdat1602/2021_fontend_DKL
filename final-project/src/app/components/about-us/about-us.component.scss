@@ -20,13 +20,14 @@ h2,
 h3,
 h4,
 h5,
-h6{
-line-height: 1em;
+h6 {
+  line-height: 1em;
 }
 
-p{
-    line-height: 1.5em;
+p {
+  line-height: 1.5em;
 }
+
 a {
   text-decoration: none;
   transition: all 0.5s ease-in-out;
@@ -37,7 +38,7 @@ a:hover {
 }
 
 .container {
-    margin-top: 3em;
+  margin-top: 3em;
 }
 
 .we-are-block {

@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 1,
-      "name": "S2.170606 - 1 PN Deluxe - Xinhomes Ocean Park",
+      "name": "S2.170606 - 1 PN Deluxe",
       "area": 47,
       "bedroom": 2,
       "bathroom": 1,
@@ -12,7 +12,7 @@
     },
     {
       "id": 2,
-      "name": "S3.170607 - 2 PN Deluxe - Xinhomes Ocean Park",
+      "name": "S3.170607 - 2 PN Deluxe",
       "area": 36,
       "bedroom": 2,
       "bathroom": 1,
@@ -386,7 +386,7 @@
   "apartments": [
     {
       "id": 1,
-      "name": "Căn hộ S2.170606 - 1 PN Deluxe - Xinhomes Ocean Park",
+      "name": "Căn hộ S2.170606 - 1 PN Deluxe",
       "area": 47,
       "bedroom": 2,
       "bathroom": 1,
@@ -2809,6 +2809,17 @@
         }
       ],
       "details": "<p>Căn hộ Dual Key là một căn hộ sở hữu cùng lúc hai chìa khoá. Với thiết kế linh hoạt được tính toán kỹ lưỡng từ khi xây dựng, mỗi một căn hộ Dual Key bản chất là một cặp - 2 căn hộ nhỏ trong 1, trong đó, mỗi căn hộ riêng lẻ đều đáp ứng đầ đủ không gian sinh hoạt cho một gia đình với đầy đủ phòng khách, phòng bếp, phòng ngủ và phòng tắm riêng tư.</p> <p>Dual Key tại West 1 ưu việt hơn mô hình nguyên gốc từ nước ngoài nhờ bản chất là một sản phẩm Officetel thời thượng. Sự kết hợp này đã khiến các căn hộ Dual Key trở thành “tấm thẻ vạn năng” cho người sở hữu, giải quyết cùng lúc bài toán tối ưu hoá không gian sinh hoạt cho gia đình đông thành viên, đồng thời linh hoạt trong khai thác sinh lời với các nhà đầu tư.</p> <h3>Nội thất</h3> <p>- Căn hộ bao gồm 2 phòng ngủ, 1 phòng khách, 1 nhà vệ sinh, 1 phòng bếp và lô gia. Với thiết kế với nhiều cửa sổ hướng ra bên ngoài đón gió và ánh sáng tự nhiên, căn hộ hứa hẹn mang đến không gian sống thoải mái cho cư dân. <br>- Diện tích căn hộ là 68,5 m². <br>- Căn hộ có hướng ban công là Tây Nam.</p> <h3>Tòa</h3> <p>West 1 là toà tháp duy nhất của Vinhomes West Point được phát triển thành toà Căn hộ văn phòng, đem tới giải pháp “2 trong 1”, sống và làm việc giữa tâm điểm sống sôi động của phía Tây – Trung tâm văn hoá, Giáo dịch, Thể thao, Hành chính của cả Hà Nội.</p> <p>West 1 sở hữu vị trí đẹp trên toạ độ định vị Vinhomes West Point, hướng trực tiếp ra mặt đường Phạm Hùng – tuyến đường huyết mạch của cả khu vực.</p> <p>Tại vị trí năng động bậc nhất này, West 1 được phát triển trở thành toà tháp Căn hộ Văn phòng, tiên phong xu hướng sống và làm việc thời đại mới với 2 dòng sản phẩm: Căn hộ Văn phòng tiêu chuẩn và Căn hộ Văn phòng Hai chìa khoá “Dual Key Officetel”</p> <p>Toà West 1 là giải pháp trọn vẹn cho lối sống hiện đại kết hợp làm việc và đầu tư.</p>"
+    }
+  ],
+
+  "coupons":[
+    {
+      "code": "westpoint",
+      "value": 0.1
+    },
+    {
+      "code": "oceanpark",
+      "value": 0.05
     }
   ]
 }

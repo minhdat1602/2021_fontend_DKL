@@ -5,7 +5,7 @@ import { Renderer2 } from '@angular/core';
 @Component({
   selector: 'app-west-point',
   templateUrl: './west-point.component.html',
-  styleUrls: ['./west-point.pc.scss','./west-point.mobile.scss', './west-point.ipad.scss']
+  styleUrls: ['./west-point.pc.scss', './west-point.mobile.scss', './west-point.ipad.scss']
 })
 export class WestPointComponent implements OnInit {
   typewriter_text: string = "XINHOMES  WEST  POINT";
@@ -20,13 +20,16 @@ export class WestPointComponent implements OnInit {
       this.typewriter_display = "";
     }
   }
-  constructor(private renderer: Renderer2, private elem: ElementRef) { 
+
+  location = 'west-point'
+  constructor(private renderer: Renderer2, private elem: ElementRef) {
 
   }
 
-  hover(){
+  hover() {
     let elements = this.elem.nativeElement.querySelectorAll('.close-btn');
     console.log(elements);
+
   }
 
   ngOnInit(): void {

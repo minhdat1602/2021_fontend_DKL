@@ -64,11 +64,16 @@ export class ProductSingleComponent implements OnInit {
 
   // Add to cart 
   addToCart(apartment: Apartment) {
-    this.cartService.addToCart(apartment)
-    this.cartNumberFunc()
+    if (localStorage.getItem('localCart')) {
+      window.alert('Bạn chỉ được mua 1 sản phẩm')
+    } else {
+
+      this.cartService.addToCart(apartment)
+      this.cartNumberFunc()
+    }
   }
 
-  // Increase number of item in cart realtime
+  // Increase number of item in cart realtime 
   cartNumber: number = 0
   cartNumberFunc() {
     let count = 0

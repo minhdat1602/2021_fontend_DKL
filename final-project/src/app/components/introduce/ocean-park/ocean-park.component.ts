@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import AOS from 'aos';
 @Component({
-  selector: 'app-project-description',
-  templateUrl: './project-description.component.html',
-  styleUrls: ['./project-description.component.scss']
+  selector: 'app-ocean-park',
+  templateUrl: './ocean-park.component.html',
+  styleUrls: ['./ocean-park.component.scss']
 })
-export class ProjectDescriptionComponent implements OnInit {
+export class OceanParkComponent implements OnInit {
 
   constructor() { }
 
@@ -24,6 +24,8 @@ export class ProjectDescriptionComponent implements OnInit {
     "assets/img/kientruc2.png"
   ];
   kientruc?: String;
+
+  location = 'ocean'
 
   ngOnInit(): void {
     AOS.init();
@@ -44,5 +46,4 @@ export class ProjectDescriptionComponent implements OnInit {
     items: 1,
 
   }
-
 }

@@ -31,16 +31,14 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 import { RouterModule } from '@angular/router';
 import { ContactComponent } from './components/contact/contact.component';
 import { ProductDetailsComponent } from './products/product-details/product-details.component';
-import { IntroduceComponent } from './components/introduce/introduce.component';
 import { MaterialModule } from './material/material.module';
-import { ProjectDescriptionComponent } from './components/project-description/project-description.component';
 import { WestPointComponent } from './components/introduce/west-point/west-point.component';
 import { ContactProjectComponent } from './components/introduce/common/contact-project/contact-project.component';
 import { BackToTopComponent } from './components/introduce/common/back-to-top/back-to-top.component';
 import { QnaComponent } from './components/qna/qna.component';
 import { PrivacyComponent } from './components/privacy/privacy.component';
+import { OceanParkComponent } from './components/introduce/ocean-park/ocean-park.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
-import { AuthDialogComponent } from './components/auth-dialog/auth-dialog.component';
 import { EventComponent } from './components/event/event.component';
 import { EventItemComponent } from './components/event/event-item/event-item.component';
 @NgModule({
@@ -57,18 +55,16 @@ import { EventItemComponent } from './components/event/event-item/event-item.com
     SuccessComponent,
     ProductSlideItemComponent,
     ProductDetailsComponent,
-    IntroduceComponent,
     ContactComponent,
-    ProjectDescriptionComponent,
     WestPointComponent,
     ContactProjectComponent,
     BackToTopComponent,
     QnaComponent,
     PrivacyComponent,
     AboutUsComponent,
-    AuthDialogComponent,
     EventComponent,
-    EventItemComponent
+    EventItemComponent,
+    OceanParkComponent,
   ],
   imports: [
     MaterialModule,
