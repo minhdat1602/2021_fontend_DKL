@@ -40,6 +40,9 @@ import { BackToTopComponent } from './components/introduce/common/back-to-top/ba
 import { QnaComponent } from './components/qna/qna.component';
 import { PrivacyComponent } from './components/privacy/privacy.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { AuthDialogComponent } from './components/auth-dialog/auth-dialog.component';
+import { EventComponent } from './components/event/event.component';
+import { EventItemComponent } from './components/event/event-item/event-item.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,7 +65,10 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
     BackToTopComponent,
     QnaComponent,
     PrivacyComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    AuthDialogComponent,
+    EventComponent,
+    EventItemComponent
   ],
   imports: [
     MaterialModule,
