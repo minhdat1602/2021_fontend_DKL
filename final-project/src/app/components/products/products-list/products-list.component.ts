@@ -3,6 +3,7 @@ import { ProductService } from 'src/app/services/product.service';
 import { FormatNumberService } from '../../../services/format-number.service';
 import { Product } from '../../../model/product';
 import { faBed, faLocationArrow, faChartArea, faBath, faCompass } from '@fortawesome/free-solid-svg-icons';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-listproducts',
   templateUrl: './products-list.component.html',
@@ -20,6 +21,8 @@ export class ProductsListComponent implements OnInit {
   searchText: string = '';
   filterPrice: number = 1;
   priceValue: number = 100000
+  filterLocation: string = ''
+  location: string = ''
 
   public products: Product[] = []
 
@@ -32,14 +35,26 @@ export class ProductsListComponent implements OnInit {
 
   constructor(
     private productService: ProductService,
-    public formatNumberService: FormatNumberService
+    public formatNumberService: FormatNumberService,
+    private actRoute: ActivatedRoute
   ) {
   }
 
   ngOnInit(): void {
+    this.actRoute.queryParams.subscribe(param => {
+      this.location = param['location']
+      if (this.location === 'ocean') {
+        this.filterLocation = 'Tây'
+      } else if (this.location === 'west-point') {
+        this.filterLocation = 'Đông'
+      }
+    })
+
     this.productService.getAllProducts().subscribe(
       response => {
-        this.products = response;
+        this.products = response.filter(item => {
+          return item.direct.includes(this.filterLocation)
+        });
 
       },
       (error) => {
@@ -53,8 +68,19 @@ export class ProductsListComponent implements OnInit {
   }
 
   filterPriceFunc() {
-    this.priceValue = 5000000 + this.filterPrice * 100000
+    this.priceValue = 500000000 + this.filterPrice * 50000000
     console.log(this.filterPrice)
+  }
+
+  filterLocationFunc(e: number) {
+    if (e === 1) {
+      this.filterLocation = ''
+    } else if (e === 2) {
+      this.filterLocation = 'Tây'
+    } else if (e === 3) {
+      this.filterLocation = 'Đông'
+    }
+    console.log(this.filterLocation)
   }
 
 }
