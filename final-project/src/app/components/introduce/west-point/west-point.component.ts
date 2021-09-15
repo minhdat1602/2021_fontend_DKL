@@ -27,6 +27,7 @@ export class WestPointComponent implements OnInit {
   hover(){
     let elements = this.elem.nativeElement.querySelectorAll('.close-btn');
     console.log(elements);
+    
   }
 
   ngOnInit(): void {
