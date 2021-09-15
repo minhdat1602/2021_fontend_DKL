@@ -19,7 +19,7 @@ export class ProductsListComponent implements OnInit {
   // Search and filter
   searchText: string = '';
   filterPrice: number = 1;
-  priceValue: number = 100000
+  priceValue: number = 500000000
 
   public products: Product[] = []
 
@@ -53,7 +53,7 @@ export class ProductsListComponent implements OnInit {
   }
 
   filterPriceFunc() {
-    this.priceValue = 5000000 + this.filterPrice * 100000
+    this.priceValue = 500000000 + this.filterPrice * 20000000
     console.log(this.filterPrice)
   }
 
