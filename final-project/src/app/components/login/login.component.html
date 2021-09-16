@@ -1,6 +1,6 @@
 <div class="login-container">
     <div class="center">
-        <h1>Login</h1>
+        <!-- <h1>Login</h1>
         <form #loginForm="ngForm">
             <div class="txt_field">
                 <input type="email" required [(ngModel)]="username" name="username" #userName=ngModel>
@@ -22,9 +22,74 @@
             <div class="signup_link">
                 Not a member? <a routerLink="/register">Sign up</a>
             </div>
-        </form>
+        </form> -->
+        <div class="modal modal-login">
+            <div class="modal-login__header">
+                <h3>Đăng nhập</h3>
+                <span class="modal-login__close">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 172 172"
+                        style=" fill:#000000;">
+                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <path d="M0,172v-172h172v172z" fill="none"></path>
+                            <g fill="#cccccc">
+                                <path
+                                    d="M49.5575,44.72l-4.8375,4.8375l36.55,36.4425l-36.55,36.4425l4.8375,4.8375l36.6575,-36.4425l36.55,36.4425l4.8375,-4.8375l-36.55,-36.4425l36.55,-36.4425l-4.8375,-4.8375l-36.55,36.4425z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                </span>
+            </div>
+            <div class="modal-login__content">
+                <form #loginForm="ngForm" class="login-form">
+                    <label for="name">Email</label>
+                    <input type="email" placeholder="example@email.com" class="login-form__name" required
+                        [(ngModel)]="username" name="username" #userName=ngModel />
+                    <p class="error" style="color: red; display: inline-block;"
+                        *ngIf="userName.invalid && userName.touched">
+                        Yêu cầu email
+                    </p>
+                    <label for="number">Мật khẩu</label>
+                    <input type="password" placeholder="*****" required [(ngModel)]="password" #userPassword=ngModel
+                        name="password" class="login-form__number">
+                    <p style="color: red;" *ngIf="userPassword.invalid && userPassword.touched">Yêu cầu mật khẩu</p>
+                    <div class="control-group">
+                        <label class="control control--checkbox">Nhớ tải khoản
+                            <input type="checkbox" />
+                            <div class="control__indicator">
+                            </div>
+                        </label>
+                        <a routerLink="/forgot-password">Quên mật khẩu?</a>
+                    </div>
+                    <button class="login-form__number" (click)="authService.login(userName.value, userPassword.value)"
+                        [disabled]="loginForm.invalid" (click)="activeLoading()">Đăng nhập</button>
+                    <a routerLink="/register" class="login-form__loginistered">Đăng ký</a>
+                </form>
+                <div class="modal-separator">
+                    <div class="modal-separator__text">
+                        Hoặc
+                    </div>
+                </div>
+                <div class="social-block">
+                    <label for="social">Đăng nhập bằng tài khoản khác</label>
+                    <button class="social-block__facebook" (click)="authService.FacebookAuth()">
+                        <img src="https://img.icons8.com/color/48/000000/facebook-circled.png" />
+                        Facebook
+                    </button>
+                    <button class="social-block__google" (click)="authService.GoogleAuth()">
+                        <img src="https://img.icons8.com/color/48/000000/google-logo.png" />
+                        Google
+                    </button>
+                </div>
+            </div>
+            <div class="lazyImage" [class.active]="isActiveLoading" style="z-index: 50;">
+                <i class="eva eva-sync"></i>
+            </div>
+        </div>
+
     </div>
-    <div class="lazyImage" [class.active]="isActiveLoading">
-        <i class="eva eva-sync"></i>
-    </div>
+
 </div>

@@ -11,6 +11,8 @@ import { PriceFilterPipe } from '../../pipes/price-filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LocationFilterPipe } from '../../pipes/location-filter.pipe';
+// import { ProductDetailsComponent } from './product-details/product-details.component';
+import { NotificationComponent } from '../common/notification/notification.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { LocationFilterPipe } from '../../pipes/location-filter.pipe';
     ProductSingleComponent,
     FilterPipe,
     PriceFilterPipe,
-    LocationFilterPipe
+    LocationFilterPipe,
+    NotificationComponent
+    // ProductDetailsComponent
   ],
   imports: [
     CommonModule,

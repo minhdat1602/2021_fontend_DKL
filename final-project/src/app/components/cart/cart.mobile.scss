@@ -1,0 +1,17 @@
+@media (max-width:540px) {
+    .apartment-info{
+        box-shadow: none;
+        div{
+            width: 100%;
+            height: 50px;
+        }
+        .apart-img{
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+        .apart-name, .apart-area, .apart-price, .remove{
+            height: 70%;
+        }
+        
+    }
+}   

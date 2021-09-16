@@ -1,4 +1,4 @@
-@import '../common/scss/ipad.scss';
+
 @media(max-width: 768px){
     .westpoint{
         .header{
@@ -80,7 +80,7 @@
                 p {
                     width: 100%;
                     padding: 15px 15px 15px 0px;
-                    font-size: $font-size-content;
+                    font-size: 15px;
                     border: none;
                     line-height: 30px;
                 }
