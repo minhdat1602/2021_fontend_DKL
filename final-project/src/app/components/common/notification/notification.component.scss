@@ -1,0 +1,41 @@
+$timeout:3s;
+
+
+.notification{
+    position: fixed;
+    top: 40%;
+    transform:  scale(0);
+    left: 50%;
+    font-size: 20px;
+    color: white;
+    animation: display $timeout none;
+    transform-origin: -0% -50%;
+    opacity: 0;
+    background: rgba(36, 35, 35, 0.9);
+    .success, .failed{
+        padding: 20px 30px;
+        fa-icon{      
+            font-size: 45px;
+            display: block;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+    .success{
+        fa-icon{
+            color: rgb(41, 214, 41);
+        }
+    }
+    .failed{
+        fa-icon{
+            color: red;
+        }
+    }
+}
+
+@keyframes display {
+0% {transform: scale(0) translate(-50%,-50%);opacity: 0;}
+10% {transform: scale(1) translate(-50%,-50%);opacity: 1;}
+90% {transform: scale(1) translate(-50%,-50%);opacity: 1;}
+100% {transform: scale(0) translate(-50%,-50%);opacity: 0;}
+}

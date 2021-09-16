@@ -7,19 +7,20 @@
 
 	<div class="container" *ngIf="!isEmpty">
 		<div class="row">
-			<div class="col-md-8">
-				<div class="apartment-info">
+			<div class="col-lg-8">
+				<div class="apartment-info" >
 					<div class="apart-img">
 						<img src="https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw776c4bfb/images/VH_Westpoint/W1/Apartment/PIM/3PN/3PN_01.jpg"
 							alt="">
 					</div>
 					<div class="apart-name">
-						<a href="">
-							<h4>{{apartment.name}}</h4>
-						</a>
+						<a routerLink=''><h4>{{apartment.name}}</h4></a>
 						<p>{{apartment.project.name}}</p>
 					</div>
-
+					<div class="apart-area">
+						<h4>Diện tích</h4>
+						<p class=""> {{apartment.area}} m<sup>2</sup></p>
+					</div>
 					<div class="apart-price">
 						<h4>Gía BDS</h4>
 						<p class="price"> {{ formatNumberService.formatNumber(apartment.price)}}<sup>đ</sup></p>
@@ -29,7 +30,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4">
+			<div class="col-lg-4">
 				<div class="wrap-total">
 					<div class="line-total">
 						<p>Giá BĐS</p>
@@ -88,7 +89,7 @@
 	</div>
 </div>
 
-
+<app-notification *ngIf="deleted" [type] = "true" [message] = "deleteSuccessNotification"></app-notification>
 
 
 

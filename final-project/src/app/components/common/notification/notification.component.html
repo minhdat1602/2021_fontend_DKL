@@ -1,3 +1,10 @@
 <div class="notification">
-    <p>{{message}}</p>
-</div> 
+    <div class="success" *ngIf="type">
+        <fa-icon [icon] = "faCheck"></fa-icon>
+        <p>{{message}}</p>
+    </div> 
+
+    <div class="failed"  *ngIf="!type">
+        <p>{{message}}</p>
+    </div> 
+</div>
