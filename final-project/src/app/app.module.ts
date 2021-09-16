@@ -30,7 +30,7 @@ import { ProductSlideItemComponent } from './components/home/items/product-slide
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { RouterModule } from '@angular/router';
 import { ContactComponent } from './components/contact/contact.component';
-import { ProductDetailsComponent } from './components/products/product-details/product-details.component';
+// import { ProductDetailsComponent } from './components/products/product-details/product-details.component';
 import { MaterialModule } from './material/material.module';
 import { WestPointComponent } from './components/introduce/west-point/west-point.component';
 import { ContactProjectComponent } from './components/common/contact-project/contact-project.component';
@@ -56,7 +56,7 @@ import { HeaderPageComponent } from './components/common/header-page/header-page
     PagenotfoundComponent,
     SuccessComponent,
     ProductSlideItemComponent,
-    ProductDetailsComponent,
+    // ProductDetailsComponent,
     ContactComponent,
     WestPointComponent,
     ContactProjectComponent,

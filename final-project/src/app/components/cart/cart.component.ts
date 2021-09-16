@@ -5,19 +5,22 @@ import { faBed, faBath, faTimes} from '@fortawesome/free-solid-svg-icons';
 import { CouponService } from 'src/app/services/coupon.service';
 import { ApartmentService } from 'src/app/services/apartment.service';
 import { Apartment } from 'src/app/model/apartment.model';
+import { KeyValue } from '@angular/common';
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.scss']
+  styleUrls: ['./cart.pc.scss', './cart.mobile.scss','./cart.ipad.scss']
 })
 export class CartComponent implements OnInit {
   headerName="Giỏ hàng"
+  deleteSuccessNotification="Đã xóa sản phẩm"
 
   faBed=faBed
   faBath=faBath
   faTimes=faTimes
   isShowWarningPopup: boolean = false
   isEmpty:boolean = true
+  deleted:boolean = false;
   constructor(
     public formatNumberService: FormatNumberService,
     private cartService: CartService,
@@ -84,7 +87,7 @@ export class CartComponent implements OnInit {
     localStorage.setItem('localCart',JSON.stringify(emptyArr))
     this.getApartment()
     this.cartNumberFunc()
-
+    this.deleted =true
     // if (localStorage.getItem('localCart')) {
     //   this.getCartDetails = JSON.parse(localStorage.getItem('localCart') || '{}')
     //   for (let i = 0; i < this.getCartDetails.length; i++) {
