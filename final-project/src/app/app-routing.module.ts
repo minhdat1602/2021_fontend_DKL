@@ -17,6 +17,7 @@ import { PrivacyComponent } from './components/privacy/privacy.component';
 import { OceanParkComponent } from './components/introduce/ocean-park/ocean-park.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ProductsListComponent } from './components/products/products-list/products-list.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 
 
 const routes: Routes = [
@@ -34,6 +35,7 @@ const routes: Routes = [
   { path: 'qna', component: QnaComponent },
   { path: 'privacy', component: PrivacyComponent },
   { path: 'about-us', component: AboutUsComponent },
+  { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: '**', component: PagenotfoundComponent },
 ];
 

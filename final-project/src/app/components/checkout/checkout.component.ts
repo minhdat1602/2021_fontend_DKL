@@ -93,5 +93,9 @@ export class CheckoutComponent implements OnInit {
     }
     console.log(this.getUserDetails)
   }
+  payment() {
+    this.cartService.removeAll()
+    this.router.navigate(['/success'])
+  }
 
 }
