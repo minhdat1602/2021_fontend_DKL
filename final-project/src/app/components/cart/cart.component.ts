@@ -11,11 +11,13 @@ import { Apartment } from 'src/app/model/apartment.model';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
+  headerName="Giỏ hàng"
+
   faBed=faBed
   faBath=faBath
   faTimes=faTimes
-  isShowWarningPopup: boolean = false;
-
+  isShowWarningPopup: boolean = false
+  isEmpty:boolean = true
   constructor(
     public formatNumberService: FormatNumberService,
     private cartService: CartService,
@@ -24,77 +26,90 @@ export class CartComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.CartDetails()
-    this.loadCart()
+    // this.CartDetails()
+    // this.loadCart()
     this.getApartment();
 
   }
 
-  getCartDetails: any = []
-  CartDetails() {
+  apartment: any
+  getApartment() {
     if (localStorage.getItem('localCart')) {
-      this.getCartDetails = JSON.parse(localStorage.getItem('localCart') || '{}')
-    }
-  }
-
-  decre(id: any, quantity: any) {
-    for (let i = 0; i < this.getCartDetails.length; i++) {
-      if (this.getCartDetails[i]['id'] === parseInt(id) && this.getCartDetails[i]['product']['quantity'] > 1) {
-        this.getCartDetails[i]['product']['quantity'] = parseInt(quantity) - 1
+      let cartItems = JSON.parse(localStorage.getItem('localCart') || '{}')
+      if(cartItems.length > 0){
+        this.apartment = cartItems[0]['apartment']
+        this.setTotalPrice()
+        this.isEmpty= false
+      }else{
+        this.isEmpty= true
       }
+     
     }
-    localStorage.setItem('localCart', JSON.stringify(this.getCartDetails))
-    this.loadCart()
-    this.cartNumberFunc()
   }
 
-  incre(id: any, quantity: any) {
-    for (let i = 0; i < this.getCartDetails.length; i++) {
-      if (this.getCartDetails[i]['id'] === parseInt(id)) {
-        this.getCartDetails[i]['product']['quantity'] = parseInt(quantity) + 1
-      }
-    }
-    localStorage.setItem('localCart', JSON.stringify(this.getCartDetails))
-    this.loadCart()
-    this.cartNumberFunc()
-  }
+  // decre(id: any, quantity: any) {
+  //   for (let i = 0; i < this.getCartDetails.length; i++) {
+  //     if (this.getCartDetails[i]['id'] === parseInt(id) && this.getCartDetails[i]['product']['quantity'] > 1) {
+  //       this.getCartDetails[i]['product']['quantity'] = parseInt(quantity) - 1
+  //     }
+  //   }
+  //   localStorage.setItem('localCart', JSON.stringify(this.getCartDetails))
+  //   this.loadCart()
+  //   this.cartNumberFunc()
+  // }
 
-  total: number = 0
-  loadCart() {
-    if (localStorage.getItem('localCart')) {
-      this.getCartDetails = JSON.parse(localStorage.getItem('localCart') || '{}')
-      this.total = this.getCartDetails.reduce((acc: any, val: any) => {
-        return acc + (val['product']['priceOfPiece'] * val['product']['quantity'])
-      }, 0)
-    }
-  }
+  // incre(id: any, quantity: any) {
+  //   for (let i = 0; i < this.getCartDetails.length; i++) {
+  //     if (this.getCartDetails[i]['id'] === parseInt(id)) {
+  //       this.getCartDetails[i]['product']['quantity'] = parseInt(quantity) + 1
+  //     }
+  //   }
+  //   localStorage.setItem('localCart', JSON.stringify(this.getCartDetails))
+  //   // this.loadCart()
+  //   this.cartNumberFunc()
+  // }
+
+  // total: number = 0
+  // loadCart() {
+  //   if (localStorage.getItem('localCart')) {
+  //     this.getCartDetails = JSON.parse(localStorage.getItem('localCart') || '{}')
+  //     this.total = this.getCartDetails.reduce((acc: any, val: any) => {
+  //       return acc + (val['product']['priceOfPiece'] * val['product']['quantity'])
+  //     }, 0)
+  //   }
+  // }
 
   deleteItem(item: any) {
-    if (localStorage.getItem('localCart')) {
-      this.getCartDetails = JSON.parse(localStorage.getItem('localCart') || '{}')
-      for (let i = 0; i < this.getCartDetails.length; i++) {
-        if (item['id'] === this.getCartDetails[i]['id']) {
-          this.getCartDetails.splice(i, 1)
-          localStorage.setItem('localCart', JSON.stringify(this.getCartDetails))
-          this.loadCart()
-          this.cartService.cartSubject.next(this.cartNumber)
-          this.isShowWarningPopup = false
-        }
-      }
-    }
+    let emptyArr: any[] = []
+    localStorage.setItem('localCart',JSON.stringify(emptyArr))
+    this.getApartment()
+    this.cartNumberFunc()
+
+    // if (localStorage.getItem('localCart')) {
+    //   this.getCartDetails = JSON.parse(localStorage.getItem('localCart') || '{}')
+    //   for (let i = 0; i < this.getCartDetails.length; i++) {
+    //     if (item['id'] === this.getCartDetails[i]['id']) {
+    //       this.getCartDetails.splice(i, 1)
+    //       localStorage.setItem('localCart', JSON.stringify(this.getCartDetails))
+    //       this.loadCart()
+    //       this.cartService.cartSubject.next(this.cartNumber)
+    //       this.isShowWarningPopup = false
+    //     }
+    //   }
+    // }
   }
 
   // Increase number of items in real time
-  cartNumber: number = 0
+  // cartNumber: number = 0
   cartNumberFunc() {
-    let count = 0
-    let cartValue = JSON.parse(localStorage.getItem('localCart') || '{}')
-    this.cartNumber = cartValue.length
-    for (let i = 0; i < cartValue.length; i++) {
-      count += cartValue[i]['product']['quantity']
-    }
-    this.cartNumber = count
-    this.cartService.cartSubject.next(this.cartNumber)
+    // let count = 0
+    // let cartValue = JSON.parse(localStorage.getItem('localCart') || '{}')
+    // this.cartNumber = cartValue.length
+    // for (let i = 0; i < cartValue.length; i++) {
+    //   count += cartValue[i]['product']['quantity']
+    // }
+    // this.cartNumber = count
+    this.cartService.cartSubject.next(0)
   }
 
   showWarningPopup() {
@@ -107,14 +122,14 @@ export class CartComponent implements OnInit {
 
 
 
-  //test
-  apartment: any
-  getApartment(){
-    this.apartmentService.fetchApartments('1').subscribe((aparts)=>{
-      this.apartment = aparts
-      this.setTotalPrice()
-    })
-  }
+  // //test
+  // apartment: any
+  // getApartment(){
+  //   this.apartmentService.fetchApartments('1').subscribe((aparts)=>{
+  //     this.apartment = aparts
+  //     this.setTotalPrice()
+  //   })
+  // }
 
   totalPrice: any;
   setTotalPrice(){

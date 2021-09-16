@@ -10,12 +10,12 @@ import { CommentService } from '../../../services/comment.service';
 import { CartService } from '../../../services/cart.service';
 
 @Component({
-  selector: 'app-productsingle',
-  templateUrl: './product-single.component.html',
-  styleUrls: ['./product-single.component.scss']
+  selector: 'app-product-details',
+  templateUrl: './product-details.component.html',
+  styleUrls: ['./product-details.component.scss']
 })
-export class ProductSingleComponent implements OnInit {
-
+export class ProductDetailsComponent implements OnInit {
+  sucessMessage="ĐÃ THÊM VÀO GIỎ HÀNG"
   private param?: String
   // Icons for UI
   faBed = faBed
@@ -97,4 +97,5 @@ export class ProductSingleComponent implements OnInit {
       this.textComment = ''
     }
   }
+
 }

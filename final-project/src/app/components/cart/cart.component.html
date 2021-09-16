@@ -1,6 +1,11 @@
 <div class="cart">
-	<p class="cart-title">Giỏ hàng</p>
-	<div class="container">
+	<app-header-page [name] = "headerName"></app-header-page>
+	<div class="empty" *ngIf="isEmpty">
+		<p>Bạn chưa chọn mua căn hộ nào</p>
+		<div class="btn"><a routerLink='/products'>Mua ngay</a></div>
+	</div>
+	
+	<div class="container" *ngIf="!isEmpty">
 		<div class="row">
 			<div class="col-md-8">
 				<div class="apartment-info" >
@@ -8,8 +13,7 @@
 						<img src="https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw776c4bfb/images/VH_Westpoint/W1/Apartment/PIM/3PN/3PN_01.jpg" alt="">
 					</div>
 					<div class="apart-name">
-						<a href=""><h4>{{apartment.name}} - TÒA R1.02</h4></a>
-
+						<a href=""><h4>{{apartment.name}}</h4></a>
 						<p>{{apartment.project.name}}</p>
 					</div>
 					
@@ -17,7 +21,7 @@
 						<h4>Gía BDS</h4>
 						<p class="price"> {{ formatNumberService.formatNumber(apartment.price)}}<sup>đ</sup></p>
 					</div>
-					<div class="remove">
+					<div class="remove" (click)="deleteItem(apartment)">
 						<fa-icon [icon]="faTimes"></fa-icon>
 					</div>
 				</div>
