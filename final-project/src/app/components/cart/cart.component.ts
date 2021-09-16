@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
-  styleUrls: ['./cart.pc.scss', './cart.mobile.scss','./cart.ipad.scss']
+  styleUrls: ['./cart.pc.scss','./cart.ipad.scss', './cart.mobile.scss']
 })
 export class CartComponent implements OnInit {
   headerName="Giỏ hàng"

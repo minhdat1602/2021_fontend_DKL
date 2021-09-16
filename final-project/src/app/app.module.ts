@@ -48,7 +48,9 @@ import { SearchFormComponent } from './components/header/search-form/search-form
 import { NotificationComponent } from './components/common/notification/notification.component';
 import { HeaderPageComponent } from './components/common/header-page/header-page.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { ProductSingleComponent } from './components/products/product-single/product-single.component';
 import { ContactProjectComponent } from './components/common/contact-project/contact-project.component';
+
 
 @NgModule({
   declarations: [
@@ -63,7 +65,7 @@ import { ContactProjectComponent } from './components/common/contact-project/con
     PagenotfoundComponent,
     SuccessComponent,
     ProductSlideItemComponent,
-    // ProductDetailsComponent,
+    ProductSingleComponent,
     ContactComponent,
     WestPointComponent,
     ContactProjectComponent,
