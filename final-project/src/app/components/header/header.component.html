@@ -1,5 +1,5 @@
-<nav class="menu" (scroll)="onWindowScroll()">
-    <div class="container">
+<nav data-aos="fade-down" class=" menu" (scroll)="onWindowScroll()">
+    <div class="header-container">
         <div class="main-nav">
             <button class="menu-btn-resp" mat-icon-button (click)="clickDrawerBtn()" class="drawer-btn drawer-btn-show">
                 <fa-icon style="font-size: 25px" [icon]="faBars"></fa-icon>
@@ -11,16 +11,32 @@
                 <button (click)="clickDrawerBtn()" class="close-drawer-btn" mat-icon-button>
                     <fa-icon [icon]="faTimes"></fa-icon>
                 </button>
-                <li *ngFor="let menu of menus">
-                    <a (click)="changeMenu(menu.key)" [class.navSelected]="menu.key===menuSelected"
-                        [routerLink]="menu.value">{{menu.key}}</a>
+                <li><a mat-button [class.navSelected]="navUrl=='/'" routerLink="">Trang chủ</a></li>
+                <li><a mat-button routerLink="products" [class.navSelected]="navUrl==='/products'">Căn hộ</a></li>
+                <li [class.navSelected]="navUrl==='/ocean-park-introduce'">
+                    <mat-menu #proMenu="matMenu">
+                        <ng-template matMenuContent>
+                            <a href="ocean-park-introduce"><button mat-menu-item>Ocean Park</button></a>
+                            <a href="west-point-introduce"><button mat-menu-item>West Point</button></a>
+                        </ng-template>
+                    </mat-menu>
+                    <a class="auth-btn" mat-button [matMenuTriggerFor]="proMenu">Dự án</a>
                 </li>
+                <li><a [class.navSelected]="navUrl==='/events'" mat-button routerLink="events">Sự kiện</a></li>
+                <li><a [class.navSelected]="navUrl==='/contact'" mat-button routerLink="contact">Liên hệ</a></li>
             </ul>
             <ul class="right-menu">
-
-                <li>
+                <li class="item-nav-search">
+                    <a mat-icon-button (click)="changeSearchDisplay()">
+                        <fa-icon [icon]="faSearch"></fa-icon>
+                    </a>
+                    <div class="search-hover" [class.show]="showSearchForm">
+                        <app-search-form></app-search-form>
+                    </div>
+                </li>
+                <li style="padding: 0 10px;">
                     <button matBadge={{cartItem}} matBadgeSize="small" matBadgeColor="warn" mat-icon-button>
-                        <a (click)="changeMenu('cart')" [class.navSelected]="'cart'===menuSelected" routerLink="cart">
+                        <a [class.navSelected]="navUrl==='/cart'" routerLink="cart">
                             <fa-icon [icon]="faShoppingCart"></fa-icon>
                         </a>
                     </button>
@@ -28,7 +44,6 @@
                 <li>
                     <mat-menu #appMenu="matMenu">
                         <ng-template matMenuContent>
-
                             <a *ngIf="!authService.isLoggedIn()" routerLink="login"><button mat-menu-item>Đăng
                                     nhập</button></a>
                             <a *ngIf="!authService.isLoggedIn()" routerLink="register"><button mat-menu-item>Đăng
@@ -38,10 +53,10 @@
                                     xuất</button></a>
                         </ng-template>
                     </mat-menu>
-                    <button class="auth-btn" mat-button [matMenuTriggerFor]="appMenu">
+                    <button class="auth-btn" mat-icon-button [matMenuTriggerFor]="appMenu">
                         <fa-icon [icon]="faUser"></fa-icon>
-                        <span *ngIf="authService.isLoggedIn()">Xin chào Minh Đạt</span>
-                        <span *ngIf="!authService.isLoggedIn()">Đăng nhập</span>
+                        <span *ngIf="authService.isLoggedIn()">Minh Đạt</span>
+                        <span *ngIf="!authService.isLoggedIn()"></span>
                     </button>
                 </li>
             </ul>

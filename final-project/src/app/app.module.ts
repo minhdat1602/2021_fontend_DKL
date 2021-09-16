@@ -34,17 +34,21 @@ import { ContactComponent } from './components/contact/contact.component';
 // import { ProductDetailsComponent } from './components/products/product-details/product-details.component';
 import { MaterialModule } from './material/material.module';
 import { WestPointComponent } from './components/introduce/west-point/west-point.component';
-import { ContactProjectComponent } from './components/common/contact-project/contact-project.component';
 import { BackToTopComponent } from './components/common/back-to-top/back-to-top.component';
 import { QnaComponent } from './components/qna/qna.component';
 import { PrivacyComponent } from './components/privacy/privacy.component';
 import { OceanParkComponent } from './components/introduce/ocean-park/ocean-park.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { EventComponent } from './components/event/event.component';
+import { EventDetailComponent } from './components/event-detail/event-detail.component';
 import { EventItemComponent } from './components/event/event-item/event-item.component';
+import { Footer2Component } from './components/footer2/footer2.component';
+import { SearchFormComponent } from './components/header/search-form/search-form.component';
+// import { EventItemComponent } from './components/event/event-item/event-item.component';
 import { NotificationComponent } from './components/common/notification/notification.component';
 import { HeaderPageComponent } from './components/common/header-page/header-page.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { ContactProjectComponent } from './components/common/contact-project/contact-project.component';
 
 @NgModule({
   declarations: [
@@ -68,8 +72,11 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
     PrivacyComponent,
     AboutUsComponent,
     EventComponent,
-    EventItemComponent,
     OceanParkComponent,
+    EventDetailComponent,
+    EventItemComponent,
+    Footer2Component,
+    SearchFormComponent,
     NotificationComponent,
     HeaderPageComponent,
     ForgotPasswordComponent,

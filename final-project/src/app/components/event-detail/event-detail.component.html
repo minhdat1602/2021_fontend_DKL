@@ -1,0 +1,31 @@
+<div *ngIf="event != null">
+    <div [ngStyle]="{'background-image': 'url('+ event.image +')'}" class="event-detail-header">
+        <div class="header-detail-overlay">
+            <h3>Sự kiện</h3>
+            <h1 data-aos="fade-up" data-aos-duration="700">{{event.title}}</h1>
+        </div>
+    </div>
+    <div class="main-detail">
+        <div class="detail-container">
+            <img class="image" [src]="event.image" alt="event image">
+            <h1 class="title">{{event.title}}</h1>
+            <p>Thời gian: <span class="time">{{event.time}}</span></p>
+            <p>Địa điểm: <span class="address">{{event.address}}</span></p>
+            <p class="description">{{event.description}}</p>
+            <div class="interested">
+                <div *ngIf="eventPrevious != null">
+                    <span>
+                        <fa-icon [icon]='faChevronLeft'></fa-icon>
+                    </span>
+                    <a href="events/3">{{eventPrevious.title}}</a>
+                </div>
+                <div *ngIf="eventNext != null">
+                    <a href="events/4">{{eventNext.title}}</a>
+                    <span>
+                        <fa-icon [icon]='faChevronRight'></fa-icon>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

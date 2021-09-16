@@ -3,7 +3,9 @@ import { AuthService } from '../../auth/auth.service';
 import { CartService } from '../../services/cart.service';
 import { faShoppingCart, faUser, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { KeyValue } from '@angular/common';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { NavigationStart, Router } from '@angular/router';
+import Aos from 'aos';
 
 @Component({
   selector: 'app-header',
@@ -16,6 +18,7 @@ export class HeaderComponent implements OnInit {
   faUser = faUser;
   faBars = faBars;
   faTimes = faTimes;
+  faSearch = faSearch;
 
   showDrawer: boolean = false;
   clickDrawerBtn(): void {
@@ -33,36 +36,52 @@ export class HeaderComponent implements OnInit {
   }
 
 
-  menuSelected: String = "";
-  menus: KeyValue<String, any>[] = [
-    { key: "Trang chủ", value: "" },
-    { key: "Căn hộ", value: "products" },
-    { key: "Dự án", value: "ocean-park-introduce" },
-    { key: "Dự án phía tây", value: "west-point-introduce" },
-    { key: "Liên hệ", value: "contact" },
-  ];
+  // menuSelected: String = "";
+  // menus: KeyValue<String, any>[] = [
+  //   { key: "Trang chủ", value: "" },
+  //   { key: "Căn hộ", value: "products" },
+  //   { key: "Dự án", value: "ocean-park-introduce" },
+  //   { key: "Dự án phía tây", value: "west-point-introduce" },
+  //   { key: "Liên hệ", value: "contact" },
+  // ];
 
+  navUrl?: string;
   constructor(
     public authService: AuthService,
-    public cartService: CartService
+    public cartService: CartService,
+    private router: Router
   ) {
     this.cartService.cartSubject.subscribe((data) => {
       this.cartItem = data
-    })
+    });
+
+    // Active in header
+
+    router.events.forEach((event) => {
+      if (event instanceof NavigationStart) {
+        console.log(event['url']);
+        this.navUrl = event['url'];
+      }
+    });
   }
 
-
+  showSearchForm: boolean = false;
+  changeSearchDisplay(): void {
+    this.showSearchForm = !this.showSearchForm;
+  }
 
   ngOnInit(): void {
-    if (this.menuSelected === "")
-      this.menuSelected = this.menus[0].key;
+    // if (this.menuSelected === "")
+    //   this.menuSelected = this.menus[0].key;
+    Aos.init();
     this.countItemInCart()
+    this.navUrl = "/";
   }
 
-  changeMenu(menu: String): void {
-    this.menuSelected = menu;
-    console.log(menu);
-  }
+  // changeMenu(menu: String): void {
+  //   this.menuSelected = menu;
+  //   console.log(menu);
+  // }
 
   cartItem = 0
   countItemInCart() {

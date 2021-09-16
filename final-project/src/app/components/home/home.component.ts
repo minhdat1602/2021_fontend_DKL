@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { Product } from 'src/app/model/product';
@@ -37,7 +37,23 @@ export class HomeComponent implements OnInit {
   intro_text2 = "";
   intro_text3 = "";
 
+  // Lấy kích thước của trang
+  public innerWidth: any;
+  public productWidth: any;
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.innerWidth = window.innerWidth;
+    if (this.innerWidth > 1024) {
+      this.productWidth = this.innerWidth / 3;
+    } else if (this.innerWidth > 768) {
+      this.productWidth = this.innerWidth / 2;
+    } else {
+      this.productWidth = this.innerWidth;
+    }
+    console.log(innerWidth);
+  }
   ngOnInit(): void {
+    this.innerWidth = window.innerWidth;
     try {
       AOS.init();
     } catch (e) {
@@ -72,17 +88,17 @@ export class HomeComponent implements OnInit {
     navSpeed: 600,
     navText: ['&#8249', '&#8250;'],
     lazyLoad: true,
-    responsive: {
-      // 0: {
-      //   items: 1
-      // },
-      // 768: {
-      //   items: 2
-      // },
-      // 1024: {
-      //   items: 3
-      // },
-    },
+    // responsive: {
+    //   // 480: {
+    //   //   items: 1
+    //   // },
+    //   // 768: {
+    //   //   items: 2
+    //   // },
+    //   // 1024: {
+    //   //   items: 3
+    //   // },
+    // },
     // nav: true
   }
 
