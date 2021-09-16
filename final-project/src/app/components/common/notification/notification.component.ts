@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-notification',
@@ -11,6 +11,7 @@ export class NotificationComponent implements OnInit {
   @Input() type: boolean = false
 
   faCheck = faCheck
+  faTimes = faTimes
   constructor() { }
 
 
