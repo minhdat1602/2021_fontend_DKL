@@ -1,16 +1,17 @@
 <div class="cart">
-	<app-header-page [name] = "headerName"></app-header-page>
+	<app-header-page [name]="headerName"></app-header-page>
 	<div class="empty" *ngIf="isEmpty">
 		<p>Bạn chưa chọn mua căn hộ nào</p>
 		<div class="btn"><a routerLink='/products'>Mua ngay</a></div>
 	</div>
-	
+
 	<div class="container" *ngIf="!isEmpty">
 		<div class="row">
 			<div class="col-lg-8">
 				<div class="apartment-info" >
 					<div class="apart-img">
-						<img src="https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw776c4bfb/images/VH_Westpoint/W1/Apartment/PIM/3PN/3PN_01.jpg" alt="">
+						<img src="https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw776c4bfb/images/VH_Westpoint/W1/Apartment/PIM/3PN/3PN_01.jpg"
+							alt="">
 					</div>
 					<div class="apart-name">
 						<a routerLink=''><h4>{{apartment.name}}</h4></a>
@@ -50,39 +51,42 @@
 					<div class="coupon">
 						<form action="">
 							<div class="input-group mb-1">
-								<input #couponCode auto type="text" class="form-control" placeholder="Nhập mã giảm giá" >
-	
+								<input #couponCode auto type="text" class="form-control" placeholder="Nhập mã giảm giá">
+
 								<div class="input-group-append">
-								  <span class="input-group-text" id="button-apply">
-									  <div (click) = "applyCoupon()" class="apply">ÁP DỤNG</div>
-								  </span>
+									<span class="input-group-text" id="button-apply">
+										<div (click)="applyCoupon()" class="apply">ÁP DỤNG</div>
+									</span>
 								</div>
 							</div>
 						</form>
 						<div class="error-coupon" [class.appear]="errorShow">Mã giảm giá không hợp lệ!</div>
-						<div class="success-coupon"[class.appear]="successShow">
+						<div class="success-coupon" [class.appear]="successShow">
 							<div class="notifice">
 								Áp dụng thành công! <br>
 								Mã {{couponCode.value}} giảm {{couponPercent}} %
 							</div>
 							<div class="line-total">
 								<p><b>Giảm giá</b></p>
-								<p class="price"><b>{{ formatNumberService.formatNumber(couponValue)}}<sup>đ</sup></b></p>
+								<p class="price"><b>{{ formatNumberService.formatNumber(couponValue)}}<sup>đ</sup></b>
+								</p>
 							</div>
 						</div>
 					</div>
 					<div class="line-total" style="margin-top: 15px;">
-						<p ><b>Tổng tiền mua online</b></p>
+						<p><b>Tổng tiền mua online</b></p>
 						<p class="price"><b>{{ formatNumberService.formatNumber(totalPrice)}}<sup>đ</sup></b></p>
 					</div>
 					<div class="button-ver">
-						<div class="btn">XÁC NHẬN</div>
+
+						<div class="btn" (click)="navigate()">XÁC NHẬN</div>
+
 					</div>
-					
+
 				</div>
 			</div>
 		</div>
-	</div>	
+	</div>
 </div>
 
 <app-notification *ngIf="deleted" [type] = "true" [message] = "deleteSuccessNotification"></app-notification>

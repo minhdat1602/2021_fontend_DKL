@@ -114,7 +114,9 @@
             </div>
             <div class="row">
               <div class="col">
-                <button id="addToCart" (click)="addToCart(apartment)" class="btn btn-primary">Mua online ngay</button>
+                <button id="addToCart" (click)="addToCart(apartment)" (click)="togglePopup()"
+                  class="btn btn-primary">Mua
+                  online ngay</button>
               </div>
             </div>
             <div class="box-support">
@@ -268,6 +270,15 @@
       </div>
     </div>
   </div>
+  <!-- <div class="page-wrapper" [ngStyle]="{'display': isShowPopup === true ? 'flex' : 'none'}">
+    <div class="custom-modal">
+      <div class="succes succes-animation icon-top"><span class="eva eva-checkmark"></span></div>
+      <div class="succes border-bottom"></div>
+      <div class="content">
+        <p class="type">Thành công</p>
+        <p class="message-type">Thêm sản phẩm thành công</p>
+      </div>
+    </div>
+  </div> -->
 </div>
-
-
+<app-notification [message]="sucessMessage"></app-notification>
