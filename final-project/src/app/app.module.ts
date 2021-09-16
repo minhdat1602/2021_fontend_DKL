@@ -30,17 +30,19 @@ import { ProductSlideItemComponent } from './components/home/items/product-slide
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { RouterModule } from '@angular/router';
 import { ContactComponent } from './components/contact/contact.component';
-import { ProductDetailsComponent } from './products/product-details/product-details.component';
+import { ProductDetailsComponent } from './components/products/product-details/product-details.component';
 import { MaterialModule } from './material/material.module';
 import { WestPointComponent } from './components/introduce/west-point/west-point.component';
-import { ContactProjectComponent } from './components/introduce/common/contact-project/contact-project.component';
-import { BackToTopComponent } from './components/introduce/common/back-to-top/back-to-top.component';
+import { ContactProjectComponent } from './components/common/contact-project/contact-project.component';
+import { BackToTopComponent } from './components/common/back-to-top/back-to-top.component';
 import { QnaComponent } from './components/qna/qna.component';
 import { PrivacyComponent } from './components/privacy/privacy.component';
 import { OceanParkComponent } from './components/introduce/ocean-park/ocean-park.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { EventComponent } from './components/event/event.component';
 import { EventItemComponent } from './components/event/event-item/event-item.component';
+import { NotificationComponent } from './components/common/notification/notification.component';
+import { HeaderPageComponent } from './components/common/header-page/header-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,6 +67,8 @@ import { EventItemComponent } from './components/event/event-item/event-item.com
     EventComponent,
     EventItemComponent,
     OceanParkComponent,
+    NotificationComponent,
+    HeaderPageComponent,
   ],
   imports: [
     MaterialModule,

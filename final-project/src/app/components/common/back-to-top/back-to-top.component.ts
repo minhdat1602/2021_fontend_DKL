@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-back-to-top',
   templateUrl: './back-to-top.component.html',
