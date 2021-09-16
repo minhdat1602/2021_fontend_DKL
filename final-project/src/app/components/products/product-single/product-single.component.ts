@@ -4,7 +4,7 @@ import { Apartment } from 'src/app/model/apartment.model';
 import { ApartmentService } from 'src/app/services/apartment.service';
 import { Image } from 'src/app/model/image.model';
 import { FormatNumberService } from 'src/app/services/format-number.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Comment } from '../../../model/comment.model';
 import { CommentService } from '../../../services/comment.service';
 import { CartService } from '../../../services/cart.service';
@@ -16,6 +16,7 @@ import { CartService } from '../../../services/cart.service';
 })
 export class ProductSingleComponent implements OnInit {
 
+  sucessMessage = "ĐÃ THÊM VÀO GIỎ HÀNG"
   private param?: String
   // Icons for UI
   faBed = faBed
@@ -23,6 +24,7 @@ export class ProductSingleComponent implements OnInit {
   faChartArea = faChartArea
   faBath = faBath
   faCompass = faCompass
+  public isShowPopup = false
 
   // Comments
   public textComment?: String = ''
@@ -33,7 +35,8 @@ export class ProductSingleComponent implements OnInit {
     public formatNumberService: FormatNumberService,
     private route: ActivatedRoute,
     public commentService: CommentService,
-    public cartService: CartService
+    public cartService: CartService,
+    private router: Router
   ) { }
 
 
@@ -66,6 +69,16 @@ export class ProductSingleComponent implements OnInit {
   addToCart(apartment: Apartment) {
     this.cartService.addToCart(apartment)
     this.cartNumberFunc()
+    setTimeout(() => {
+      this.router.navigate(['/cart']);
+    }, 2000)
+  }
+
+  togglePopup() {
+    this.isShowPopup = true
+    setTimeout(() => {
+      this.isShowPopup = false
+    }, 2000)
   }
 
   // Increase number of item in cart realtime
