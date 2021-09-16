@@ -1,1 +1,8 @@
-<p>event-item works!</p>
+<div *ngIf="event" [title]="event.title" class="event-item">
+    <a class="item-img" routerLink="event/{{event.id}}"><img [src]="event.image" alt="event image"></a>
+    <h3>{{event?.title}}</h3>
+    <a class="item-time" href="#">Thời gian: {{event.time}} [...]</a>
+    <p>Xem thêm</p>
+</div>
+
+<!-- <h1>aaaaaaaaaa</h1> -->
