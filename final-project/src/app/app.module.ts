@@ -41,6 +41,7 @@ import { OceanParkComponent } from './components/introduce/ocean-park/ocean-park
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { EventComponent } from './components/event/event.component';
 import { EventItemComponent } from './components/event/event-item/event-item.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,6 +66,7 @@ import { EventItemComponent } from './components/event/event-item/event-item.com
     EventComponent,
     EventItemComponent,
     OceanParkComponent,
+    ForgotPasswordComponent,
   ],
   imports: [
     MaterialModule,
