@@ -40,7 +40,11 @@ import { PrivacyComponent } from './components/privacy/privacy.component';
 import { OceanParkComponent } from './components/introduce/ocean-park/ocean-park.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { EventComponent } from './components/event/event.component';
+import { EventDetailComponent } from './components/event-detail/event-detail.component';
 import { EventItemComponent } from './components/event/event-item/event-item.component';
+import { Footer2Component } from './components/footer2/footer2.component';
+import { SearchFormComponent } from './components/header/search-form/search-form.component';
+// import { EventItemComponent } from './components/event/event-item/event-item.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,8 +67,11 @@ import { EventItemComponent } from './components/event/event-item/event-item.com
     PrivacyComponent,
     AboutUsComponent,
     EventComponent,
-    EventItemComponent,
     OceanParkComponent,
+    EventDetailComponent,
+    EventItemComponent,
+    Footer2Component,
+    SearchFormComponent,
   ],
   imports: [
     MaterialModule,

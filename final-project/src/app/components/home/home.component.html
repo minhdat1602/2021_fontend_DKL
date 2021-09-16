@@ -36,7 +36,7 @@
 </div>
 
 <div data-aos="fade-up" data-aos-duration="600" class="highligh product-slide">
-    <div class="container">
+    <div class="slide-container">
         <h2 class="highligh-title">Bất động sản nổi bật</h2>
         <owl-carousel-o *ngIf="products" [options]="customOptions">
             <ng-container *ngFor="let product of products">
@@ -49,7 +49,7 @@
     </div>
 </div>
 <div data-aos="fade-up" data-aos-duration="600" class="best-seller product-slide">
-    <div class="container">
+    <div class="slide-container">
         <h2 class="best-seller-title">Căn hộ bán chạy nhất</h2>
         <owl-carousel-o *ngIf="products" [options]="customOptions">
             <ng-container *ngFor="let product of bestSellerProducts">

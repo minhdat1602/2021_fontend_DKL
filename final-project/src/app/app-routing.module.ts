@@ -14,9 +14,11 @@ import { ContactComponent } from './components/contact/contact.component'
 import { WestPointComponent } from './components/introduce/west-point/west-point.component';
 import { QnaComponent } from './components/qna/qna.component';
 import { PrivacyComponent } from './components/privacy/privacy.component';
-import { OceanParkComponent } from './components/introduce/ocean-park/ocean-park.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ProductsListComponent } from './components/products/products-list/products-list.component';
+import { EventComponent } from './components/event/event.component';
+import { EventDetailComponent } from './components/event-detail/event-detail.component';
+import { OceanParkComponent } from './components/introduce/ocean-park/ocean-park.component';
 
 
 const routes: Routes = [
@@ -34,7 +36,10 @@ const routes: Routes = [
   { path: 'qna', component: QnaComponent },
   { path: 'privacy', component: PrivacyComponent },
   { path: 'about-us', component: AboutUsComponent },
+  { path: "events", component: EventComponent },
+  { path: "events/:id", component: EventDetailComponent },
   { path: '**', component: PagenotfoundComponent },
+
 ];
 
 @NgModule({
