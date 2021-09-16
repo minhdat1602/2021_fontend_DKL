@@ -1,5 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AngularFireModule } from '@angular/fire';
+import { AngularSvgIconModule } from 'angular-svg-icon';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,16 +24,12 @@ import { LoginComponent } from './components/login/login.component';
 
 // Services
 import { AuthService } from './auth/auth.service';
-import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { CartComponent } from './components/cart/cart.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { SuccessComponent } from './components/success/success.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProductSlideItemComponent } from './components/home/items/product-slide-item/product-slide-item.component';
-import { AngularSvgIconModule } from 'angular-svg-icon';
-import { RouterModule } from '@angular/router';
 import { ContactComponent } from './components/contact/contact.component';
 import { ProductDetailsComponent } from './components/products/product-details/product-details.component';
 import { MaterialModule } from './material/material.module';

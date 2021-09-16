@@ -1,28 +1,30 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormatNumberService } from 'src/app/services/format-number.service';
 import { CartService } from 'src/app/services/cart.service';
-import { faBed, faBath, faTimes} from '@fortawesome/free-solid-svg-icons';
+import { faBed, faBath, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { CouponService } from 'src/app/services/coupon.service';
 import { ApartmentService } from 'src/app/services/apartment.service';
 import { Apartment } from 'src/app/model/apartment.model';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
-  headerName="Giỏ hàng"
+  headerName = "Giỏ hàng"
 
-  faBed=faBed
-  faBath=faBath
-  faTimes=faTimes
+  faBed = faBed
+  faBath = faBath
+  faTimes = faTimes
   isShowWarningPopup: boolean = false
-  isEmpty:boolean = true
+  isEmpty: boolean = true
   constructor(
     public formatNumberService: FormatNumberService,
     private cartService: CartService,
     private couponService: CouponService,
-    private apartmentService: ApartmentService
+    private apartmentService: ApartmentService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -36,14 +38,14 @@ export class CartComponent implements OnInit {
   getApartment() {
     if (localStorage.getItem('localCart')) {
       let cartItems = JSON.parse(localStorage.getItem('localCart') || '{}')
-      if(cartItems.length > 0){
+      if (cartItems.length > 0) {
         this.apartment = cartItems[0]['apartment']
         this.setTotalPrice()
-        this.isEmpty= false
-      }else{
-        this.isEmpty= true
+        this.isEmpty = false
+      } else {
+        this.isEmpty = true
       }
-     
+
     }
   }
 
@@ -81,7 +83,7 @@ export class CartComponent implements OnInit {
 
   deleteItem(item: any) {
     let emptyArr: any[] = []
-    localStorage.setItem('localCart',JSON.stringify(emptyArr))
+    localStorage.setItem('localCart', JSON.stringify(emptyArr))
     this.getApartment()
     this.cartNumberFunc()
 
@@ -120,6 +122,13 @@ export class CartComponent implements OnInit {
     this.isShowWarningPopup = false
   }
 
+  navigate() {
+    if (localStorage.getItem('user')) {
+      this.router.navigate(['/checkout'])
+    } else {
+      this.router.navigate(['/login'])
+    }
+  }
 
 
   // //test
@@ -132,30 +141,30 @@ export class CartComponent implements OnInit {
   // }
 
   totalPrice: any;
-  setTotalPrice(){
-    this.totalPrice = this.apartment.price + this.apartment.price * 0.1 + this.apartment.price*0.02 - this.couponValue
+  setTotalPrice() {
+    this.totalPrice = this.apartment.price + this.apartment.price * 0.1 + this.apartment.price * 0.02 - this.couponValue
   }
   @ViewChild('couponCode') couponCode: ElementRef
   couponValue = 0
-  couponPercent=0
+  couponPercent = 0
   errorShow: any
-  successShow:any
+  successShow: any
   //check coupon
-  applyCoupon(){
-    this.couponService.getAllCoupons().subscribe((coupons)=>{
+  applyCoupon() {
+    this.couponService.getAllCoupons().subscribe((coupons) => {
       let found = false;
       let coupon = this.couponCode.nativeElement.value;
       coupons.forEach(cou => {
-        if(coupon === cou.code){
+        if (coupon === cou.code) {
           found = true;
           this.couponValue = this.apartment.price * cou.value
-          this.couponPercent = cou.value * 100     
-        }    
+          this.couponPercent = cou.value * 100
+        }
       });
-      if(found){
+      if (found) {
         this.errorShow = false
         this.successShow = true
-      }else{
+      } else {
         this.successShow = false
         this.errorShow = true
         this.couponValue = 0
