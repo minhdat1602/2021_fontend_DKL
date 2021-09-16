@@ -18,6 +18,7 @@ import { OceanParkComponent } from './components/introduce/ocean-park/ocean-park
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ProductsListComponent } from './components/products/products-list/products-list.component';
 import{NotificationComponent} from './components/common/notification/notification.component'
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -35,6 +36,7 @@ const routes: Routes = [
   { path: 'privacy', component: PrivacyComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'n', component: NotificationComponent },
+  { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: '**', component: PagenotfoundComponent },
 ];
 
