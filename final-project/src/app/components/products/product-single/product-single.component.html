@@ -1,7 +1,9 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
 <div class="main container">
   <div class="row">
     <div class="products-information">
+      <app-header-page [name]="'Chi tiết căn hộ'"></app-header-page>
       <div id="carousel" class="carousel slide col-xl-7" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carousel" data-slide-to="0" class="active"></li>
@@ -281,4 +283,5 @@
     </div>
   </div> -->
 </div>
-<app-notification [message]="sucessMessage"></app-notification>
+<app-notification *ngIf="successAddCart" [type] = "true" [message]="sucessAddCartMessage"></app-notification>
+<app-notification *ngIf="failedAddCart" [type] = "false" [message]="failedAddCartMessage"></app-notification>

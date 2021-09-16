@@ -4,7 +4,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 
 import { ProductsRoutingModule } from './products-routing.module';
 import { ProductsListComponent } from './products-list/products-list.component';
-import { ProductSingleComponent } from './product-single/product-single.component';
+// import { ProductSingleComponent } from './product-single/product-single.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FilterPipe } from 'src/app/pipes/filter.pipe';
 import { PriceFilterPipe } from '../../pipes/price-filter.pipe';
@@ -18,11 +18,11 @@ import { NotificationComponent } from '../common/notification/notification.compo
 @NgModule({
   declarations: [
     ProductsListComponent,
-    ProductSingleComponent,
+    // ProductSingleComponent,
     FilterPipe,
     PriceFilterPipe,
     LocationFilterPipe,
-    NotificationComponent
+    // NotificationComponent
     // ProductDetailsComponent
   ],
   imports: [

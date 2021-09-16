@@ -15,8 +15,12 @@ import { CartService } from '../../../services/cart.service';
   styleUrls: ['./product-single.component.scss']
 })
 export class ProductSingleComponent implements OnInit {
+  sucessAddCartMessage = "ĐÃ THÊM VÀO GIỎ HÀNG"
+  failedAddCartMessage = "GIỎ HÀNG ĐÃ ĐẦY"
 
-  sucessMessage = "ĐÃ THÊM VÀO GIỎ HÀNG"
+  successAddCart:boolean = false
+  failedAddCart:boolean = false
+
   private param?: String
   // Icons for UI
   faBed = faBed
@@ -67,11 +71,16 @@ export class ProductSingleComponent implements OnInit {
 
   // Add to cart 
   addToCart(apartment: Apartment) {
-    this.cartService.addToCart(apartment)
-    this.cartNumberFunc()
+    if(this.cartService.addToCart(apartment)){
+      this.cartNumberFunc()
+      this.successAddCart = true
+    } else{
+      this.failedAddCart = true
+    }
     setTimeout(() => {
       this.router.navigate(['/cart']);
-    }, 2000)
+    }, 3000)
+    
   }
 
   togglePopup() {

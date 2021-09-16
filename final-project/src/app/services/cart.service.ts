@@ -26,6 +26,9 @@ export class CartService {
     } else if((this.itemsCart = JSON.parse(localStorage.getItem('localCart') || '{}')).length==0){
       this.itemsCart.push(item)
       localStorage.setItem('localCart', JSON.stringify(this.itemsCart))
+      return true
+    } else{
+      return false
     }
 
     // else {

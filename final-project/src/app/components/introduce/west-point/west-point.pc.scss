@@ -1,5 +1,4 @@
-
-
+@import '../../../share/share.pc.scss';
 .header {
     position: relative;
     height: 900px;
@@ -35,7 +34,6 @@
         }
     }
 }
-
 
 
 .location {
@@ -91,11 +89,11 @@
                     }
                     h4 {
                         font-weight: 700;
-                        color: #ef4b3d;
+                        color: $color-header-section;
                         font-size: 37px;
                     }
                     p {
-                        font-size: 15px;
+                        font-size: $font-size-content-pc;
                         word-spacing: 2px;
                     }
                 }
@@ -107,31 +105,24 @@
 
 
 
-
-
-
-
-
-
-
 .citizen {
-    margin-top: 50px;
+    margin-top: $margin-section-pc;
     position: relative;
     font-family: 'Nunito Sans', sans-serif;
     .header-content {
         text-align: center;
         h3 {
-            color: #ef4b3d;
+            color: $color-header-section;
             letter-spacing: 2.5px;
-            font-size: 25px;
+            font-size: $font-size-header-pc;
             font-weight: 700;
             margin-bottom: 10px;
         }
         h2 {
-            font-size: 35px;
-            color: #14254c;
+            font-size: $font-size-sub-header-pc;
+            color: $color-sub-header-section;
             margin-top: 0;
-            margin-bottom:40px;
+            margin-bottom:$margin-content-section-pc;
         
         }
     }
@@ -150,7 +141,7 @@
             text-align: justify;
             letter-spacing: 1px;
             word-spacing: 3px;
-            /*box-shadow: 10px 10px 10px #0000002b;*/
+            font-size: $font-size-content-pc;
         }
         
         .slide-citizen {
@@ -184,22 +175,21 @@
 
 
 .value {
-    // overflow: hidden;
-    margin-top: 50px;
+    margin-top: $margin-section-pc;
     .header-content {
         text-align: center;
         h3 {
-            color: #ef4b3d;
+            color: $color-header-section;
             letter-spacing: 2.5px;
-            font-size: 25px;
+            font-size: $font-size-header-pc;
             font-weight: 700;
             margin-bottom: 10px;
         }
         h2 {
-            font-size: 35px;
-            color: #14254c;
+            font-size: $font-size-sub-header-pc;
+            color: $color-sub-header-section;
             margin-top: 0;
-            margin-bottom:40px;
+            margin-bottom:$margin-content-section-pc;
         
         }
     }
@@ -263,7 +253,7 @@
                         span {
                             width: 105px;
                             display: inline-block;
-                            font-size: 17px;
+                            font-size: $font-size-content-pc;
                             letter-spacing: 1px;
                             position: relative;
                             padding-bottom: 25px;
@@ -290,21 +280,21 @@
 .utility {
     overflow: hidden;
     height: 650px;
-    margin-top: 50px;
+    margin-top: $margin-section-pc;
     .header-content {
         text-align: center;
         h3 {
-            color: #ef4b3d;
+            color: $color-header-section;
             letter-spacing: 2.5px;
-            font-size: 25px;
+            font-size: $font-size-header-pc;
             font-weight: 700;
             margin-bottom: 10px;
         }
         h2 {
-            font-size: 35px;
-            color: #14254c;
+            font-size: $font-size-sub-header-pc;
+            color: $color-sub-header-section;
             margin-top: 0;
-            margin-bottom:40px;
+            margin-bottom:$margin-content-section-pc;
         
         }
     }
@@ -333,8 +323,8 @@
             .btn {
                 width: 200px;
                 height: 50px;
-                background: linear-gradient(to right, #f34e39 0%, #f34e39 13%, #f4523b 22%, #fc6546 50%, #ff6e4b 68%, #ff6e4b 100%);
                 color: white;
+                background: $background-button;
                 font-size: 18px;
                 display: flex;
                 justify-content: center;
@@ -351,7 +341,7 @@
                     font-size: 20px;
                 }
                 ul li {
-                    font-size: 19px;
+                    font-size: $font-size-content-pc;
                     list-style-type: disc;
                     height: 30px;
                 }
@@ -371,19 +361,19 @@
 
 .flat {
     background-image: url("/assets/img/design-bg.png");
-    margin-top: 50px;
+    margin-top: $margin-section-pc;
     padding-top: 50px;
     .header-content {
         text-align: center;
         h3 {
-            color: #ef4b3d;
+            color: $color-header-section;
             letter-spacing: 2.5px;
-            font-size: 25px;
+            font-size: $font-size-header-pc;
             font-weight: 700;
             margin-bottom: 10px;
         }
         h2 {
-            font-size: 35px;
+            font-size: $font-size-sub-header-pc;
             color: white;
             margin-top: 0;
             margin-bottom:20px;
@@ -401,6 +391,7 @@
             margin: auto;
             text-align: center;
             color: white;
+            font-size: $font-size-content-pc;
         }
         h3 {
             text-align: center;
