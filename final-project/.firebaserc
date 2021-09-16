@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "tkit-8c587": {
+      "hosting": {
+        "final-project": [
+          "tkit-8c587"
+        ]
+      }
+    }
+  }
+}

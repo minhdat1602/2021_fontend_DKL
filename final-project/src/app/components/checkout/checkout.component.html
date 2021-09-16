@@ -1,80 +1,54 @@
-<main>
-  <div class="basket">
-    <div class="basket-module">
-      <label for="promo-code">Enter a promotional code</label>
-      <input id="promo-code" type="text" name="promo-code" maxlength="5" class="promo-code-field">
-      <button class="promo-code-cta">Apply</button>
-    </div>
-    <div class="basket-labels">
-      <ul>
-        <li class="item item-heading">Item</li>
-        <li class="price">Price</li>
-        <li class="quantity">Quantity</li>
-        <li class="subtotal">Subtotal</li>
+<div class="main-content">
+  <div class="card-checkout">
+    <div class="left-content">
+      <ul class="list">
+        <li style="margin: 1em;">
+          <h5>Tên công ty</h5>
+          <h4>DLK Company</h4>
+        </li>
+        <li style="margin: 1em;">
+          <h5>Số tài khoản</h5>
+          <h4>1892394241
+          </h4>
+        </li>
+        <li style="margin: 1em;">
+          <h5>Ngân hàng</h5>
+          <h4><i class="mdi mdi-currency-try"></i>BIDV Đông Sài Gòn</h4>
+        </li>
       </ul>
+      <button class="back-button"> <i class="mdi mdi-chevron-left"></i> Hủy</button>
     </div>
-    <div class="basket-product" *ngFor="let item of localCart">
-
-      <div class="item">
-        <div class="product-image">
-          <img src="{{ item.product.img }}" alt="Placholder Image 2" class="product-frame">
+    <div class="right-content">
+      <div class="top-content">
+        <h5>MASTER CARD</h5><i class="mdi mdi-chevron-right"></i>
+        <img class="card-logo" src="https://image.flaticon.com/icons/svg/179/179449.svg" />
+      </div>
+      <div class="middle-content">
+        <div class="material-input-group">
+          <i class="mdi mdi-account"></i>
+          <input type="text" class="material-input iconic" value="Minh Đạt" required>
+          <span class="highlight"></span>
+          <span class="material-input-bar"></span>
+          <label class="material-input-label iconic">Tên người giao dịch</label>
         </div>
-        <div class="product-details">
-          <h1><strong><span class="item-quantity">{{ item.product.quantity }}</span> x {{ item.product.name }}</strong>
-          </h1>
-          <!-- <p><strong>Navy, Size 18</strong></p> -->
-          <p>Product Code - 232321939</p>
+        <div class="material-input-group">
+          <i class="mdi mdi-credit-card"></i>
+          <input type="text" class="material-input iconic" value="5432 3465 1709 89" required>
+          <span class="highlight"></span>
+          <span class="material-input-bar"></span>
+          <label class="material-input-label iconic">Tài khoản ngân hàng</label>
+        </div>
+        <div class="material-input-group">
+          <i class="mdi mdi-credit-card"></i>
+          <input type="text" class="material-input iconic" value="BIDV" required>
+          <span class="highlight"></span>
+          <span class="material-input-bar"></span>
+          <label class="material-input-label iconic">Lựa chọn ngân hàng</label>
         </div>
       </div>
-      <div class="price">{{ formatNumberService.formatNumber(item.product.priceOfPiece) }}</div>
-      <div class="quantity">
-        <input type="number" value="{{ item.product.quantity }}" min="1" class="quantity-field">
-      </div>
-      <div class="subtotal">{{ formatNumberService.formatNumber(item.product.priceOfPiece * item.product.quantity) }}
-      </div>
-      <div class="remove">
-        <button>Remove</button>
+      <div class="bottom-content">
+        <button class="check-button" (click)="payment()">Thanh toán<i class="mdi mdi-chevron-right"></i></button>
       </div>
     </div>
-
   </div>
-  <aside>
-    <div class="summary">
-      <div class="summary-total-items"><span class="total-items"></span> Items in your Bag</div>
-      <div class="summary-subtotal">
-        <div class="subtotal-title">Tạm tính</div>
-        <div class="subtotal-value final-value" id="basket-subtotal">{{ formatNumberService.formatNumber(subTotalPrice)
-          }}</div>
-        <div class="summary-promo hide">
-          <div class="promo-title">Promotion</div>
-          <div class="promo-value final-value" id="basket-promo"></div>
-        </div>
-      </div>
-      <div class="summary-subtotal">
-        <div class="subtotal-title">Giảm giá</div>
-        <div class="subtotal-value final-value" id="basket-subtotal">{{ formatNumberService.formatNumber(0)}}</div>
-        <div class="summary-promo hide">
-          <div class="promo-title">Promotion</div>
-          <div class="promo-value final-value" id="basket-promo"></div>
-        </div>
-      </div>
-      <div class="summary-delivery">
-        <div class="subtotal-title">Tax (12%)</div>
-        <div class="subtotal-value final-value" id="basket-subtotal">{{ formatNumberService.formatNumber(tax) }}</div>
-        <div class="summary-promo hide">
-          <div class="promo-title">Promotion</div>
-          <div class="promo-value final-value" id="basket-promo"></div>
-        </div>
-      </div>
-
-
-      <div class="summary-total">
-        <div class="total-title">Total</div>
-        <div class="total-value final-value" id="basket-total">{{ formatNumberService.formatNumber(total) }}</div>
-      </div>
-      <div class="summary-checkout">
-        <button class="checkout-cta" (click)="navigate()">Check out</button>
-      </div>
-    </div>
-  </aside>
-</main>
+</div>

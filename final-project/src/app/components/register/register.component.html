@@ -1,144 +1,54 @@
 <div class="register-container">
     <div class="container">
-        <div class="title">Registration</div>
+        <div class="title">Đăng ký</div>
         <form (ngSubmit)="submitForm()" #registerForm="ngForm">
             <div class="user-details">
                 <div class="input-box">
-                    <span class="details">Full Name</span>
-                    <input 
-                        type="text" 
-                        placeholder="Enter your name" 
-                        [(ngModel)]="user.displayName"
-                        name="fullname"
-                        #userName = ngModel
-                        [ngClass]="{'error': userName.invalid && userName.touched}"
-                        required
-                        >
-                    <p
-                        *ngIf="userName.invalid && userName.dirty"
-                        style="color: red;"
-                    >
-                    Your name is required</p>
+                    <span class="details">Họ và tên</span>
+                    <input type="text" [(ngModel)]="user.displayName" name="fullname" #userName=ngModel
+                        [ngClass]="{'error': userName.invalid && userName.touched}" required>
+                    <p *ngIf="userName.invalid && userName.dirty" style="color: red;">
+                        Yêu cầu họ và tên</p>
                 </div>
                 <div class="input-box">
-                    <span class="details">Your UID</span>
-                    <input
-                        type="number"
-                        placeholder="Enter your UID" 
-                        [(ngModel)]="user.providerId"
-                        #userproviderId=ngModel
-                        required
-                        name="tenantId"
-                        >
-                        <p
-                        *ngIf="userproviderId.invalid && userproviderId.dirty"
-                        style="color: red;"
-                    >
-                    Your UID is required and number type</p>
+                    <span class="details">CMND</span>
+                    <input type="number" [(ngModel)]="user.providerId" #userproviderId=ngModel required name="tenantId">
+                    <p *ngIf="userproviderId.invalid && userproviderId.dirty" style="color: red;">
+                        Nhập CMND</p>
                 </div>
                 <div class="input-box">
                     <span class="details">Email</span>
-                    <input 
-                        type="email" 
-                        placeholder="Enter your email" 
-                        required
-                        [(ngModel)]="user.email"
-                        name="email"
-                        #userEmail=ngModel
-                        >
-                        <p
-                        *ngIf="userEmail.invalid && userEmail.dirty"
-                        style="color: red;"
-                    >
-                    Your email is required</p>
+                    <input type="email" required [(ngModel)]="user.email" name="email" #userEmail=ngModel>
+                    <p *ngIf="userEmail.invalid && userEmail.dirty" style="color: red;">
+                        Nhập email</p>
                 </div>
                 <div class="input-box">
-                    <span class="details">Phone Number</span>
-                    <input
-                        type="number"
-                        placeholder="Enter your phone number" 
-                        [(ngModel)]="user.phoneNumber"
-                        name="phoneNumber"
-                        #userPhoneNumber=ngModel
+                    <span class="details">Số điện thoại</span>
+                    <input type="number" [(ngModel)]="user.phoneNumber" name="phoneNumber" #userPhoneNumber=ngModel
                         required>
-                    <p
-                    *ngIf="userPhoneNumber.invalid && userPhoneNumber.dirty"
-                    style="color: red;"
-                >
-                Your email is required and type number</p>
+                    <p *ngIf="userPhoneNumber.invalid && userPhoneNumber.dirty" style="color: red;">
+                        Nhập số điện thoại</p>
                 </div>
                 <div class="input-box">
-                    <span class="details">Password</span>
-                    <input 
-                        type="password" 
-                        placeholder="Enter your password" 
-                        required
-                        [(ngModel)]="user.password"
-                        name="password"
-                        #userPassword=ngModel
-                        >
-                        <p
-                        *ngIf="userPassword.invalid && userPassword.dirty"
-                        style="color: red;"
-                    >
-                    Your password is required</p>
-                    <p
-                    *ngIf="userPassword.invalid && userPassword.dirty"
-                    style="color: red;"
-                >
-                Your password has more then 6 character</p>
+                    <span class="details">Mật khẩu</span>
+                    <input type="password" required [(ngModel)]="user.password" name="password" #userPassword=ngModel>
+                    <p *ngIf="userPassword.invalid && userPassword.dirty" style="color: red;">
+                        Nhập mật khẩu</p>
+                    <p *ngIf="userPassword.invalid && userPassword.dirty" style="color: red;">
+                        Mật khẩu phải hơn 6 ký tự</p>
                 </div>
                 <div class="input-box">
-                    <span class="details">Confirm Password</span>
-                    <input 
-                        type="password" 
-                        placeholder="Confirm your password" 
-                        required
-                        [(ngModel)]="user.confirmPassword"
-                        name="confirmPassword"
-                        #confirmPassword=ngModel
-                        [disabled]="userPassword.invalid === true"
-                        >
-                        <p
-                        *ngIf="confirmPassword.invalid && confirmPassword.dirty"
-                        style="color: red;"
-                    >
-                    Confirm password</p>
-                    <p
-                        *ngIf="userPassword !== confirmPassword && confirmPassword.dirty"
-                        style="color: red;"
-                    >
-                    Confirm wrong password</p>
+                    <span class="details">Xác nhận mật khẩu</span>
+                    <input type="password" required [(ngModel)]="user.confirmPassword" name="confirmPassword"
+                        #confirmPassword=ngModel [disabled]="userPassword.invalid === true">
+                    <p *ngIf="confirmPassword.invalid && confirmPassword.dirty" style="color: red;">
+                        Xác nhận mật khẩu</p>
+
                 </div>
             </div>
-            <!-- <div class="gender-details">
-                <input type="radio" name="gender" id="dot-1">
-                <input type="radio" name="gender" id="dot-2">
-                <input type="radio" name="gender" id="dot-3">
-                <span class="gender-title">Gender</span>
-                <div class="category">
-                    <label for="dot-1">
-                        <span class="dot one"></span>
-                        <span class="gender">Male</span>
-                    </label>
-                    <label for="dot-2">
-                        <span class="dot two"></span>
-                        <span class="gender">Female</span>
-                    </label>
-                    <label for="dot-3">
-                        <span class="dot three"></span>
-                        <span class="gender">Prefer not to say</span>
-                    </label>
-                </div>
-            </div> -->
-          
-            <input 
-                class="button"
-                type="submit" 
-                value="Register"
-                [disabled]="registerForm.invalid"
-                />
+
+            <input class="button" type="submit" value="Register" [disabled]="registerForm.invalid" />
         </form>
     </div>
-    
+
 </div>

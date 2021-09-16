@@ -43,6 +43,8 @@ import { EventComponent } from './components/event/event.component';
 import { EventItemComponent } from './components/event/event-item/event-item.component';
 import { NotificationComponent } from './components/common/notification/notification.component';
 import { HeaderPageComponent } from './components/common/header-page/header-page.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,6 +71,7 @@ import { HeaderPageComponent } from './components/common/header-page/header-page
     OceanParkComponent,
     NotificationComponent,
     HeaderPageComponent,
+    ForgotPasswordComponent,
   ],
   imports: [
     MaterialModule,
