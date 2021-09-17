@@ -4,6 +4,7 @@ import { FormatNumberService } from '../../../services/format-number.service';
 import { Product } from '../../../model/product';
 import { faBed, faLocationArrow, faChartArea, faBath, faCompass } from '@fortawesome/free-solid-svg-icons';
 import { ActivatedRoute } from '@angular/router';
+import {ApartmentService} from '../../../services/apartment.service';
 @Component({
   selector: 'app-listproducts',
   templateUrl: './products-list.component.html',
@@ -36,7 +37,8 @@ export class ProductsListComponent implements OnInit {
   constructor(
     private productService: ProductService,
     public formatNumberService: FormatNumberService,
-    private actRoute: ActivatedRoute
+    private actRoute: ActivatedRoute,
+    private apartmentService:ApartmentService
   ) {
   }
 
@@ -58,7 +60,7 @@ export class ProductsListComponent implements OnInit {
       this.searchText = param['search']
     })
 
-    this.productService.getAllProducts().subscribe(
+    this.apartmentService.fetchListApartments().subscribe(
       response => {
         this.products = response.filter(item => {
           return item.direct.includes(this.filterLocation)
