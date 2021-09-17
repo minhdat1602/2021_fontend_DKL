@@ -1,5 +1,6 @@
 $timeout:3s;
 .notification{
+    z-index: 99;
     position: fixed;
     top: 40%;
     transform:  scale(0);
