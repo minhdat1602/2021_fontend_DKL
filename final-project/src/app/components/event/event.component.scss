@@ -58,6 +58,14 @@ div.main-event {
                 }
             }
         }
+        @media (max-width: 480px) {
+            width: 360px;
+            div.event-wrap {
+                div.event-item {
+                    width: 340px !important;
+                }
+            }
+        }
 
         div.event-wrap {
             display: flex;
