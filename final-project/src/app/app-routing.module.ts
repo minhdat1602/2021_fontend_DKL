@@ -33,6 +33,7 @@ const routes: Routes = [
   { path: 'success', component: SuccessComponent },
   { path: 'ocean-park-introduce', component: OceanParkComponent },
   { path: 'contact', component: ContactComponent },
+  // { path: "products", component: EventDetailComponent },
   { path: 'products', loadChildren: () => import('./components/products/products.module').then(m => m.ProductsModule) },
   // { path: 'product-details', component: ProductDetailsComponent },
   { path: 'west-point-introduce', component: WestPointComponent },
