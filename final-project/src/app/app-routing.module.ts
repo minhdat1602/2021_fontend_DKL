@@ -22,6 +22,7 @@ import { OceanParkComponent } from './components/introduce/ocean-park/ocean-park
 import { NotificationComponent } from './components/common/notification/notification.component'
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { EventDetailComponent } from './components/event-detail/event-detail.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -42,6 +43,7 @@ const routes: Routes = [
   { path: "events/:id", component: EventDetailComponent },
   { path: 'n', component: NotificationComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
+  { path: 'profile', component: ProfileComponent },
   { path: '**', component: PagenotfoundComponent },
 
 ];

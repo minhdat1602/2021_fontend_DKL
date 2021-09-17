@@ -64,8 +64,8 @@
                         </label>
                         <a routerLink="/forgot-password">Quên mật khẩu?</a>
                     </div>
-                    <button class="login-form__number" (click)="authService.login(userName.value, userPassword.value)"
-                        [disabled]="loginForm.invalid" (click)="activeLoading()">Đăng nhập</button>
+                    <button class="login-form__number" (click)="login(userName.value, userPassword.value)"
+                        [disabled]="loginForm.invalid">Đăng nhập</button>
                     <a routerLink="/register" class="login-form__loginistered">Đăng ký</a>
                 </form>
                 <div class="modal-separator">
@@ -93,3 +93,4 @@
     </div>
 
 </div>
+<app-notification *ngIf="successLogin" [type]="true" [message]="sucessLoginMessage"></app-notification>
