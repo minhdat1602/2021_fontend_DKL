@@ -16,4 +16,8 @@ export class ApartmentService {
   fetchListApartments(): Observable<Apartment[]> {
     return this.http.get<Apartment[]>(this.apiUrl)
   }
+
+
+
 }
+
