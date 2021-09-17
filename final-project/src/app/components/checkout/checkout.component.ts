@@ -3,9 +3,6 @@ import { Router } from '@angular/router';
 import { CartService } from '../../services/cart.service';
 import { FormatNumberService } from '../../services/format-number.service';
 import { AuthService } from '../../auth/auth.service';
-import { Apartment } from '../../model/apartment.model';
-import { ApartmentService } from '../../services/apartment.service';
-import { ThisReceiver } from '@angular/compiler';
 
 @Component({
   selector: 'app-checkout',
@@ -23,11 +20,10 @@ export class CheckoutComponent implements OnInit {
     private cartService: CartService,
     public formatNumberService: FormatNumberService,
     private router: Router,
-    private authService: AuthService,
+    private authService: AuthService
   ) { }
 
   ngOnInit(): void {
-
     this.userDetail()
     this.getApartment()
 
@@ -41,12 +37,8 @@ export class CheckoutComponent implements OnInit {
         this.apartment = cartItems[0]['apartment']
         this.couponValue = (this.apartment.price + this.apartment.price * 0.1 + this.apartment.price * 0.02) * 0.1
         this.setTotalPrice()
-<<<<<<< HEAD
-      }
-=======
         console.log(this.apartment)
-      } 
->>>>>>> origin/main
+      }
     }
 
   }
