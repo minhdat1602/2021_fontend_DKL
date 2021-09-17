@@ -41,7 +41,12 @@ export class CheckoutComponent implements OnInit {
         this.apartment = cartItems[0]['apartment']
         this.couponValue = (this.apartment.price + this.apartment.price * 0.1 + this.apartment.price * 0.02) * 0.1
         this.setTotalPrice()
+
       }
+
+        console.log(this.apartment)
+      } 
+
     }
 
   }

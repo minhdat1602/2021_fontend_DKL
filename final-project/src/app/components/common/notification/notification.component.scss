@@ -41,13 +41,13 @@ $timeout:3s;
 @media (max-width: 768px) {
     .notification{
         top: 40%;
-        left: 40%;
-        font-size: 20px;
+        left: 42%;
+        font-size: 16px;
         transform-origin: -0% -50%;
         .success, .failed{
-            padding: 20px 30px;
+            padding: 10px 20px;
             fa-icon{      
-                font-size: 45px;
+                font-size: 35px;
                 margin-bottom: 10px;
             }
         }
