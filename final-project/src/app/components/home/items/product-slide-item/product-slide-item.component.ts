@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Width } from 'ngx-owl-carousel-o/lib/services/carousel.service';
 import { Product } from 'src/app/model/product';
 
 @Component({
@@ -17,7 +18,11 @@ export class ProductSlideItemComponent implements OnInit {
 
   // product: Product = new Product(1, "S2.170606 - 1 PN Deluxe - Vinhomes Ocean Park", 47.00, 2, 1, "Tây Nam", 900000000, "https://stay.vinhomes.vn/on/demandware.static/-/Sites-vhm_leasing_en_master/vi_VN/dw5fe2e3e9/images/Vinhomes%20Ocean%20Park/Studio/Studio_4_medium.jpg");
 
+
+  @Input() width?: any;
   ngOnInit(): void {
     // console.log(this.product)
+    this.width = this.width.toString() + "px";
+    console.log(this.width);
   }
 }

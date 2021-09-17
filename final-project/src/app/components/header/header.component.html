@@ -26,7 +26,7 @@
                 <li><a [class.navSelected]="navUrl==='/contact'" mat-button routerLink="contact">Liên hệ</a></li>
             </ul>
             <ul class="right-menu">
-                <li class="item-nav-search">
+                <li class="item-nav-search show">
                     <a mat-icon-button (click)="changeSearchDisplay()">
                         <fa-icon [icon]="faSearch"></fa-icon>
                     </a>
@@ -44,7 +44,7 @@
                         </a>
                     </button>
                 </li>
-                <li>
+                <li class="show">
                     <mat-menu #appMenu="matMenu">
                         <ng-template matMenuContent>
                             <a *ngIf="!authService.isLoggedIn()" routerLink="login"><button mat-menu-item>Đăng
@@ -60,7 +60,7 @@
                     </mat-menu>
                     <button style="padding-right: 15px;" class="auth-btn" mat-button [matMenuTriggerFor]="appMenu">
                         <fa-icon [icon]="faUser"></fa-icon>
-                        <span *ngIf="authService.isLoggedIn()">Minh Đạt</span>
+                        <span *ngIf="authService.isLoggedIn()"></span>
                         <span *ngIf="!authService.isLoggedIn()"></span>
                     </button>
                 </li>
