@@ -151,9 +151,14 @@ nav {
 
                 // @media (max-width: 1024px) {
                 &:last-child {
-                    padding-right: 35px !important;
+                    // padding-right: 35px !important;
                 }
                 // }
+                @media (max-width: 460px) {
+                    &.show {
+                        display: none !important;
+                    }
+                }
 
                 &.item-nav-search {
                     &::before {
