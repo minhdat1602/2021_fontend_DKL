@@ -1,54 +1,106 @@
-<div class="main-content">
-  <div class="card-checkout">
-    <div class="left-content">
-      <ul class="list">
-        <li style="margin: 1em;">
-          <h5>Tên công ty</h5>
-          <h4>DLK Company</h4>
-        </li>
-        <li style="margin: 1em;">
-          <h5>Số tài khoản</h5>
-          <h4>1892394241
-          </h4>
-        </li>
-        <li style="margin: 1em;">
-          <h5>Ngân hàng</h5>
-          <h4><i class="mdi mdi-currency-try"></i>BIDV Đông Sài Gòn</h4>
-        </li>
-      </ul>
-      <button class="back-button"> <i class="mdi mdi-chevron-left"></i> Hủy</button>
-    </div>
-    <div class="right-content">
-      <div class="top-content">
-        <h5>MASTER CARD</h5><i class="mdi mdi-chevron-right"></i>
-        <img class="card-logo" src="https://image.flaticon.com/icons/svg/179/179449.svg" />
-      </div>
-      <div class="middle-content">
-        <div class="material-input-group">
-          <i class="mdi mdi-account"></i>
-          <input type="text" class="material-input iconic" value="Minh Đạt" required>
-          <span class="highlight"></span>
-          <span class="material-input-bar"></span>
-          <label class="material-input-label iconic">Tên người giao dịch</label>
+<div class="checkout">
+  <app-header-page [name] = "'Xác nhận'"></app-header-page>
+  <div class="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 order-md-2 mb-4">
+          <h1 class="mb-3"><b>Căn hộ</b></h1>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h3 class="my-0"><b>{{apartment.name}}</b></h3>
+                <small class="text-muted">{{apartment.project.name}}</small>
+              </div>
+              <span class="text-muted pt-1">{{ formatNumberService.formatNumber(apartment.price)}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h3 class="my-0">Thuế GTGT</h3>
+              </div>
+              <span class="text-muted">{{ formatNumberService.formatNumber(apartment.price*0.1)}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h3 class="my-0">Phí bảo trì</h3>
+                <small class="text-muted"></small>
+              </div>
+              <span class="text-muted">{{ formatNumberService.formatNumber(apartment.price*0.02)}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between bg-light">
+              <div class="text-success">
+                <h3 class="my-0">Mã giảm giá</h3>
+                <small>westpoint</small>
+              </div>
+              <span class="text-success">-{{ formatNumberService.formatNumber(couponValue)}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <h2 class="my-0">Thành tiền</h2>
+              <h2 class="my-0">{{ formatNumberService.formatNumber(totalPrice)}}</h2>
+            </li>
+          </ul>
         </div>
-        <div class="material-input-group">
-          <i class="mdi mdi-credit-card"></i>
-          <input type="text" class="material-input iconic" value="5432 3465 1709 89" required>
-          <span class="highlight"></span>
-          <span class="material-input-bar"></span>
-          <label class="material-input-label iconic">Tài khoản ngân hàng</label>
-        </div>
-        <div class="material-input-group">
-          <i class="mdi mdi-credit-card"></i>
-          <input type="text" class="material-input iconic" value="BIDV" required>
-          <span class="highlight"></span>
-          <span class="material-input-bar"></span>
-          <label class="material-input-label iconic">Lựa chọn ngân hàng</label>
+        <div class="col-md-8 order-md-1">
+          <h1 class="mb-3"><b>Thông tin khách hàng</b></h1>
+          <form class="needs-validation was-validated" novalidate="">
+            <div class="mb-3">
+              <label for="name">Họ tên <span class="text-muted"></span></label>
+              <input type="text" [value]="user.displayName" class="form-control" id="name" placeholder="email@example.com">
+              <div class="invalid-feedback">
+                Vui lòng điền tên hợp lệ !
+              </div>
+            </div>
+
+            
+
+            <div class="mb-3">
+              <label for="email">Email <span class="text-muted"></span></label>
+              <input type="email" class="form-control" id="email" placeholder="email@example.com">
+              <div class="invalid-feedback">
+                Vui lòng điền email hợp lệ !
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="phone">Địa chỉ</label>
+              <input type="number" class="form-control" id="phone" placeholder="Số điện thoại" required="">
+              <div class="invalid-feedback">
+                Vui lòng điền số điện thoại hợp lệ !
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="address">Địa chỉ</label>
+              <input type="text" class="form-control" id="address" placeholder="Địa chỉ" required="">
+              <div class="invalid-feedback">
+                Vui lòng điền địa chỉ hợp lệ !
+              </div>
+            </div>
+            <hr class="mb-4">
+            <div class="note">
+              <h1>* Lưu ý:</h1>
+              <p>Khi bấm Xác nhận đặt mua, chúng tôi sẽ liên hệ với quý khách qua thông tin của quý khách ở trên</p>
+              <p><b>Tuyệt đối KHÔNG </b>thanh toán bất kỳ khoản tiền nào trước khi chúng tôi liên hệ với quý khách</p>
+            </div>
+
+            
+      
+            
+            <hr class="mb-4">
+
+            
+            <button class="btn btn-primary btn-lg btn-block" (click)="payment()">Xác nhận đặt mua</button>
+            <app-notification *ngIf="notification" [type]="true" [message] = "'Thành công'"></app-notification>
+          </form>
         </div>
       </div>
-      <div class="bottom-content">
-        <button class="check-button" (click)="payment()">Thanh toán<i class="mdi mdi-chevron-right"></i></button>
-      </div>
+
+     
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
