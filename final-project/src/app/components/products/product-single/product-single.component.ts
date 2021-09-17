@@ -8,6 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Comment } from '../../../model/comment.model';
 import { CommentService } from '../../../services/comment.service';
 import { CartService } from '../../../services/cart.service';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-productsingle',
@@ -18,8 +19,8 @@ export class ProductSingleComponent implements OnInit {
   sucessAddCartMessage = "ĐÃ THÊM VÀO GIỎ HÀNG"
   failedAddCartMessage = "GIỎ HÀNG ĐÃ ĐẦY"
 
-  successAddCart:boolean = false
-  failedAddCart:boolean = false
+  successAddCart: boolean = false
+  failedAddCart: boolean = false
 
   private param?: String
   // Icons for UI
@@ -71,16 +72,16 @@ export class ProductSingleComponent implements OnInit {
 
   // Add to cart 
   addToCart(apartment: Apartment) {
-    if(this.cartService.addToCart(apartment)){
+    if (this.cartService.addToCart(apartment)) {
       this.cartNumberFunc()
       this.successAddCart = true
-    } else{
+    } else {
       this.failedAddCart = true
     }
     setTimeout(() => {
       this.router.navigate(['/cart']);
     }, 3000)
-    
+
   }
 
   togglePopup() {
@@ -118,5 +119,15 @@ export class ProductSingleComponent implements OnInit {
       this.commentService.addComment(apartment, this.comment)
       this.textComment = ''
     }
+  }
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: true,
+    navSpeed: 700,
+    // navText: ['', ''],
+    items: 1,
   }
 }

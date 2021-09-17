@@ -20,16 +20,15 @@ export class EventDetailComponent implements OnInit {
   // icon
   faChevronRight = faChevronRight;
   faChevronLeft = faChevronLeft;
-
+  event?: Event;
   //
   _id?: any;
   eventPrevious?: number;
   eventNext?: number;
   events: Event[] = [];
   fetchEvents(): void {
-    this._eventService.fetchEventAll().subscribe((events) => {
+    this._eventService.fetchEventLimit().subscribe((events) => {
       this.events = events;
-      console.log(this.events);
     });
   }
   ngOnInit(): void {
@@ -48,7 +47,7 @@ export class EventDetailComponent implements OnInit {
   }
 
 
-  event?: Event;
+
   fetchItem(id: number): void {
     this._eventService.fetchEventOne(id).subscribe((event) => {
       this.event = event;

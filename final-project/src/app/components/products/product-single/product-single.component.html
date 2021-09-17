@@ -5,7 +5,14 @@
     <div class="products-information">
       <app-header-page [name]="'Chi tiết căn hộ'"></app-header-page>
       <div id="carousel" class="carousel slide col-xl-7" data-ride="carousel">
-        <ol class="carousel-indicators">
+        <owl-carousel-o [options]="customOptions">
+          <ng-container *ngFor="let image of apartment.images">
+            <ng-template carouselSlide [id]="image.id">
+              <img height="400px" class="d-block w-100" [src]="image.imageUrl" alt="image slide" title="product image">
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+        <!-- <ol class="carousel-indicators">
           <li data-target="#carousel" data-slide-to="0" class="active"></li>
           <li data-target="#carousel" *ngFor="let image of apartment.images"></li>
 
@@ -17,9 +24,6 @@
           <div class="carousel-item" *ngFor="let image of apartment.images">
             <img class="d-block w-100" src={{image.imageUrl}} alt="First slide">
           </div>
-
-
-
         </div>
         <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -28,7 +32,7 @@
         <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
-        </a>
+        </a> -->
       </div>
       <div class="content-product col-xl-5">
         <div class="row">
