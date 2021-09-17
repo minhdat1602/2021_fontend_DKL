@@ -1,8 +1,10 @@
 <div data-aos="fade-down" data-aos-duration="600" class="main-form">
     <form class="search-form" action="get">
-        <input type="text" placeholder="Tìm kiếm...">
-        <button mat-button>
-            <fa-icon mat-button [icon]="faSearch"></fa-icon>
-        </button>
+        <input type="text" [(ngModel)]="searchText" placeholder="Tìm kiếm...">
+        <a routerLink="/products" [queryParams]="{ search: searchText }">
+            <button mat-button>
+                <fa-icon mat-button [icon]="faSearch"></fa-icon>
+            </button>
+        </a>
     </form>
 </div>
