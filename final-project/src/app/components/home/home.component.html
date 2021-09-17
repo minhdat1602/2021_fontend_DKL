@@ -1,6 +1,7 @@
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
 
 <div class="banner">
+    <div class="fill-bg"></div>
     <h2 class="welcome">NƠI HẠNH PHÚC NGẬP TRÀN</h2>
     <p>{{typewriter_display}}</p>
 
@@ -16,19 +17,20 @@
 </div>
 
 <div class="introduction">
-    <div data-aos="fade-right" class="sub-intro sub1">
+    <div data-aos="fade-right" data-aos-once="true" class="sub-intro sub1">
         <div class="intro-title">An Tâm chọn<br>Sống An Nhiên</div>
         <div class="">Ann Home là công ty dịch vụ bất động sản hàng đầu về uy tín và chất lượng dịch vụ. Ann
             Home phân phối trực tiếp (F1) các sản phẩm bất động sản đô thị và nghỉ dưỡng từ các chủ đầu tư uy
             tín.
         </div>
     </div>
-    <div data-aos="fade-up" class="sub-intro sub2">Không ngừng học hỏi và nỗ lực để trở thành người bạn đồng hành
+    <div data-aos="fade-up" data-aos-once="true" class="sub-intro sub2">Không ngừng học hỏi và nỗ lực để trở thành người
+        bạn đồng hành
         đáng tin cậy và
         tận tụy của khách hàng. Chúng tôi không chỉ tư vấn những sản phẩm phù hợp mà còn giúp quý khách hàng lựa
         chọn gói giải pháp tài chính tối ưu nhằm đạt mục đích đầu tư hiệu quả nhất.
     </div>
-    <div data-aos="fade-left" class="sub-intro sub3">
+    <div data-aos="fade-left" data-aos-once="true" class="sub-intro sub3">
         <div class="sub-intro-text">Lấy chữ An làm gốc, chúng tôi cam kết hỗ trợ khách hàng “An tâm” lựa chọn
             các
             sản phẩm đầu tư sinh lời hay tìm chốn an cư dài lâu. Thông tin về các dự án luôn được cập nhật đầy
@@ -39,7 +41,7 @@
     </div>
 </div>
 
-<div data-aos="fade-up" data-aos-duration="600" class="highligh product-slide">
+<div data-aos="fade-up" data-aos-once="true" data-aos-duration="600" class="highligh product-slide">
     <div class="slide-container">
         <h2 class="highligh-title">Bất động sản nổi bật</h2>
         <owl-carousel-o *ngIf="products" [options]="customOptions">
@@ -52,7 +54,7 @@
         </owl-carousel-o>
     </div>
 </div>
-<div data-aos="fade-up" data-aos-duration="600" class="best-seller product-slide">
+<div data-aos="fade-up" data-aos-once="true" data-aos-duration="600" class="best-seller product-slide">
     <div class="slide-container">
         <h2 class="best-seller-title">Căn hộ bán chạy nhất</h2>
         <owl-carousel-o *ngIf="products" [options]="customOptions">

@@ -58,7 +58,7 @@
                                     xuất</button></a>
                         </ng-template>
                     </mat-menu>
-                    <button style="padding-right: 15px;" class="auth-btn" mat-icon-button [matMenuTriggerFor]="appMenu">
+                    <button style="padding-right: 15px;" class="auth-btn" mat-button [matMenuTriggerFor]="appMenu">
                         <fa-icon [icon]="faUser"></fa-icon>
                         <span *ngIf="authService.isLoggedIn()">Minh Đạt</span>
                         <span *ngIf="!authService.isLoggedIn()"></span>

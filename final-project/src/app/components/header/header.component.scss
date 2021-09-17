@@ -149,11 +149,11 @@ nav {
             li {
                 padding: 0 0px;
 
-                @media (max-width: 1024px) {
-                    &:last-child {
-                        padding-right: 30px !important;
-                    }
+                // @media (max-width: 1024px) {
+                &:last-child {
+                    padding-right: 35px !important;
                 }
+                // }
 
                 &.item-nav-search {
                     &::before {
