@@ -13,16 +13,23 @@ export class EventComponent implements OnInit {
   constructor(private _eventService: EventService) { }
 
   events: Event[] = [];
-
+  all: boolean = false;
   ngOnInit(): void {
     Aos.init();
-    this.fetchEvents();
+    this.fetchEventLimit();
   }
 
   fetchEvents(): void {
     this._eventService.fetchEventAll().subscribe((events) => {
       this.events = events;
-      console.log(this.events);
+      this.all = true;
+    });
+  }
+
+  fetchEventLimit(): void {
+    this._eventService.fetchEventLimit().subscribe((events) => {
+      this.events = events;
+      this.all = false;
     });
   }
 

@@ -19,8 +19,8 @@
         </div>
     </div>
 </div>
-<div *ngIf="events.length>0" class="view-all">
-    <a href="#">Xem tất cả sự kiện</a>
+<div *ngIf="events.length>0 && all==false" class="view-all">
+    <a (click)="fetchEvents()" mat-button>Xem tất cả sự kiện</a>
 </div>
 <div *ngIf="events.length == 0" class="view-all">
     <p>Không có sự kiện nào</p>
