@@ -1,4 +1,11 @@
 @media (max-width:768px) {
+    .cart{
+        .empty{
+            p{
+              font-size: 25px;
+            }
+        }
+    }
     .apartment-info{
         box-shadow: none;
         div{

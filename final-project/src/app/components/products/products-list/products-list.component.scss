@@ -75,8 +75,6 @@ a:hover {
 .postcard {
   flex-wrap: wrap;
   display: flex;
-
-  // box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
   border-radius: 10px;
   margin: 0 0 2rem 0;
   overflow: hidden;
@@ -165,10 +163,10 @@ a:hover {
       cursor: default;
       user-select: none;
       transition: background-color 0.3s;
+    }
 
-      &:hover {
-        background: rgba(83, 83, 83, 0.8);
-      }
+    .postcard__text.t-dark::before{
+      background: white;
     }
   }
 
@@ -184,8 +182,9 @@ a:hover {
     border-radius: 10px;
   }
 
-  &:hover .postcard__bar {
-    width: 100px;
+ 
+  .postcard__text::before{
+    background: white;
   }
 }
 
@@ -210,13 +209,13 @@ a:hover {
     .postcard__text {
       padding: 3rem;
       width: 100%;
+      background: white;
     }
 
     .media.postcard__text:before {
       content: "";
       position: absolute;
       display: block;
-      background: #18151f;
       top: -20%;
       height: 130%;
       width: 55px;
@@ -224,7 +223,7 @@ a:hover {
 
     &:hover .postcard__img {
       // transform: scaleX(1.4);
-      max-width: 500px;
+      // max-width: 500px;
     }
 
     &:nth-child(2n+1) {

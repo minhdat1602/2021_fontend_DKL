@@ -70,7 +70,7 @@ export class CheckoutComponent implements OnInit {
       this.cartService.removeAll()
 
       setTimeout(() => {
-        this.router.navigate(['/success']);
+        this.router.navigate(['/cart']);
       }, 3000)
 
       this.cartNumberFunc()
