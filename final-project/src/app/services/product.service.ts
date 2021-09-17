@@ -22,6 +22,10 @@ export class ProductService {
 
   }
 
+  fetchByKey(keyword: String): Observable<Product[]> {
+    return this.httpClient.get<Product[]>(this.productURL + "?keyword=" + keyword);
+  }
+
   getAllProducts(): Observable<Product[]> {
     this.products = this.httpClient.get<Product[]>(this.productURL)
     return this.products

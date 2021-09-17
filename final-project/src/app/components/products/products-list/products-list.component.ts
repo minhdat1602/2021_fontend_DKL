@@ -40,9 +40,16 @@ export class ProductsListComponent implements OnInit {
   ) {
   }
 
+  private keyword?: string;
+  fetchByKey(keyword: String): void {
+    this.productService.fetchByKey(keyword).subscribe((products) => this.products = products);
+  }
   ngOnInit(): void {
     this.actRoute.queryParams.subscribe(param => {
-      this.location = param['location']
+      this.location = param['keyword'];
+
+
+      this.location = param['location'];
       if (this.location === 'ocean') {
         this.filterLocation = 'Tây'
       } else if (this.location === 'west-point') {

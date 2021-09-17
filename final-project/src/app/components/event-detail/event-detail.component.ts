@@ -23,30 +23,21 @@ export class EventDetailComponent implements OnInit {
 
   //
   _id?: any;
-  eventPrevious?: Event;
-  eventNext?: Event;
-
+  eventPrevious?: number;
+  eventNext?: number;
+  events: Event[] = [];
+  fetchEvents(): void {
+    this._eventService.fetchEventAll().subscribe((events) => {
+      this.events = events;
+      console.log(this.events);
+    });
+  }
   ngOnInit(): void {
     AOS.init();
-
+    this.fetchEvents();
     this._route.params.forEach((param) => {
       this._id = param['id'];
       this.fetchItem(this._id);
-
-      // Code lại sau
-      if (this._id == 1) {
-        this._eventService.fetchEventOne(6).subscribe((event) => {
-          this.eventPrevious = event;
-        });
-      } else {
-        this._eventService.fetchEventOne((this._id - 1)).subscribe((event) => {
-          this.eventPrevious = event;
-        });
-      }
-      this._eventService.fetchEventOne((this._id + 1)).subscribe((event) => {
-        this.eventNext = event;
-      });
-
     }
     );
 
