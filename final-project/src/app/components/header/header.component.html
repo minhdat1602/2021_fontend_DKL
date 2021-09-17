@@ -48,6 +48,8 @@
                                     nhập</button></a>
                             <a *ngIf="!authService.isLoggedIn()" routerLink="register"><button mat-menu-item>Đăng
                                     ký</button></a>
+                            <a *ngIf="authService.isLoggedIn()" routerLink="/profile"><button mat-menu-item>Thông tin cá
+                                    nhân</button></a>
                             <a *ngIf="authService.isLoggedIn()" (click)="authService.logout()"><button
                                     mat-menu-item>Đăng
                                     xuất</button></a>

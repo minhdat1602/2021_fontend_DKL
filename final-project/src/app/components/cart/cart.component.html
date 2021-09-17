@@ -23,7 +23,7 @@
 					</div>
 					<div class="apart-price">
 						<h4>Gía BDS</h4>
-						<p class="price"> {{ formatNumberService.formatNumber(apartment.price)}}<sup>đ</sup></p>
+						<p class="price"> {{ formatNumberService.formatNumber(apartment.price)}}</p>
 					</div>
 					<div class="remove" (click)="deleteItem(apartment)">
 						<fa-icon [icon]="faTimes"></fa-icon>
@@ -34,19 +34,19 @@
 				<div class="wrap-total">
 					<div class="line-total">
 						<p>Giá BĐS</p>
-						<p><b>{{ formatNumberService.formatNumber(apartment.price)}}<sup>đ</sup></b></p>
+						<p><b>{{ formatNumberService.formatNumber(apartment.price)}}</b></p>
 					</div>
 					<div class="line-total">
 						<p>Thuế GTGT (tạm tính)</p>
-						<p><b>{{ formatNumberService.formatNumber(apartment.price*0.1)}}<sup>đ</sup></b></p>
+						<p><b>{{ formatNumberService.formatNumber(apartment.price*0.1)}}</b></p>
 					</div>
 					<div class="line-total">
 						<p>Kinh phí bảo trì (tạm tính)</p>
-						<p><b>{{ formatNumberService.formatNumber(apartment.price*0.02)}}<sup>đ</sup></b></p>
+						<p><b>{{ formatNumberService.formatNumber(apartment.price*0.02)}}</b></p>
 					</div>
 					<div class="line-total">
 						<p><b>Tổng tiền niêm yết</b></p>
-						<p class="price"><b>{{ formatNumberService.formatNumber(totalPrice)}}<sup>đ</sup></b></p>
+						<p class="price"><b>{{ formatNumberService.formatNumber(apartment.price +apartment.price*0.1 + apartment.price*0.02)}}</b></p>
 					</div>
 					<div class="coupon">
 						<form action="">
@@ -68,14 +68,14 @@
 							</div>
 							<div class="line-total">
 								<p><b>Giảm giá</b></p>
-								<p class="price"><b>{{ formatNumberService.formatNumber(couponValue)}}<sup>đ</sup></b>
+								<p class="price"><b>{{ formatNumberService.formatNumber(couponValue)}}</b>
 								</p>
 							</div>
 						</div>
 					</div>
 					<div class="line-total" style="margin-top: 15px;">
 						<p><b>Tổng tiền mua online</b></p>
-						<p class="price"><b>{{ formatNumberService.formatNumber(totalPrice)}}<sup>đ</sup></b></p>
+						<p class="price"><b>{{ formatNumberService.formatNumber(totalPrice)}}</b></p>
 					</div>
 					<div class="button-ver">
 
@@ -90,7 +90,6 @@
 </div>
 
 <app-notification *ngIf="deleted" [type] = "true" [message] = "deleteSuccessNotification"></app-notification>
-
 
 
 

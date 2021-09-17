@@ -10,7 +10,9 @@ export class LoginComponent implements OnInit {
 
   username = '';
   password = '';
-  isActiveLoading: boolean = false;
+  successLogin = false
+  sucessLoginMessage = "Đăng nhập thành công"
+  isActiveLoading: boolean = false
 
   constructor(
     public authService: AuthService
@@ -19,8 +21,13 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  activeLoading() {
+  login(username: string, password: string) {
+    this.authService.login(username, password)
     this.isActiveLoading = true
+    setTimeout(() => {
+      this.successLogin = true
+      this.isActiveLoading = false
+    }, 2000)
   }
 
 }

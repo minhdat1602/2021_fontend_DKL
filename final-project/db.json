@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 1,
-      "name": "S2.170606 - 1 PN Deluxe",
+      "name": "S2.170606 - 1 PN Deluxe - Xinhomes Ocean park",
       "area": 47,
       "bedroom": 2,
       "bathroom": 1,
@@ -12,12 +12,12 @@
     },
     {
       "id": 2,
-      "name": "S3.170607 - 2 PN Deluxe",
+      "name": "S3.170607 - 2 PN Deluxe - Xinhomes West point",
       "area": 36,
       "bedroom": 2,
       "bathroom": 1,
-      "direct": "Tây Bắc",
-      "price": 800000000,
+      "direct": "Đông Bắc",
+      "price": 700000000,
       "image": "https://img5.goodfon.com/original/1600x900/2/fb/house-greece-corfu-kaminaki-agni-villa-aura-dom-villa-vid--3.jpg"
     },
     {
@@ -32,7 +32,7 @@
     },
     {
       "id": 4,
-      "name": "S5.170609 - 1 PN Deluxe - Xinhomes Ocean Park",
+      "name": "S5.170609 - 1 PN Deluxe - Xinhomes West point",
       "area": 47,
       "bedroom": 2,
       "bathroom": 1,
@@ -42,7 +42,7 @@
     },
     {
       "id": 5,
-      "name": "S6.170610 - 1 PN Deluxe - Xinhomes Ocean Park",
+      "name": "S6.170610 - 1 PN Deluxe - Xinhomes West point",
       "area": 34,
       "bedroom": 2,
       "bathroom": 1,
@@ -57,17 +57,17 @@
       "bedroom": 2,
       "bathroom": 1,
       "direct": "Tây Nam",
-      "price": 780000000,
+      "price": 720000000,
       "image": "https://villasatusatu.com/wp-content/uploads/2016/07/Pool-1b-1600x900.jpg"
     },
     {
       "id": 7,
-      "name": "S8.170612 - 1 PN Deluxe - Xinhomes Ocean Park",
+      "name": "S8.170612 - 1 PN Deluxe - Xinhomes West point",
       "area": 47,
       "bedroom": 2,
       "bathroom": 1,
-      "direct": "Tây Nam",
-      "price": 930000000,
+      "direct": "Đông Nam",
+      "price": 820000000,
       "image": "https://images.wallpaperscraft.com/image/pool_pavilion_rest_73516_1600x900.jpg"
     },
     {
@@ -77,17 +77,17 @@
       "bedroom": 2,
       "bathroom": 1,
       "direct": "Tây Nam",
-      "price": 900000000,
+      "price": 840000000,
       "image": "https://data.1freewallpapers.com/download/great-place-for-a-pool-1600x900.jpg"
     },
     {
       "id": 9,
-      "name": "S10.170614 - 1 PN Deluxe - Xinhomes Ocean Park",
+      "name": "S10.170614 - 1 PN Deluxe - Xinhomes West point",
       "area": 47,
       "bedroom": 2,
       "bathroom": 1,
-      "direct": "Tây Nam",
-      "price": 900000000,
+      "direct": "Đông Nam",
+      "price": 860000000,
       "image": "https://wallpaperaccess.com/full/2195996.jpg"
     },
     {
@@ -97,107 +97,107 @@
       "bedroom": 2,
       "bathroom": 1,
       "direct": "Tây Bắc",
-      "price": 780000000,
+      "price": 760000000,
       "image": "https://images.wallpaperscraft.com/image/bedroom_room_design_furniture_interior_39672_1600x900.jpg"
     },
     {
       "id": 11,
-      "name": "S1.1706016 - 1 PN Deluxe - Xinhomes Ocean Park",
+      "name": "S21.1706016 - 1 PN Deluxe - Xinhomes Ocean Park",
       "area": 47,
       "bedroom": 2,
       "bathroom": 1,
       "direct": "Tây Nam",
-      "price": 900000000,
+      "price": 880000000,
       "image": "https://cdn.wallpapersafari.com/76/69/sxJUXM.jpg"
     },
     {
       "id": 12,
-      "name": "S3.1706017 - 2 PN Deluxe - Xinhomes Ocean Park",
+      "name": "S23.1706017 - 2 PN Deluxe - Xinhomes West point",
       "area": 36,
       "bedroom": 2,
       "bathroom": 1,
-      "direct": "Tây Bắc",
-      "price": 800000000,
+      "direct": "Đông Bắc",
+      "price": 780000000,
       "image": "https://www.florida-dreams.com/unitimages/6379450459.jpg"
     },
     {
       "id": 13,
-      "name": "S4.1706018 - 1 PN Deluxe - Xinhomes Ocean Park",
+      "name": "S24.1706018 - 1 PN Deluxe - Xinhomes Ocean Park",
       "area": 49,
       "bedroom": 2,
       "bathroom": 1,
       "direct": "Tây Nam",
-      "price": 760000000,
+      "price": 960000000,
       "image": "https://wallpapermemory.com/uploads/290/sci-fi-background-hd-1600x900-409372.jpg"
     },
     {
       "id": 14,
-      "name": "S5.1706019 - 1 PN Deluxe - Xinhomes Ocean Park",
+      "name": "S25.1706019 - 1 PN Deluxe - Xinhomes West point",
       "area": 47,
       "bedroom": 2,
       "bathroom": 1,
       "direct": "Đông Nam",
-      "price": 890000000,
+      "price": 1000000000,
       "image": "https://images.wallpaperscraft.com/image/house_yard_garden_evening_light_pond_vegetation_water-lilies_62819_1600x900.jpg"
     },
     {
       "id": 15,
-      "name": "S6.170620 - 1 PN Deluxe - Xinhomes Ocean Park",
+      "name": "S26.170620 - 1 PN Deluxe - Xinhomes Ocean Park",
       "area": 34,
       "bedroom": 2,
       "bathroom": 1,
-      "direct": "Đông Nam",
-      "price": 920000000,
+      "direct": "Tây Nam",
+      "price": 980000000,
       "image": "https://cityhomecollective.blob.core.windows.net/uploads/optimized/properties/6553%20S%201460%20W/1008577_Exterior_800x600-8yu62-1600x900.jpg"
     },
     {
       "id": 16,
-      "name": "S7.170621 - 1 PN Deluxe - Xinhomes Ocean Park",
+      "name": "S27.170621 - 1 PN Deluxe - Xinhomes Ocean Park",
       "area": 57,
       "bedroom": 2,
       "bathroom": 1,
       "direct": "Tây Nam",
-      "price": 780000000,
+      "price": 1200000000,
       "image": "https://wallpaperaccess.com/full/3060213.jpg"
     },
     {
       "id": 17,
-      "name": "S8.170622 - 1 PN Deluxe - Xinhomes Ocean Park",
+      "name": "S28.170622 - 1 PN Deluxe - Xinhomes Ocean Park",
       "area": 47,
       "bedroom": 2,
       "bathroom": 1,
       "direct": "Tây Nam",
-      "price": 930000000,
+      "price": 980000000,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScpl-4JDkh3no0NVNCTw8x0lPzfxnQ0o7x_g&usqp=CAU"
     },
     {
       "id": 18,
-      "name": "S9.170623 - 1 PN Deluxe - Xinhomes Ocean Park",
+      "name": "S29.170623 - 1 PN Deluxe - Xinhomes West point",
       "area": 47,
       "bedroom": 2,
       "bathroom": 1,
-      "direct": "Tây Nam",
-      "price": 900000000,
+      "direct": "Đông Nam",
+      "price": 1200000000,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqJ8MTV5DKCPzaBbdWRCgLs2K7QkgIj5Y2HA&usqp=CAU"
     },
     {
       "id": 19,
-      "name": "S10.170624 - 1 PN Deluxe - Xinhomes Ocean Park",
+      "name": "S30.170624 - 1 PN Deluxe - Xinhomes Ocean Park",
       "area": 47,
       "bedroom": 2,
       "bathroom": 1,
       "direct": "Tây Nam",
-      "price": 900000000,
+      "price": 1100000000,
       "image": "https://www.desktopbackground.org/download/o/2012/09/22/456706_luxury-house-hd-wallpapers_1600x900_h.jpg"
     },
     {
       "id": 20,
-      "name": "S11.170625 - 1 PN Deluxe - Xinhomes Ocean Park",
+      "name": "S31.170625 - 1 PN Deluxe - Xinhomes Ocean Park",
       "area": 47,
       "bedroom": 2,
       "bathroom": 1,
       "direct": "Tây Bắc",
-      "price": 780000000,
+      "price": 1120000000,
       "image": "https://www.teahub.io/photos/full/233-2331196_dream-house-images-hd.jpg"
     }
   ],
@@ -398,6 +398,16 @@
           "id": 18921,
           "author": "Ẩn danh",
           "comment": "Nhà ở khá là hiện đại, khuôn viên thoáng mát, an ninh trật tự và mọi người ở đây khá là thân thiện."
+        },
+        {
+          "id": 13921,
+          "author": "Ẩn danh",
+          "comment": "Dự án khá uy tín, giao dịch nhanh gọn và nhận nhà nhanh"
+        },
+        {
+          "id": 19921,
+          "author": "Ẩn danh",
+          "comment": "Dịch vụ chăm sóc khách hàng khá là ổn, cho phép xem nhà và hoàn tiền khi không ưng ý"
         }
       ],
       "image": "https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw776c4bfb/images/VH_Westpoint/W1/Apartment/PIM/3PN/3PN_01.jpg",
@@ -517,10 +527,26 @@
       "area": 36,
       "bedroom": 2,
       "bathroom": 1,
-      "direct": "Tây Bắc",
-      "price": 800000000,
+      "direct": "Đông Bắc",
+      "price": 700000000,
       "unitPrice": 4370000,
-      "comments": [],
+      "comments": [
+        {
+          "id": 18921,
+          "author": "Ẩn danh",
+          "comment": "Nhà ở khá là hiện đại, khuôn viên thoáng mát, an ninh trật tự và mọi người ở đây khá là thân thiện."
+        },
+        {
+          "id": 13921,
+          "author": "Ẩn danh",
+          "comment": "Dự án khá uy tín, giao dịch nhanh gọn và nhận nhà nhanh"
+        },
+        {
+          "id": 19921,
+          "author": "Ẩn danh",
+          "comment": "Dịch vụ chăm sóc khách hàng khá là ổn, cho phép xem nhà và hoàn tiền khi không ưng ý"
+        }
+      ],
       "image": "https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw776c4bfb/images/VH_Westpoint/W1/Apartment/PIM/3PN/3PN_01.jpg",
       "images": [
         {
@@ -641,7 +667,23 @@
       "direct": "Tây Nam",
       "price": 760000000,
       "unitPrice": 4370000,
-      "comments": [],
+      "comments": [
+        {
+          "id": 18921,
+          "author": "Ẩn danh",
+          "comment": "Nhà ở khá là hiện đại, khuôn viên thoáng mát, an ninh trật tự và mọi người ở đây khá là thân thiện."
+        },
+        {
+          "id": 13921,
+          "author": "Ẩn danh",
+          "comment": "Dự án khá uy tín, giao dịch nhanh gọn và nhận nhà nhanh"
+        },
+        {
+          "id": 19921,
+          "author": "Ẩn danh",
+          "comment": "Dịch vụ chăm sóc khách hàng khá là ổn, cho phép xem nhà và hoàn tiền khi không ưng ý"
+        }
+      ],
       "image": "https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw776c4bfb/images/VH_Westpoint/W1/Apartment/PIM/3PN/3PN_01.jpg",
       "images": [
         {
@@ -762,7 +804,23 @@
       "direct": "Đông Nam",
       "price": 890000000,
       "unitPrice": 4370000,
-      "comments": [],
+      "comments": [
+        {
+          "id": 18921,
+          "author": "Ẩn danh",
+          "comment": "Nhà ở khá là hiện đại, khuôn viên thoáng mát, an ninh trật tự và mọi người ở đây khá là thân thiện."
+        },
+        {
+          "id": 13921,
+          "author": "Ẩn danh",
+          "comment": "Dự án khá uy tín, giao dịch nhanh gọn và nhận nhà nhanh"
+        },
+        {
+          "id": 19921,
+          "author": "Ẩn danh",
+          "comment": "Dịch vụ chăm sóc khách hàng khá là ổn, cho phép xem nhà và hoàn tiền khi không ưng ý"
+        }
+      ],
       "image": "https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw776c4bfb/images/VH_Westpoint/W1/Apartment/PIM/3PN/3PN_01.jpg",
       "images": [
         {
@@ -883,7 +941,23 @@
       "direct": "Đông Nam",
       "price": 920000000,
       "unitPrice": 4370000,
-      "comments": [],
+      "comments": [
+        {
+          "id": 18921,
+          "author": "Ẩn danh",
+          "comment": "Nhà ở khá là hiện đại, khuôn viên thoáng mát, an ninh trật tự và mọi người ở đây khá là thân thiện."
+        },
+        {
+          "id": 13921,
+          "author": "Ẩn danh",
+          "comment": "Dự án khá uy tín, giao dịch nhanh gọn và nhận nhà nhanh"
+        },
+        {
+          "id": 19921,
+          "author": "Ẩn danh",
+          "comment": "Dịch vụ chăm sóc khách hàng khá là ổn, cho phép xem nhà và hoàn tiền khi không ưng ý"
+        }
+      ],
       "image": "https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw776c4bfb/images/VH_Westpoint/W1/Apartment/PIM/3PN/3PN_01.jpg",
       "images": [
         {
@@ -1004,7 +1078,23 @@
       "direct": "Tây Nam",
       "price": 780000000,
       "unitPrice": 4370000,
-      "comments": [],
+      "comments": [
+        {
+          "id": 18921,
+          "author": "Ẩn danh",
+          "comment": "Nhà ở khá là hiện đại, khuôn viên thoáng mát, an ninh trật tự và mọi người ở đây khá là thân thiện."
+        },
+        {
+          "id": 13921,
+          "author": "Ẩn danh",
+          "comment": "Dự án khá uy tín, giao dịch nhanh gọn và nhận nhà nhanh"
+        },
+        {
+          "id": 19921,
+          "author": "Ẩn danh",
+          "comment": "Dịch vụ chăm sóc khách hàng khá là ổn, cho phép xem nhà và hoàn tiền khi không ưng ý"
+        }
+      ],
       "image": "https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw776c4bfb/images/VH_Westpoint/W1/Apartment/PIM/3PN/3PN_01.jpg",
       "images": [
         {
@@ -1125,7 +1215,23 @@
       "direct": "Tây Nam",
       "price": 930000000,
       "unitPrice": 4370000,
-      "comments": [],
+      "comments": [
+        {
+          "id": 18921,
+          "author": "Ẩn danh",
+          "comment": "Nhà ở khá là hiện đại, khuôn viên thoáng mát, an ninh trật tự và mọi người ở đây khá là thân thiện."
+        },
+        {
+          "id": 13921,
+          "author": "Ẩn danh",
+          "comment": "Dự án khá uy tín, giao dịch nhanh gọn và nhận nhà nhanh"
+        },
+        {
+          "id": 19921,
+          "author": "Ẩn danh",
+          "comment": "Dịch vụ chăm sóc khách hàng khá là ổn, cho phép xem nhà và hoàn tiền khi không ưng ý"
+        }
+      ],
       "image": "https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw776c4bfb/images/VH_Westpoint/W1/Apartment/PIM/3PN/3PN_01.jpg",
       "images": [
         {
@@ -1246,7 +1352,23 @@
       "direct": "Tây Nam",
       "price": 900000000,
       "unitPrice": 4370000,
-      "comments": [],
+      "comments": [
+        {
+          "id": 18921,
+          "author": "Ẩn danh",
+          "comment": "Nhà ở khá là hiện đại, khuôn viên thoáng mát, an ninh trật tự và mọi người ở đây khá là thân thiện."
+        },
+        {
+          "id": 13921,
+          "author": "Ẩn danh",
+          "comment": "Dự án khá uy tín, giao dịch nhanh gọn và nhận nhà nhanh"
+        },
+        {
+          "id": 19921,
+          "author": "Ẩn danh",
+          "comment": "Dịch vụ chăm sóc khách hàng khá là ổn, cho phép xem nhà và hoàn tiền khi không ưng ý"
+        }
+      ],
       "image": "https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw776c4bfb/images/VH_Westpoint/W1/Apartment/PIM/3PN/3PN_01.jpg",
       "images": [
         {
@@ -1367,7 +1489,23 @@
       "direct": "Tây Nam",
       "price": 900000000,
       "unitPrice": 4370000,
-      "comments": [],
+      "comments": [
+        {
+          "id": 18921,
+          "author": "Ẩn danh",
+          "comment": "Nhà ở khá là hiện đại, khuôn viên thoáng mát, an ninh trật tự và mọi người ở đây khá là thân thiện."
+        },
+        {
+          "id": 13921,
+          "author": "Ẩn danh",
+          "comment": "Dự án khá uy tín, giao dịch nhanh gọn và nhận nhà nhanh"
+        },
+        {
+          "id": 19921,
+          "author": "Ẩn danh",
+          "comment": "Dịch vụ chăm sóc khách hàng khá là ổn, cho phép xem nhà và hoàn tiền khi không ưng ý"
+        }
+      ],
       "image": "https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw776c4bfb/images/VH_Westpoint/W1/Apartment/PIM/3PN/3PN_01.jpg",
       "images": [
         {
@@ -1488,7 +1626,23 @@
       "direct": "Tây Bắc",
       "price": 780000000,
       "unitPrice": 4370000,
-      "comments": [],
+      "comments": [
+        {
+          "id": 18921,
+          "author": "Ẩn danh",
+          "comment": "Nhà ở khá là hiện đại, khuôn viên thoáng mát, an ninh trật tự và mọi người ở đây khá là thân thiện."
+        },
+        {
+          "id": 13921,
+          "author": "Ẩn danh",
+          "comment": "Dự án khá uy tín, giao dịch nhanh gọn và nhận nhà nhanh"
+        },
+        {
+          "id": 19921,
+          "author": "Ẩn danh",
+          "comment": "Dịch vụ chăm sóc khách hàng khá là ổn, cho phép xem nhà và hoàn tiền khi không ưng ý"
+        }
+      ],
       "image": "https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw776c4bfb/images/VH_Westpoint/W1/Apartment/PIM/3PN/3PN_01.jpg",
       "images": [
         {
@@ -1609,7 +1763,23 @@
       "direct": "Tây Nam",
       "price": 900000000,
       "unitPrice": 4370000,
-      "comments": [],
+      "comments": [
+        {
+          "id": 18921,
+          "author": "Ẩn danh",
+          "comment": "Nhà ở khá là hiện đại, khuôn viên thoáng mát, an ninh trật tự và mọi người ở đây khá là thân thiện."
+        },
+        {
+          "id": 13921,
+          "author": "Ẩn danh",
+          "comment": "Dự án khá uy tín, giao dịch nhanh gọn và nhận nhà nhanh"
+        },
+        {
+          "id": 19921,
+          "author": "Ẩn danh",
+          "comment": "Dịch vụ chăm sóc khách hàng khá là ổn, cho phép xem nhà và hoàn tiền khi không ưng ý"
+        }
+      ],
       "image": "https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw776c4bfb/images/VH_Westpoint/W1/Apartment/PIM/3PN/3PN_01.jpg",
       "images": [
         {
@@ -1730,7 +1900,23 @@
       "direct": "Tây Bắc",
       "price": 800000000,
       "unitPrice": 4370000,
-      "comments": [],
+      "comments": [
+        {
+          "id": 18921,
+          "author": "Ẩn danh",
+          "comment": "Nhà ở khá là hiện đại, khuôn viên thoáng mát, an ninh trật tự và mọi người ở đây khá là thân thiện."
+        },
+        {
+          "id": 13921,
+          "author": "Ẩn danh",
+          "comment": "Dự án khá uy tín, giao dịch nhanh gọn và nhận nhà nhanh"
+        },
+        {
+          "id": 19921,
+          "author": "Ẩn danh",
+          "comment": "Dịch vụ chăm sóc khách hàng khá là ổn, cho phép xem nhà và hoàn tiền khi không ưng ý"
+        }
+      ],
       "image": "https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw776c4bfb/images/VH_Westpoint/W1/Apartment/PIM/3PN/3PN_01.jpg",
       "images": [
         {
@@ -1851,7 +2037,23 @@
       "direct": "Tây Nam",
       "price": 760000000,
       "unitPrice": 4370000,
-      "comments": [],
+      "comments": [
+        {
+          "id": 18921,
+          "author": "Ẩn danh",
+          "comment": "Nhà ở khá là hiện đại, khuôn viên thoáng mát, an ninh trật tự và mọi người ở đây khá là thân thiện."
+        },
+        {
+          "id": 13921,
+          "author": "Ẩn danh",
+          "comment": "Dự án khá uy tín, giao dịch nhanh gọn và nhận nhà nhanh"
+        },
+        {
+          "id": 19921,
+          "author": "Ẩn danh",
+          "comment": "Dịch vụ chăm sóc khách hàng khá là ổn, cho phép xem nhà và hoàn tiền khi không ưng ý"
+        }
+      ],
       "image": "https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw776c4bfb/images/VH_Westpoint/W1/Apartment/PIM/3PN/3PN_01.jpg",
       "images": [
         {
@@ -1972,7 +2174,23 @@
       "direct": "Đông Nam",
       "price": 890000000,
       "unitPrice": 4370000,
-      "comments": [],
+      "comments": [
+        {
+          "id": 18921,
+          "author": "Ẩn danh",
+          "comment": "Nhà ở khá là hiện đại, khuôn viên thoáng mát, an ninh trật tự và mọi người ở đây khá là thân thiện."
+        },
+        {
+          "id": 13921,
+          "author": "Ẩn danh",
+          "comment": "Dự án khá uy tín, giao dịch nhanh gọn và nhận nhà nhanh"
+        },
+        {
+          "id": 19921,
+          "author": "Ẩn danh",
+          "comment": "Dịch vụ chăm sóc khách hàng khá là ổn, cho phép xem nhà và hoàn tiền khi không ưng ý"
+        }
+      ],
       "image": "https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw776c4bfb/images/VH_Westpoint/W1/Apartment/PIM/3PN/3PN_01.jpg",
       "images": [
         {
@@ -2093,7 +2311,23 @@
       "direct": "Đông Nam",
       "price": 920000000,
       "unitPrice": 4370000,
-      "comments": [],
+      "comments": [
+        {
+          "id": 18921,
+          "author": "Ẩn danh",
+          "comment": "Nhà ở khá là hiện đại, khuôn viên thoáng mát, an ninh trật tự và mọi người ở đây khá là thân thiện."
+        },
+        {
+          "id": 13921,
+          "author": "Ẩn danh",
+          "comment": "Dự án khá uy tín, giao dịch nhanh gọn và nhận nhà nhanh"
+        },
+        {
+          "id": 19921,
+          "author": "Ẩn danh",
+          "comment": "Dịch vụ chăm sóc khách hàng khá là ổn, cho phép xem nhà và hoàn tiền khi không ưng ý"
+        }
+      ],
       "image": "https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw776c4bfb/images/VH_Westpoint/W1/Apartment/PIM/3PN/3PN_01.jpg",
       "images": [
         {
@@ -2214,7 +2448,23 @@
       "direct": "Tây Nam",
       "price": 780000000,
       "unitPrice": 4370000,
-      "comments": [],
+      "comments": [
+        {
+          "id": 18921,
+          "author": "Ẩn danh",
+          "comment": "Nhà ở khá là hiện đại, khuôn viên thoáng mát, an ninh trật tự và mọi người ở đây khá là thân thiện."
+        },
+        {
+          "id": 13921,
+          "author": "Ẩn danh",
+          "comment": "Dự án khá uy tín, giao dịch nhanh gọn và nhận nhà nhanh"
+        },
+        {
+          "id": 19921,
+          "author": "Ẩn danh",
+          "comment": "Dịch vụ chăm sóc khách hàng khá là ổn, cho phép xem nhà và hoàn tiền khi không ưng ý"
+        }
+      ],
       "image": "https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw776c4bfb/images/VH_Westpoint/W1/Apartment/PIM/3PN/3PN_01.jpg",
       "images": [
         {
@@ -2335,7 +2585,23 @@
       "direct": "Tây Nam",
       "price": 930000000,
       "unitPrice": 4370000,
-      "comments": [],
+      "comments": [
+        {
+          "id": 18921,
+          "author": "Ẩn danh",
+          "comment": "Nhà ở khá là hiện đại, khuôn viên thoáng mát, an ninh trật tự và mọi người ở đây khá là thân thiện."
+        },
+        {
+          "id": 13921,
+          "author": "Ẩn danh",
+          "comment": "Dự án khá uy tín, giao dịch nhanh gọn và nhận nhà nhanh"
+        },
+        {
+          "id": 19921,
+          "author": "Ẩn danh",
+          "comment": "Dịch vụ chăm sóc khách hàng khá là ổn, cho phép xem nhà và hoàn tiền khi không ưng ý"
+        }
+      ],
       "image": "https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw776c4bfb/images/VH_Westpoint/W1/Apartment/PIM/3PN/3PN_01.jpg",
       "images": [
         {
@@ -2456,7 +2722,23 @@
       "direct": "Tây Nam",
       "price": 900000000,
       "unitPrice": 4370000,
-      "comments": [],
+      "comments": [
+        {
+          "id": 18921,
+          "author": "Ẩn danh",
+          "comment": "Nhà ở khá là hiện đại, khuôn viên thoáng mát, an ninh trật tự và mọi người ở đây khá là thân thiện."
+        },
+        {
+          "id": 13921,
+          "author": "Ẩn danh",
+          "comment": "Dự án khá uy tín, giao dịch nhanh gọn và nhận nhà nhanh"
+        },
+        {
+          "id": 19921,
+          "author": "Ẩn danh",
+          "comment": "Dịch vụ chăm sóc khách hàng khá là ổn, cho phép xem nhà và hoàn tiền khi không ưng ý"
+        }
+      ],
       "image": "https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw776c4bfb/images/VH_Westpoint/W1/Apartment/PIM/3PN/3PN_01.jpg",
       "images": [
         {
@@ -2577,7 +2859,23 @@
       "direct": "Tây Nam",
       "price": 900000000,
       "unitPrice": 4370000,
-      "comments": [],
+      "comments": [
+        {
+          "id": 18921,
+          "author": "Ẩn danh",
+          "comment": "Nhà ở khá là hiện đại, khuôn viên thoáng mát, an ninh trật tự và mọi người ở đây khá là thân thiện."
+        },
+        {
+          "id": 13921,
+          "author": "Ẩn danh",
+          "comment": "Dự án khá uy tín, giao dịch nhanh gọn và nhận nhà nhanh"
+        },
+        {
+          "id": 19921,
+          "author": "Ẩn danh",
+          "comment": "Dịch vụ chăm sóc khách hàng khá là ổn, cho phép xem nhà và hoàn tiền khi không ưng ý"
+        }
+      ],
       "image": "https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw776c4bfb/images/VH_Westpoint/W1/Apartment/PIM/3PN/3PN_01.jpg",
       "images": [
         {
@@ -2698,7 +2996,23 @@
       "direct": "Tây Bắc",
       "price": 780000000,
       "unitPrice": 4370000,
-      "comments": [],
+      "comments": [
+        {
+          "id": 18921,
+          "author": "Ẩn danh",
+          "comment": "Nhà ở khá là hiện đại, khuôn viên thoáng mát, an ninh trật tự và mọi người ở đây khá là thân thiện."
+        },
+        {
+          "id": 13921,
+          "author": "Ẩn danh",
+          "comment": "Dự án khá uy tín, giao dịch nhanh gọn và nhận nhà nhanh"
+        },
+        {
+          "id": 19921,
+          "author": "Ẩn danh",
+          "comment": "Dịch vụ chăm sóc khách hàng khá là ổn, cho phép xem nhà và hoàn tiền khi không ưng ý"
+        }
+      ],
       "image": "https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw776c4bfb/images/VH_Westpoint/W1/Apartment/PIM/3PN/3PN_01.jpg",
       "images": [
         {

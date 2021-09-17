@@ -153,15 +153,17 @@ export class CartComponent implements OnInit {
   couponPercent = 0
   errorShow: any
   successShow: any
+  code = ''
   //check coupon
   applyCoupon() {
     this.couponService.getAllCoupons().subscribe((coupons) => {
       let found = false;
       let coupon = this.couponCode.nativeElement.value;
+      this.code =this.couponCode.nativeElement.value;
       coupons.forEach(cou => {
         if (coupon === cou.code) {
           found = true;
-          this.couponValue = this.apartment.price * cou.value
+          this.couponValue =(this.apartment.price + this.apartment.price * 0.1 + this.apartment.price * 0.02) * cou.value
           this.couponPercent = cou.value * 100
         }
       });

@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
 
 
   faSearch = faSearch;
+  searchText = ''
 
   typewriter_text: string = "Hạnh phúc là có người đồng hành gửi trao tin cậy";
   typewriter_display: string = "";

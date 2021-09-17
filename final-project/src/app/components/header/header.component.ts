@@ -59,7 +59,6 @@ export class HeaderComponent implements OnInit {
 
     router.events.forEach((event) => {
       if (event instanceof NavigationStart) {
-        console.log(event['url']);
         this.navUrl = event['url'];
       }
     });
