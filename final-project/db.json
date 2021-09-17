@@ -2,23 +2,23 @@
   "products": [
     {
       "id": 1,
-      "name": "S2.170606 - 1 PN Deluxe - Xinhomes West point",
+      "name": "S2.170606 - 1 PN Deluxe - Xinhomes West Point",
       "area": 47,
       "bedroom": 2,
       "bathroom": 1,
       "direct": "Tây Nam",
       "price": 900000000,
-      "image": "https://images.wallpaperscraft.com/image/pool_pavilion_rest_73516_1600x900.jpg"
+      "image": "https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw9a93a200/images/VH_OceanPark/Ruby1/R1.02/Apartment/PIM/1PN/1PN_4_large.jpg"
     },
     {
       "id": 2,
-      "name": "S3.170607 - 2 PN Deluxe - Xinhomes West point",
+      "name": "S3.170607 - 2 PN Deluxe - Xinhomes West Point",
       "area": 36,
       "bedroom": 2,
       "bathroom": 1,
       "direct": "Đông Bắc",
       "price": 700000000,
-      "image": "https://img5.goodfon.com/original/1600x900/2/fb/house-greece-corfu-kaminaki-agni-villa-aura-dom-villa-vid--3.jpg"
+      "image": "https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dw776c4bfb/images/VH_Westpoint/W1/Apartment/PIM/3PN/3PN_01.jpg"
     },
     {
       "id": 3,
@@ -28,11 +28,11 @@
       "bathroom": 1,
       "direct": "Tây Nam",
       "price": 760000000,
-      "image": "https://images.wallpaperscraft.com/image/pool_building_home_comfort_furniture_hdr_54854_1600x900.jpg"
+      "image": "https://images.wallpaperscraft.com/image/living_room_villa_sofas_tables_view_ocean_interior_73660_1600x900.jpg"
     },
     {
       "id": 4,
-      "name": "S5.170609 - 1 PN Deluxe - Xinhomes West point",
+      "name": "S5.170609 - 1 PN Deluxe - Xinhomes West Point",
       "area": 47,
       "bedroom": 2,
       "bathroom": 1,
@@ -42,7 +42,7 @@
     },
     {
       "id": 5,
-      "name": "S6.170610 - 1 PN Deluxe - Xinhomes West point",
+      "name": "S6.170610 - 1 PN Deluxe - Xinhomes West Point",
       "area": 34,
       "bedroom": 2,
       "bathroom": 1,
@@ -62,7 +62,7 @@
     },
     {
       "id": 7,
-      "name": "S8.170612 - 1 PN Deluxe - Xinhomes West point",
+      "name": "S8.170612 - 1 PN Deluxe - Xinhomes West Point",
       "area": 47,
       "bedroom": 2,
       "bathroom": 1,
@@ -82,7 +82,7 @@
     },
     {
       "id": 9,
-      "name": "S10.170614 - 1 PN Deluxe - Xinhomes West point",
+      "name": "S10.170614 - 1 PN Deluxe - Xinhomes West Point",
       "area": 47,
       "bedroom": 2,
       "bathroom": 1,
@@ -112,7 +112,7 @@
     },
     {
       "id": 12,
-      "name": "S23.1706017 - 2 PN Deluxe - Xinhomes West point",
+      "name": "S23.1706017 - 2 PN Deluxe - Xinhomes West Point",
       "area": 36,
       "bedroom": 2,
       "bathroom": 1,
@@ -132,7 +132,7 @@
     },
     {
       "id": 14,
-      "name": "S25.1706019 - 1 PN Deluxe - Xinhomes West point",
+      "name": "S25.1706019 - 1 PN Deluxe - Xinhomes West Point",
       "area": 47,
       "bedroom": 2,
       "bathroom": 1,
@@ -172,7 +172,7 @@
     },
     {
       "id": 18,
-      "name": "S29.170623 - 1 PN Deluxe - Xinhomes West point",
+      "name": "S29.170623 - 1 PN Deluxe - Xinhomes West Point",
       "area": 47,
       "bedroom": 2,
       "bathroom": 1,
@@ -705,7 +705,7 @@
       "building": "W1",
       "project": {
         "id": 1,
-        "name": "Xinhomes West Point",
+        "name": "Xinhomes Ocean Park",
         "location": "Gia Lâm, Hà Nội",
         "map": "<iframe src='https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d35434.83602635765!2d105.775474058535!3d21.00752776826224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1svinhome%20west%20point!5e0!3m2!1svi!2s!4v1631081795110!5m2!1svi!2s' width='100%' height='500' style='border:0;' allowfullscreen='' loading='lazy'></iframe>",
         "flat": "https://online.vinhomes.vn/on/demandware.static/-/Sites-vinhomes_vn_master/default/dwfc08c515/images/VH_Westpoint/W1/Apartment/DESC/Keyplan-toa-W1.jpg",

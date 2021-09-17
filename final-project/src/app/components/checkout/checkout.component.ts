@@ -38,9 +38,10 @@ export class CheckoutComponent implements OnInit {
         this.couponValue = (this.apartment.price + this.apartment.price * 0.1 + this.apartment.price * 0.02) * 0.1
         this.setTotalPrice()
         console.log(this.apartment)
-      } 
+
+      }
     }
-   
+
   }
 
   totalPrice: any;
@@ -65,7 +66,7 @@ export class CheckoutComponent implements OnInit {
   }
 
 
-  notification:boolean=false
+  notification: boolean = false
   payment() {
     if (this.authService.isLoggedIn()) {
       this.cartService.removeAll()
