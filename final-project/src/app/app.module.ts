@@ -50,6 +50,7 @@ import { HeaderPageComponent } from './components/common/header-page/header-page
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { ProductSingleComponent } from './components/products/product-single/product-single.component';
 import { ContactProjectComponent } from './components/common/contact-project/contact-project.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 @NgModule({
@@ -82,6 +83,7 @@ import { ContactProjectComponent } from './components/common/contact-project/con
     NotificationComponent,
     HeaderPageComponent,
     ForgotPasswordComponent,
+    ProfileComponent,
   ],
   imports: [
     MaterialModule,

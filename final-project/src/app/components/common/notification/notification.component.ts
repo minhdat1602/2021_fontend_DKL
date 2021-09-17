@@ -7,11 +7,11 @@ import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./notification.component.scss']
 })
 export class NotificationComponent implements OnInit {
-  @Input() message = '' 
-  @Input() type:boolean = false
+  @Input() message = ''
+  @Input() type: boolean = false
 
-  faCheck=faCheck
-  faTimes=faTimes
+  faCheck = faCheck
+  faTimes = faTimes
   constructor() { }
 
 
