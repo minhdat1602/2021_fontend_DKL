@@ -149,6 +149,12 @@ nav {
             li {
                 padding: 0 0px;
 
+                @media (max-width: 1024px) {
+                    &:last-child {
+                        padding-right: 30px !important;
+                    }
+                }
+
                 &.item-nav-search {
                     &::before {
                         bottom: -2px;
@@ -167,9 +173,21 @@ nav {
                         top: 70px;
                         right: 140px;
                         left: auto;
-                        display: none;
+                        // display: none;
+                        transition: opacity 2s ease-out;
+                        opacity: 0;
+                        height: 0;
+                        overflow: hidden;
+
+                        .close-search-btn {
+                            position: absolute;
+                            right: 0px;
+                            top: -7px;
+                        }
 
                         &.show {
+                            opacity: 1;
+                            height: auto;
                             display: block !important;
                         }
                     }
