@@ -68,7 +68,7 @@ export class ProductsListComponent implements OnInit {
   }
 
   filterPriceFunc() {
-    this.priceValue = 500000000 + this.filterPrice * 50000000
+    this.priceValue = 600000000 + this.filterPrice * 5000000
     console.log(this.filterPrice)
   }
 

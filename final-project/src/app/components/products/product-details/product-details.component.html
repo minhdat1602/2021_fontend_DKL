@@ -1,9 +1,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
 <div class="main container">
   <div class="row">
     <div class="products-information">
-      <app-header-page [name]="'Chi tiết căn hộ'"></app-header-page>
       <div id="carousel" class="carousel slide col-xl-7" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carousel" data-slide-to="0" class="active"></li>
@@ -116,9 +114,7 @@
             </div>
             <div class="row">
               <div class="col">
-                <button id="addToCart" (click)="addToCart(apartment)" (click)="togglePopup()"
-                  class="btn btn-primary">Mua
-                  online ngay</button>
+                <button id="addToCart" (click)="addToCart(apartment)" class="btn btn-primary">Mua online ngay</button>
               </div>
             </div>
             <div class="box-support">
@@ -272,7 +268,6 @@
       </div>
     </div>
   </div>
-
 </div>
-<app-notification *ngIf="successAddCart" [type]="true" [message]="sucessAddCartMessage"></app-notification>
-<app-notification *ngIf="failedAddCart" [type]="false" [message]="failedAddCartMessage"></app-notification>
+
+<app-notification [message]="sucessMessage"></app-notification>
