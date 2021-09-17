@@ -54,21 +54,21 @@
 
             <div class="mb-3">
               <label for="email">Email <span class="text-muted"></span></label>
-              <input type="email" class="form-control" id="email" placeholder="email@example.com">
+              <input type="email" [value]="user.email" class="form-control" id="email" placeholder="email@example.com">
               <div class="invalid-feedback">
                 Vui lòng điền email hợp lệ !
               </div>
             </div>
             <div class="mb-3">
               <label for="phone">Địa chỉ</label>
-              <input type="number" class="form-control" id="phone" placeholder="Số điện thoại" required="">
+              <input type="number" value="0387127372" class="form-control" id="phone" placeholder="Số điện thoại" required="">
               <div class="invalid-feedback">
                 Vui lòng điền số điện thoại hợp lệ !
               </div>
             </div>
             <div class="mb-3">
               <label for="address">Địa chỉ</label>
-              <input type="text" class="form-control" id="address" placeholder="Địa chỉ" required="">
+              <input type="text" value="Quang Trung, Đồng Nai"  class="form-control" id="address" placeholder="Địa chỉ" required="">
               <div class="invalid-feedback">
                 Vui lòng điền địa chỉ hợp lệ !
               </div>

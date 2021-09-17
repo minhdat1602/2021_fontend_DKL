@@ -113,7 +113,16 @@
     }
     @media (max-width: 768px) {
         .welcome {
-            font-size: 28px !important;
+            font-size: 32px;
+            text-align: center;
+        }
+        .search-form {
+            width: 300px;
+        }
+    }
+    @media (max-width: 540px) {
+        .welcome {
+            font-size: 22px !important;
             text-align: center;
         }
         .search-form {
