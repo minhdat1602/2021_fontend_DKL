@@ -12,4 +12,10 @@ export class ApartmentService {
   fetchApartments(param: any): Observable<Apartment[]> {
     return this.http.get<Apartment[]>(this.apiUrl + `/${param}`)
   }
+
+
+  getAllApartments(): Observable<Apartment[]> {
+    return this.http.get<Apartment[]>(this.apiUrl)
+  }
+
 }
