@@ -3,12 +3,16 @@
 <div class="banner">
     <h2 class="welcome">NƠI HẠNH PHÚC NGẬP TRÀN</h2>
     <p>{{typewriter_display}}</p>
+
     <div class="search-form">
-        <input type="text" placeholder="Tìm kiếm căn nhà của bạn...">
-        <button>
-            <fa-icon title="Tìm kiếm" [icon]="faSearch"></fa-icon>
-        </button>
+        <input type="text" [(ngModel)]="searchText" placeholder="Tìm kiếm căn nhà của bạn...">
+        <a routerLink="/products" [queryParams]="{ search: searchText } ">
+            <button>
+                <fa-icon title="Tìm kiếm" [icon]="faSearch"></fa-icon>
+            </button>
+        </a>
     </div>
+
 </div>
 
 <div class="introduction">

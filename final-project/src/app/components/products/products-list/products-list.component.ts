@@ -48,6 +48,7 @@ export class ProductsListComponent implements OnInit {
       } else if (this.location === 'west-point') {
         this.filterLocation = 'Đông'
       }
+      this.searchText = param['search']
     })
 
     this.productService.getAllProducts().subscribe(
