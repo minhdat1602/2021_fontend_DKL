@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-listproducts',
   templateUrl: './products-list.component.html',
-  styleUrls: ['./products-list.component.scss']
+  styleUrls: ['./products-list.component.scss','./product-list.long.scss']
 })
 export class ProductsListComponent implements OnInit {
 

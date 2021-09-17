@@ -1,6 +1,4 @@
 $timeout:3s;
-
-
 .notification{
     position: fixed;
     top: 40%;
@@ -38,4 +36,21 @@ $timeout:3s;
 10% {transform: scale(1) translate(-50%,-50%);opacity: 1;}
 90% {transform: scale(1) translate(-50%,-50%);opacity: 1;}
 100% {transform: scale(0) translate(-50%,-50%);opacity: 0;}
+}
+
+@media (max-width: 768px) {
+    .notification{
+        top: 40%;
+        left: 40%;
+        font-size: 20px;
+        transform-origin: -0% -50%;
+        .success, .failed{
+            padding: 20px 30px;
+            fa-icon{      
+                font-size: 45px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    
 }

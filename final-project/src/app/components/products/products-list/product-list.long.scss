@@ -1,0 +1,83 @@
+@media (min-width:1140px) {
+    
+
+    .postcard.light.yellow{
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.521);
+        &:before{
+            background-image: none;
+        }
+    } 
+
+
+    .postcard{
+        .postcard__tagbox{
+            .tag__item{
+                margin: 5px 10px 5px 0px;
+                padding: 7px 16px;
+            }
+        }
+    }
+
+    .postcard.light{
+        background-color: white !important;
+    }
+    .postcard:nth-child(2n+1){
+        
+        .postcard__text{
+            transition: 1s;
+            transform: translateX(-70px);
+        }
+        .postcard__bar {
+            transition: 1s !important;
+        }
+        .postcard__img{
+            max-width: 450px !important;
+        }
+    }
+
+    .postcard:nth-child(2n+1):hover{
+        .postcard__text{
+            transform: translateX(0px);
+        }
+        .postcard__bar {
+        width: 100%;
+        }
+        .postcard__img{
+            transform: scale(1.2);
+        }
+    }
+
+
+
+
+
+
+
+
+
+    .postcard:nth-child(2n+0){
+        
+        .postcard__text{
+            transition: 1s;
+            transform: translateX(70px);
+        }
+        .postcard__bar {
+            transition: 1s !important;
+        }
+        .postcard__img{
+            max-width: 450px !important;
+        }
+    }
+
+    .postcard:nth-child(2n+0):hover{
+        .postcard__text{
+            transform: translateX(0px);
+        }
+        .postcard__bar {
+        width: 100%;
+        }
+        .postcard__img{
+            transform: scale(1.2);
+        }
+    }
+} 
