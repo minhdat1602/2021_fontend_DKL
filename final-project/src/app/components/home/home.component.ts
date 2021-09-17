@@ -45,14 +45,7 @@ export class HomeComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.innerWidth = window.innerWidth;
-    if (this.innerWidth > 1024) {
-      this.productWidth = this.innerWidth / 3;
-    } else if (this.innerWidth > 768) {
-      this.productWidth = this.innerWidth / 2;
-    } else {
-      this.productWidth = this.innerWidth;
-    }
-    console.log(innerWidth);
+    console.log("inner" + this.innerWidth);
   }
   ngOnInit(): void {
     this.innerWidth = window.innerWidth;

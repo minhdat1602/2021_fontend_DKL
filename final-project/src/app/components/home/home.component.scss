@@ -1,5 +1,6 @@
 // Banner Section
 .banner {
+
     background-image: url("https://storage.googleapis.com/vinhomes-data-01/3_1624089856.jpg");
     height: 100vh;
     width: 100%;
@@ -113,6 +114,7 @@
     @media (max-width: 768px) {
         .welcome {
             font-size: 28px !important;
+            text-align: center;
         }
         .search-form {
             width: 300px;

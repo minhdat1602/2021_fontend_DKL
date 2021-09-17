@@ -32,7 +32,7 @@ footer {
 
                 .location {
                     iframe {
-                        width: 400px;
+                        width: calc(100%) !important;
                         box-sizing: border-box;
                         margin: auto;
                         padding: 20px;

@@ -47,8 +47,14 @@
         <owl-carousel-o *ngIf="products" [options]="customOptions">
             <ng-container *ngFor="let product of products">
                 <ng-template carouselSlide [id]="product.id.toString()">
-                    <app-product-slide-item [product]="product" primary="white" secondary="white">
-                    </app-product-slide-item>
+                    <div *ngIf="innerWidth > 460">
+                        <app-product-slide-item [width]="400" [product]="product" primary="white" secondary="white">
+                        </app-product-slide-item>
+                    </div>
+                    <div *ngIf="innerWidth <= 460">
+                        <app-product-slide-item [width]="300" [product]="product" primary="white" secondary="white">
+                        </app-product-slide-item>
+                    </div>
                 </ng-template>
             </ng-container>
         </owl-carousel-o>
