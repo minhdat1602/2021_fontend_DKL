@@ -7,8 +7,7 @@
       "bedroom": 2,
       "bathroom": 1,
       "direct": "Tây Nam",
-      "price": 900000000,
-      "image": "https://images.wallpaperscraft.com/image/pool_pavilion_rest_73516_1600x900.jpg"
+      "price": 900000000
     },
     {
       "id": 2,
@@ -16,9 +15,7 @@
       "area": 36,
       "bedroom": 2,
       "bathroom": 1,
-      "direct": "Đông Bắc",
-      "price": 700000000,
-      "image": "https://img5.goodfon.com/original/1600x900/2/fb/house-greece-corfu-kaminaki-agni-villa-aura-dom-villa-vid--3.jpg"
+      "direct": "Đông Bắc"
     },
     {
       "id": 3,
