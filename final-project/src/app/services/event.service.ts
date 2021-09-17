@@ -14,6 +14,12 @@ export class EventService {
     return this._http.get(this.eventUrl);
   }
 
+  fetchEventLimit(): Observable<any> {
+    let url = this.eventUrl + "?_limit=6"
+    console.log("url:" + url);
+    return this._http.get(url);
+  }
+
   fetchEventOne(id: number): Observable<any> {
     let url = this.eventUrl + "/" + id;
     console.log(url);

@@ -31,6 +31,9 @@
                         <fa-icon [icon]="faSearch"></fa-icon>
                     </a>
                     <div class="search-hover" [class.show]="showSearchForm">
+                        <button (click)="changeSearchDisplay()" class="close-search-btn" mat-icon-button>
+                            <fa-icon [icon]="faTimes"></fa-icon>
+                        </button>
                         <app-search-form></app-search-form>
                     </div>
                 </li>
@@ -55,7 +58,7 @@
                                     xuất</button></a>
                         </ng-template>
                     </mat-menu>
-                    <button class="auth-btn" mat-icon-button [matMenuTriggerFor]="appMenu">
+                    <button style="padding-right: 15px;" class="auth-btn" mat-icon-button [matMenuTriggerFor]="appMenu">
                         <fa-icon [icon]="faUser"></fa-icon>
                         <span *ngIf="authService.isLoggedIn()">Minh Đạt</span>
                         <span *ngIf="!authService.isLoggedIn()"></span>

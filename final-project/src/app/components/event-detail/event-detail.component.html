@@ -13,17 +13,27 @@
             <p>Địa điểm: <span class="address">{{event.address}}</span></p>
             <p class="description">{{event.description}}</p>
             <div class="interested">
-                <div *ngIf="eventPrevious != null">
+                <div>
                     <span>
                         <fa-icon [icon]='faChevronLeft'></fa-icon>
                     </span>
-                    <a href="events/3">{{eventPrevious.title}}</a>
+                    <a href="events/4">{{events[4].title}}</a>
                 </div>
-                <div *ngIf="eventNext != null">
-                    <a href="events/4">{{eventNext.title}}</a>
+                <div>
+                    <a href="events/5">{{events[5].title}}</a>
                     <span>
                         <fa-icon [icon]='faChevronRight'></fa-icon>
                     </span>
+                </div>
+            </div>
+        </div>
+        <div class="right-detail">
+            <!-- <app-search-form></app-search-form> -->
+            <h3>Sự kiện khác</h3>
+            <div class="order-detail">
+                <div *ngFor="let event of events" class="order-item">
+                    <div class="order-img"><img [src]="event.image" alt="image"></div>
+                    <div class="order-title"> <a href="events/{{event.id}}">{{event.title}}</a></div>
                 </div>
             </div>
         </div>
