@@ -1,12 +1,22 @@
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
 
-<div class="banner">
+<div [ngStyle]="{'background-image':'url('+background+')'}" class="banner">
     <div class="fill-bg"></div>
     <h2 class="welcome">NƠI HẠNH PHÚC NGẬP TRÀN</h2>
     <p>{{typewriter_display}}</p>
 
     <div class="search-form">
-        <input type="text" [(ngModel)]="searchText" placeholder="Tìm kiếm căn nhà của bạn...">
+        <form>
+            <input width="100%" matInput [(ngModel)]="searchText" placeholder="Tìm kiếm căn nhà..."
+                [formControl]="control" [matAutocomplete]="auto">
+            <div>
+                <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let street of filteredStreets | async" [value]="street">
+                        {{street}}
+                    </mat-option>
+                </mat-autocomplete>
+            </div>
+        </form>
         <a routerLink="/products" [queryParams]="{ search: searchText } ">
             <button>
                 <fa-icon title="Tìm kiếm" [icon]="faSearch"></fa-icon>

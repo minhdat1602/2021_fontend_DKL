@@ -6,6 +6,9 @@ import { PRODUCTS } from 'src/data/data';
 import AOS from 'aos';
 import { ProductService } from 'src/app/services/product-service/product.service';
 import { Router, Navigation, NavigationStart, ActivatedRoute } from '@angular/router';
+import { FormControl } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { startWith, map } from 'rxjs/operators';
 
 
 @Component({
@@ -15,9 +18,14 @@ import { Router, Navigation, NavigationStart, ActivatedRoute } from '@angular/ro
 })
 export class HomeComponent implements OnInit {
 
+  control = new FormControl();
+  streets: string[] = [];
+  filteredStreets?: Observable<string[]>;
+
   constructor(private productService: ProductService) {
   }
 
+  background?: String = "assets/img/banner.jpg";
 
   faSearch = faSearch;
   searchText = ''
@@ -56,6 +64,10 @@ export class HomeComponent implements OnInit {
     }
     this.typingCallback(this);
     this.getProducts();
+    this.filteredStreets = this.control.valueChanges.pipe(
+      startWith(''),
+      map(value => this._filter(value))
+    );
 
   }
 
@@ -98,6 +110,32 @@ export class HomeComponent implements OnInit {
       },
     },
     // nav: true
+  }
+
+  // Auto complete search
+  private _filter(value: string): string[] {
+    const filterValue = this._normalizeValue(value);
+    console.log(filterValue);
+    let t: string[] = [];
+    this.productService.fetchByKey(filterValue).subscribe((streets) => {
+      streets.forEach((product) => {
+        let n = product.name;
+        // if (filterValue.trim().length > 0) {
+        //   n = n.replace(filterValue, "<span class='aa'>" + filterValue + "</span>")
+        // }
+        t.push(n);
+      });
+      this.streets = t;
+    });
+    if (filterValue.trim().length == 0) {
+      this.streets = [];
+    }
+    return this.streets.filter(street => this._normalizeValue(street).includes(filterValue));
+
+  }
+
+  private _normalizeValue(value: string): string {
+    return value.toLowerCase().replace(/\s/g, '');
   }
 
 }

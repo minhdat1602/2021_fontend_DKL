@@ -30,6 +30,10 @@ export class ProductService {
     this.products = this.httpClient.get<Product[]>(this.productURL)
     return this.products
   }
+  private highlightUrl = "https://mobile2021group17.herokuapp.com/home/highlight";
+  fetchHighLight(): Observable<Product[]> {
+    return this.httpClient.get<Product[]>(this.highlightUrl);
+  }
 
   // getAllProduct = () => {
   //   this.itemsRef = this.afDb.list('products')

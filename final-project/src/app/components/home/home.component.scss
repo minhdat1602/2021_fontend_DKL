@@ -1,6 +1,6 @@
 // Banner Section
 .banner {
-    background-image: url("/../assets/img/banner.jpg");
+    // background-image: url("/assets/img/banner.jpg");
     height: 100vh;
     width: 100%;
     background-repeat: no-repeat;
@@ -72,7 +72,7 @@
     .search-form {
         display: flex;
         justify-content: space-between;
-        width: 550px;
+        // width: 550px;
         background-color: #fff;
         border-radius: 5px;
         align-items: center;
@@ -87,6 +87,19 @@
             border: none;
             font-weight: 500;
             border-radius: 5px;
+            width: 450px;
+        }
+
+        @media (max-width: 1024px) {
+            input {
+                width: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            input {
+                width: 200px;
+            }
         }
 
         button {
@@ -114,9 +127,6 @@
         .welcome {
             font-size: 28px !important;
             text-align: center;
-        }
-        .search-form {
-            width: 300px;
         }
     }
 }
