@@ -60,7 +60,7 @@ export class ProductsListComponent implements OnInit {
       this.searchText = param['search']
     })
 
-    this.apartmentService.fetchListApartments().subscribe(
+    this.productService.getAllProducts().subscribe(
       response => {
         this.products = response.filter(item => {
           return item.direct.includes(this.filterLocation)
